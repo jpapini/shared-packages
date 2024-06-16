@@ -1,0 +1,13 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "TypeScript configuration for React.js",
+    "extends": "./tsconfig.node.json",
+
+    "compilerOptions": {
+        /* Language and Environment */
+        // Specify a set of bundled library declaration files that describe the target runtime environment.
+        "lib": ["esnext", "dom", "dom.iterable"],
+        // Specify what JSX code is generated.
+        "jsx": "react-jsx"
+    }
+}

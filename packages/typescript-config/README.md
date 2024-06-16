@@ -1,6 +1,6 @@
-# Prettier configuration
+# Typescript configurations
 
-Prettier configuration.
+Typescript configurations.
 
 ## Author
 

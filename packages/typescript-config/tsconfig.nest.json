@@ -1,0 +1,23 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "TypeScript configuration for Nest.js",
+    "extends": "./tsconfig.node.json",
+
+    "compilerOptions": {
+        /* Language and Environment */
+        // Enable experimental support for legacy experimental decorators.
+        "experimentalDecorators": true,
+        // Emit design-type metadata for decorated declarations in source files.
+        "emitDecoratorMetadata": true,
+
+        /* Interop Constraints */
+        // Ensure that each file can be safely transpiled without relying on other imports.
+        "isolatedModules": false,
+        // Do not transform or elide any imports or exports not marked as type-only, ensuring they are written in the output file's format based on the 'module' setting.
+        "verbatimModuleSyntax": false,
+
+        /* Type Checking */
+        // Check for class properties that are declared but not set in the constructor.
+        "strictPropertyInitialization": false
+    }
+}
