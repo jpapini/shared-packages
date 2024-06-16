@@ -1,0 +1,14 @@
+{
+    "name": "@jpapini/shared-tools",
+    "private": true,
+    "scripts": {},
+    "packageManager": "pnpm@9.3.0",
+    "engines": {
+        "node": "20",
+        "pnpm": "9"
+    },
+    "volta": {
+        "node": "20.14.0",
+        "pnpm": "9.3.0"
+    }
+}
