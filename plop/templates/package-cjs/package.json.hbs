@@ -1,0 +1,47 @@
+{
+    "name": "@jpapini/{{ kebabCase packageName }}",
+    "version": "0.0.1",
+    "description": "{{ sentenceCase packageName }}.",
+    "keywords": [
+        "jpapini",
+        "{{ kebabCase packageName }}",
+        "tools"
+    ],
+    "homepage": "https://github.com/jpapini/shar-shared-tools/tree/main/packages/{{ kebabCase packageName }}#readme",
+    "bugs": {
+        "url": "https://github.com/jpapini/shar-shared-tools/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jpapini/shar-shared-tools.git",
+        "directory": "packages/{{ kebabCase packageName }}"
+    },
+    "license": "UNLICENSED",
+    "author": "Julien Papini <julien.papini@gmail.com> (https://github.com/jpapini)",
+    "type": "commonjs",
+    "exports": {
+        ".": "./index.js"
+    },
+    "files": [
+        "*.js"
+    ],
+    "scripts": {
+        "clean": "rimraf .turbo",
+        "reset": "pnpm run clean; rimraf node_modules"
+    },
+    "devDependencies": {
+        "npm-run-all2": "6.2.0"
+    },
+    "packageManager": "pnpm@9.3.0",
+    "engines": {
+        "node": "20",
+        "pnpm": "9"
+    },
+    "volta": {
+        "node": "20.14.0",
+        "pnpm": "9.3.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}

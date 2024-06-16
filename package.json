@@ -1,15 +1,18 @@
 {
     "name": "@jpapini/shared-tools",
     "private": true,
+    "type": "module",
     "scripts": {
         "clean": "turbo run clean; rimraf .turbo node_modules/.cache",
         "reset": "turbo run reset; rimraf .turbo node_modules",
+        "plop": "plop --plopfile plop/plopfile.js",
         "changeset:add": "changeset add"
     },
     "devDependencies": {
         "@changesets/changelog-github": "0.5.0",
         "@changesets/cli": "2.27.5",
         "npm-run-all2": "6.2.0",
+        "plop": "4.0.1",
         "rimraf": "5.0.7",
         "turbo": "2.0.4"
     },
