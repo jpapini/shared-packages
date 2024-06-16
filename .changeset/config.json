@@ -1,0 +1,16 @@
+{
+    "$schema": "https://unpkg.com/@changesets/config@3.0.1/schema.json",
+    "baseBranch": "main",
+    "access": "public",
+    "commit": false,
+    "updateInternalDependencies": "patch",
+    "bumpVersionsWithWorkspaceProtocolOnly": true,
+    "changelog": [
+        "@changesets/changelog-github",
+        { "repo": "jpapini/shar-shared-tools" }
+    ],
+    "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
+        "updateInternalDependents": "always",
+        "onlyUpdatePeerDependentsWhenOutOfRange": true
+    }
+}
