@@ -1,0 +1,56 @@
+{
+    "name": "@jpapini/prettier-config",
+    "version": "0.0.1",
+    "description": "Prettier config.",
+    "keywords": [
+        "jpapini",
+        "prettier-config",
+        "tools",
+        "lint",
+        "prettier"
+    ],
+    "homepage": "https://github.com/jpapini/shar-shared-tools/tree/main/packages/prettier-config#readme",
+    "bugs": {
+        "url": "https://github.com/jpapini/shar-shared-tools/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jpapini/shar-shared-tools.git",
+        "directory": "packages/prettier-config"
+    },
+    "license": "UNLICENSED",
+    "author": "Julien Papini <julien.papini@gmail.com> (https://github.com/jpapini)",
+    "type": "commonjs",
+    "exports": {
+        ".": "./index.js"
+    },
+    "files": [
+        "*.js"
+    ],
+    "scripts": {
+        "clean": "rimraf .turbo",
+        "reset": "pnpm run clean; rimraf node_modules"
+    },
+    "dependencies": {
+        "prettier-plugin-packagejson": "2.5.0"
+    },
+    "devDependencies": {
+        "npm-run-all2": "6.2.0",
+        "prettier": "3.3.2"
+    },
+    "peerDependencies": {
+        "prettier": "3"
+    },
+    "packageManager": "pnpm@9.3.0",
+    "engines": {
+        "node": "20",
+        "pnpm": "9"
+    },
+    "volta": {
+        "node": "20.14.0",
+        "pnpm": "9.3.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
