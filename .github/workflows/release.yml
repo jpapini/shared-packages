@@ -33,6 +33,7 @@ jobs:
               with:
                   title: 'Release package(s)'
                   commit: 'chore(version): bump package(s) version'
+                  publish: pnpm build && pnpm publish -r
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
