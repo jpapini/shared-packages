@@ -32,9 +32,6 @@ importers:
       '@jpapini/prettier-config':
         specifier: workspace:*
         version: link:packages/prettier-config
-      '@jpapini/stylelint-config':
-        specifier: workspace:*
-        version: link:packages/stylelint-config
       '@jpapini/typescript-config':
         specifier: workspace:*
         version: link:packages/typescript-config
@@ -47,6 +44,9 @@ importers:
       '@swc/jest':
         specifier: 0.2.36
         version: 0.2.36(@swc/core@1.6.1)
+      '@types/jest':
+        specifier: 29.5.12
+        version: 29.5.12
       '@types/node':
         specifier: 20.14.2
         version: 20.14.2
@@ -68,9 +68,6 @@ importers:
       rimraf:
         specifier: 5.0.7
         version: 5.0.7
-      stylelint:
-        specifier: 16.6.1
-        version: 16.6.1(typescript@5.4.5)
       turbo:
         specifier: 2.0.4
         version: 2.0.4
@@ -322,6 +319,9 @@ importers:
       consola:
         specifier: 3.2.3
         version: 3.2.3
+      css-loader:
+        specifier: 7.1.2
+        version: 7.1.2(webpack@5.92.0(@swc/core@1.6.1)(webpack-cli@5.1.4))
       dotenv:
         specifier: 16.4.5
         version: 16.4.5
@@ -331,12 +331,21 @@ importers:
       mini-css-extract-plugin:
         specifier: 2.9.0
         version: 2.9.0(webpack@5.92.0(@swc/core@1.6.1)(webpack-cli@5.1.4))
+      postcss:
+        specifier: 8.4.38
+        version: 8.4.38
       postcss-import:
         specifier: 16.1.0
         version: 16.1.0(postcss@8.4.38)
+      postcss-loader:
+        specifier: 8.1.1
+        version: 8.1.1(postcss@8.4.38)(typescript@5.4.5)(webpack@5.92.0(@swc/core@1.6.1)(webpack-cli@5.1.4))
       run-script-webpack-plugin:
         specifier: 0.2.0
         version: 0.2.0
+      swc-loader:
+        specifier: 0.2.6
+        version: 0.2.6(@swc/core@1.6.1)(webpack@5.92.0(@swc/core@1.6.1)(webpack-cli@5.1.4))
       tailwindcss:
         specifier: 3.4.4
         version: 3.4.4
@@ -365,21 +374,9 @@ importers:
       '@types/webpack-node-externals':
         specifier: 3.0.4
         version: 3.0.4(@swc/core@1.6.1)(webpack-cli@5.1.4(webpack-dev-server@5.0.4)(webpack@5.92.0))
-      css-loader:
-        specifier: 7.1.2
-        version: 7.1.2(webpack@5.92.0(@swc/core@1.6.1)(webpack-cli@5.1.4))
       npm-run-all2:
         specifier: 6.2.0
         version: 6.2.0
-      postcss:
-        specifier: 8.4.38
-        version: 8.4.38
-      postcss-loader:
-        specifier: 8.1.1
-        version: 8.1.1(postcss@8.4.38)(typescript@5.4.5)(webpack@5.92.0(@swc/core@1.6.1)(webpack-cli@5.1.4))
-      swc-loader:
-        specifier: 0.2.6
-        version: 0.2.6(@swc/core@1.6.1)(webpack@5.92.0(@swc/core@1.6.1)(webpack-cli@5.1.4))
       webpack:
         specifier: 5.92.0
         version: 5.92.0(@swc/core@1.6.1)(webpack-cli@5.1.4)
@@ -1396,6 +1393,9 @@ packages:
 
   '@types/istanbul-reports@3.0.4':
     resolution: {integrity: sha512-pk2B1NWalF9toCRu6gjBzR69syFjP4Od8WRAX+0mmf9lAjCRicLOWc+ZrxZHx/0XRjotgkF9t6iaMJ+aXcOdZQ==}
+
+  '@types/jest@29.5.12':
+    resolution: {integrity: sha512-eDC8bTvT/QhYdxJAulQikueigY5AsdBRH2yDKW3yveW7svY3+DzN84/2NUgkw10RTiJbWqZrTtoGVdYlvFJdLw==}
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
@@ -7079,6 +7079,11 @@ snapshots:
   '@types/istanbul-reports@3.0.4':
     dependencies:
       '@types/istanbul-lib-report': 3.0.3
+
+  '@types/jest@29.5.12':
+    dependencies:
+      expect: 29.7.0
+      pretty-format: 29.7.0
 
   '@types/json-schema@7.0.15': {}
 

@@ -99,6 +99,7 @@ export function createReactAppWebpackConfig(
                             {
                                 loader: 'postcss-loader',
                                 options: {
+                                    implementation: require.resolve('postcss'),
                                     postcssOptions: {
                                         plugins: [
                                             require.resolve('postcss-import'),

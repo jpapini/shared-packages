@@ -8,6 +8,9 @@ import type { Configuration } from 'webpack';
 
 import type { IWebpackEnv } from '~/types';
 import { loadDotenv } from '~/utils/dotenv.util';
+import { findNodeModulesPath } from '~/utils/node-modules.util';
+
+const NODE_MODULES_PATH = findNodeModulesPath();
 
 export function createCommonWebpackConfig(rootDir: string) {
     return function (env: IWebpackEnv): Configuration {
@@ -26,6 +29,10 @@ export function createCommonWebpackConfig(rootDir: string) {
         consola.info('Root:', colors.blue.bold(rootDir));
         consola.info('Cache:', colors.blue.bold(cacheDirectory));
         consola.info('TSConfig:', colors.blue.bold(tsconfigPath));
+        consola.info(
+            'Node modules for loaders:',
+            colors.blue.bold(NODE_MODULES_PATH ?? 'not found'),
+        );
 
         loadDotenv(rootDir);
 
@@ -36,6 +43,9 @@ export function createCommonWebpackConfig(rootDir: string) {
             resolve: {
                 extensions: ['.js', '.ts'],
                 plugins: [new TsconfigPathsPlugin({ configFile: tsconfigPath })],
+            },
+            resolveLoader: {
+                modules: ['node_modules'],
             },
             optimization: {
                 minimize: false,
@@ -74,6 +84,8 @@ export function createCommonWebpackConfig(rootDir: string) {
                 ],
             },
         };
+
+        if (NODE_MODULES_PATH) commonConfig.resolveLoader?.modules?.push(NODE_MODULES_PATH);
 
         if (!isProduction) {
             commonConfig.cache = {
