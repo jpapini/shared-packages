@@ -1,6 +1,6 @@
 {
     "name": "@jpapini/commitlint-config",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "Commitlint configuration.",
     "keywords": [
         "jpapini",
