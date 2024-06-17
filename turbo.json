@@ -8,6 +8,14 @@
             "cache": false
         },
         "typecheck": {},
+        "test": {},
+        "test:watch": {
+            "cache": false,
+            "persistent": true
+        },
+        "test:cov": {
+            "outputs": ["coverage/**"]
+        },
         "build": {
             "dependsOn": ["^build"],
             "outputs": ["dist/**", "*.tsbuildinfo"]

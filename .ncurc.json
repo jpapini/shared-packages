@@ -1,7 +1,7 @@
 {
     "color": true,
     "interactive": true,
-    "packageFile": ["**/package.json", "**/package.json.hbs"],
+    "packageFile": "**/package.{json,json.hbs}",
     "upgrade": true,
     "target": "minor"
 }
