@@ -1,0 +1,21 @@
+### Jetbrains IDEs ###
+.idea
+
+### Visual Studio Code ###
+.vscode
+
+### Dependencies ###
+node_modules
+
+### Cache ###
+.turbo
+
+### Compiled outputs ###
+dist
+generated
+
+### Tests ###
+coverage
+
+### Temporary ###
+old

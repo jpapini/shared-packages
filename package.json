@@ -8,17 +8,24 @@
         "plop": "plop --plopfile plop/plopfile.js",
         "lint": "run-s -c lint:*",
         "lint:prettier": "prettier --cache --cache-location node_modules/.cache/prettier/.prettiercache --check -u '**/*'",
+        "lint:eslint": "eslint --cache --cache-location node_modules/.cache/eslint/.eslintcache .",
         "format": "run-s -c format:*",
         "format:prettier": "prettier --cache --cache-location node_modules/.cache/prettier/.prettiercache --write -u '**/*'",
+        "format:eslint": "eslint --cache --cache-location node_modules/.cache/eslint/.eslintcache --fix .",
         "changeset:add": "changeset add"
     },
     "prettier": "@jpapini/prettier-config",
+    "eslintConfig": {
+        "extends": "@jpapini/eslint-config"
+    },
     "devDependencies": {
         "@changesets/changelog-github": "0.5.0",
         "@changesets/cli": "2.27.5",
+        "@jpapini/eslint-config": "workspace:*",
         "@jpapini/prettier-config": "workspace:*",
         "@jpapini/typescript-config": "workspace:*",
         "@types/node": "20.14.2",
+        "eslint": "8.57.0",
         "npm-run-all2": "6.2.0",
         "plop": "4.0.1",
         "prettier": "3.3.2",

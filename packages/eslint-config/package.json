@@ -1,0 +1,72 @@
+{
+    "name": "@jpapini/eslint-config",
+    "version": "0.0.1",
+    "description": "ESLint configuration.",
+    "keywords": [
+        "jpapini",
+        "eslint-config",
+        "tools",
+        "lint",
+        "eslint"
+    ],
+    "homepage": "https://github.com/jpapini/shar-shared-tools/tree/main/packages/eslint-config#readme",
+    "bugs": {
+        "url": "https://github.com/jpapini/shar-shared-tools/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jpapini/shar-shared-tools.git",
+        "directory": "packages/eslint-config"
+    },
+    "license": "UNLICENSED",
+    "author": "Julien Papini <julien.papini@gmail.com> (https://github.com/jpapini)",
+    "type": "commonjs",
+    "exports": {
+        ".": "./index.js",
+        "./react": "./react.js",
+        "./react.js": "./react.js",
+        "./nest": "./nest.js",
+        "./nest.js": "./nest.js"
+    },
+    "files": [
+        "*.js"
+    ],
+    "scripts": {
+        "clean": "rimraf .turbo",
+        "reset": "pnpm run clean; rimraf node_modules"
+    },
+    "dependencies": {
+        "@rushstack/eslint-patch": "1.10.3",
+        "@typescript-eslint/eslint-plugin": "7.13.0",
+        "@typescript-eslint/parser": "7.13.0",
+        "eslint-config-prettier": "9.1.0",
+        "eslint-plugin-10x": "1.5.2",
+        "eslint-plugin-import": "2.29.1",
+        "eslint-plugin-jest": "28.6.0",
+        "eslint-plugin-jsx-a11y": "6.8.0",
+        "eslint-plugin-prettier": "5.1.3",
+        "eslint-plugin-react": "7.34.2",
+        "eslint-plugin-react-hooks": "4.6.2",
+        "eslint-plugin-simple-import-sort": "12.1.0",
+        "eslint-plugin-unicorn": "54.0.0"
+    },
+    "devDependencies": {
+        "eslint": "8.57.0",
+        "npm-run-all2": "6.2.0"
+    },
+    "peerDependencies": {
+        "eslint": "8"
+    },
+    "packageManager": "pnpm@9.3.0",
+    "engines": {
+        "node": "20",
+        "pnpm": "9"
+    },
+    "volta": {
+        "node": "20.14.0",
+        "pnpm": "9.3.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
