@@ -1,5 +1,11 @@
 # @jpapini/webpack-config
 
+## 1.1.0
+
+### Minor Changes
+
+-   [`1ffd6df`](https://github.com/jpapini/shar-shared-tools/commit/1ffd6df2ce734091afd6c4e30f7bdea0f206163a) Thanks [@jpapini](https://github.com/jpapini)! - Removing loaders peer deps.
+
 ## 1.0.0
 
 ### Major Changes
