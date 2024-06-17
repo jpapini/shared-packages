@@ -23,6 +23,9 @@ importers:
       '@jpapini/eslint-config':
         specifier: workspace:*
         version: link:packages/eslint-config
+      '@jpapini/git-hooks':
+        specifier: workspace:*
+        version: link:packages/git-hooks
       '@jpapini/prettier-config':
         specifier: workspace:*
         version: link:packages/prettier-config
@@ -112,6 +115,34 @@ importers:
       eslint:
         specifier: 8.57.0
         version: 8.57.0
+      npm-run-all2:
+        specifier: 6.2.0
+        version: 6.2.0
+
+  packages/git-hooks:
+    dependencies:
+      '@commitlint/cli':
+        specifier: 19.3.0
+        version: 19.3.0(@types/node@20.14.2)(typescript@5.4.5)
+      '@jpapini/commitlint-config':
+        specifier: workspace:*
+        version: link:../commitlint-config
+      '@jpapini/lint-staged-config':
+        specifier: workspace:*
+        version: link:../lint-staged-config
+      consola:
+        specifier: 3.2.3
+        version: 3.2.3
+      husky:
+        specifier: 9.0.11
+        version: 9.0.11
+      lint-staged:
+        specifier: 15.2.7
+        version: 15.2.7
+      resolve-bin:
+        specifier: 1.0.1
+        version: 1.0.1
+    devDependencies:
       npm-run-all2:
         specifier: 6.2.0
         version: 6.2.0
@@ -752,6 +783,10 @@ packages:
   concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
+  consola@3.2.3:
+    resolution: {integrity: sha512-I5qxpzLv+sJhTVEoLYNcTW+bThDCPsit0vLNKShZx6rLtpilNpmmeTPaeqJb9ZE9dV3DGaeby6Vuhrw38WjeyQ==}
+    engines: {node: ^14.18.0 || >=16.10.0}
+
   constant-case@3.0.4:
     resolution: {integrity: sha512-I2hSBi7Vvs7BEuJDr5dDHfzb/Ruj3FyvFyh7KLilAjNQw3Be+xgqUBA2W6scVEcL0hL1dwPRtIqEPVUCKkSsyQ==}
 
@@ -1184,6 +1219,9 @@ packages:
     resolution: {integrity: sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==}
     engines: {node: '>=8'}
 
+  find-parent-dir@0.3.1:
+    resolution: {integrity: sha512-o4UcykWV/XN9wm+jMEtWLPlV8RXCZnMhQI6F6OdHeSez7iiJWePw8ijOlskJZMsaQoGR/b7dH6lO02HhaTN7+A==}
+
   find-up@4.1.0:
     resolution: {integrity: sha512-PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==}
     engines: {node: '>=8'}
@@ -1402,6 +1440,11 @@ packages:
   human-signals@5.0.0:
     resolution: {integrity: sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==}
     engines: {node: '>=16.17.0'}
+
+  husky@9.0.11:
+    resolution: {integrity: sha512-AB6lFlbwwyIqMdHYhwPe+kjOC3Oc5P3nThEoW/AaO2BX3vJDjWPFxYLxokUZOo6RNX20He3AaT8sESs9NJcmEw==}
+    engines: {node: '>=18'}
+    hasBin: true
 
   iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
@@ -2297,6 +2340,9 @@ packages:
 
   require-main-filename@2.0.0:
     resolution: {integrity: sha512-NKN5kMDylKuldxYLSUfrbo5Tuzh4hd+2E8NPPX02mZtn1VuREQToYe/ZdlJy+J3uCpfaiGF05e7B8W0iXbQHmg==}
+
+  resolve-bin@1.0.1:
+    resolution: {integrity: sha512-4G9C3udcDB1c9qaopB+9dygm2bMyF2LeJ2JHBIc24N7ob+UuSSwX3ID1hQwpDEQep9ZRNdhT//rgEd6xbWA/SA==}
 
   resolve-dir@1.0.1:
     resolution: {integrity: sha512-R7uiTjECzvOsWSfdM0QKFNBVFcK27aHOUwdvK53BcW8zqnGdYp0Fbj82cy54+2A4P2tFM22J5kRfe1R+lM/1yg==}
@@ -3694,6 +3740,8 @@ snapshots:
 
   concat-map@0.0.1: {}
 
+  consola@3.2.3: {}
+
   constant-case@3.0.4:
     dependencies:
       no-case: 3.0.4
@@ -4261,6 +4309,8 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
+  find-parent-dir@0.3.1: {}
+
   find-up@4.1.0:
     dependencies:
       locate-path: 5.0.0
@@ -4505,6 +4555,8 @@ snapshots:
   human-id@1.0.2: {}
 
   human-signals@5.0.0: {}
+
+  husky@9.0.11: {}
 
   iconv-lite@0.4.24:
     dependencies:
@@ -5386,6 +5438,10 @@ snapshots:
   require-from-string@2.0.2: {}
 
   require-main-filename@2.0.0: {}
+
+  resolve-bin@1.0.1:
+    dependencies:
+      find-parent-dir: 0.3.1
 
   resolve-dir@1.0.1:
     dependencies:

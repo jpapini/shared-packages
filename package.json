@@ -27,6 +27,7 @@
         "@commitlint/cli": "19.3.0",
         "@jpapini/commitlint-config": "workspace:*",
         "@jpapini/eslint-config": "workspace:*",
+        "@jpapini/git-hooks": "workspace:*",
         "@jpapini/prettier-config": "workspace:*",
         "@jpapini/typescript-config": "workspace:*",
         "@types/node": "20.14.2",

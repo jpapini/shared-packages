@@ -1,0 +1,57 @@
+{
+    "name": "@jpapini/git-hooks",
+    "version": "0.0.1",
+    "description": "Git hooks configuration.",
+    "keywords": [
+        "jpapini",
+        "git-hooks",
+        "tools",
+        "git",
+        "hooks"
+    ],
+    "homepage": "https://github.com/jpapini/shar-shared-tools/tree/main/packages/git-hooks#readme",
+    "bugs": {
+        "url": "https://github.com/jpapini/shar-shared-tools/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jpapini/shar-shared-tools.git",
+        "directory": "packages/git-hooks"
+    },
+    "license": "UNLICENSED",
+    "author": "Julien Papini <julien.papini@gmail.com> (https://github.com/jpapini)",
+    "type": "module",
+    "files": [
+        "hooks",
+        "scripts"
+    ],
+    "scripts": {
+        "postinstall": "node scripts/install.js",
+        "clean": "rimraf .turbo",
+        "reset": "pnpm run clean; rimraf hooks/_ node_modules"
+    },
+    "dependencies": {
+        "@commitlint/cli": "19.3.0",
+        "@jpapini/commitlint-config": "workspace:*",
+        "@jpapini/lint-staged-config": "workspace:*",
+        "consola": "3.2.3",
+        "husky": "9.0.11",
+        "lint-staged": "15.2.7",
+        "resolve-bin": "1.0.1"
+    },
+    "devDependencies": {
+        "npm-run-all2": "6.2.0"
+    },
+    "packageManager": "pnpm@9.3.0",
+    "engines": {
+        "node": "20",
+        "pnpm": "9"
+    },
+    "volta": {
+        "node": "20.14.0",
+        "pnpm": "9.3.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
