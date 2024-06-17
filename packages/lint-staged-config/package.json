@@ -1,6 +1,6 @@
 {
     "name": "@jpapini/lint-staged-config",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "Lint-staged configuration.",
     "keywords": [
         "jpapini",
