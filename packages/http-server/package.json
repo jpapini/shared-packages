@@ -1,0 +1,56 @@
+{
+    "name": "@jpapini/http-server",
+    "version": "0.0.1",
+    "description": "Wrapper around http-server for handling .env files.",
+    "keywords": [
+        "jpapini",
+        "http-server",
+        "tools",
+        "binary",
+        "cli",
+        "wrapper",
+        "dotenv"
+    ],
+    "homepage": "https://github.com/jpapini/shar-shared-tools/tree/main/packages/http-server#readme",
+    "bugs": {
+        "url": "https://github.com/jpapini/shar-shared-tools/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jpapini/shar-shared-tools.git",
+        "directory": "packages/http-server"
+    },
+    "license": "UNLICENSED",
+    "author": "Julien Papini <julien.papini@gmail.com> (https://github.com/jpapini)",
+    "type": "module",
+    "bin": {
+        "http-server": "./cli.js"
+    },
+    "files": [
+        "*.js"
+    ],
+    "scripts": {
+        "clean": "rimraf .turbo",
+        "reset": "pnpm run clean; rimraf node_modules"
+    },
+    "dependencies": {
+        "dotenv": "16.4.5",
+        "http-server": "14.1.1",
+        "resolve-bin": "1.0.1"
+    },
+    "devDependencies": {
+        "npm-run-all2": "6.2.0"
+    },
+    "packageManager": "pnpm@9.3.0",
+    "engines": {
+        "node": "20",
+        "pnpm": "9"
+    },
+    "volta": {
+        "node": "20.14.0",
+        "pnpm": "9.3.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
