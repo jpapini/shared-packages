@@ -1,20 +1,21 @@
 {
-    "name": "@jpapini/type-check",
+    "name": "@jpapini/nest-utils",
     "version": "0.0.1",
-    "description": "Type check.",
+    "description": "Nest utils.",
     "keywords": [
         "jpapini",
-        "type-check",
-        "utils"
+        "nest-utils",
+        "utils",
+        "nest"
     ],
-    "homepage": "https://github.com/jpapini/shar-shared-tools/tree/main/packages/type-check#readme",
+    "homepage": "https://github.com/jpapini/shar-shared-tools/tree/main/packages/nest-utils#readme",
     "bugs": {
         "url": "https://github.com/jpapini/shar-shared-tools/issues"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/jpapini/shar-shared-tools.git",
-        "directory": "packages/type-check"
+        "directory": "packages/nest-utils"
     },
     "license": "UNLICENSED",
     "author": "Julien Papini <julien.papini@gmail.com> (https://github.com/jpapini)",
@@ -36,9 +37,18 @@
         "typecheck": "tsc --noEmit --pretty",
         "build": "vite build"
     },
+    "dependencies": {
+        "uid": "2.0.2"
+    },
     "devDependencies": {
         "@jpapini/vite-config": "workspace:*",
-        "npm-run-all2": "6.2.0"
+        "@nestjs/common": "10.3.9",
+        "npm-run-all2": "6.2.0",
+        "reflect-metadata": "0.2.2",
+        "rxjs": "7.8.1"
+    },
+    "peerDependencies": {
+        "@nestjs/common": "10"
     },
     "packageManager": "pnpm@9.3.0",
     "engines": {

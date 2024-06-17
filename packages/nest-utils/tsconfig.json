@@ -1,0 +1,12 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "extends": "@jpapini/typescript-config/tsconfig.nest.json",
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "~/*": ["src/*"]
+        }
+    },
+    "include": ["src/**/*", "dts/**/*"],
+    "exclude": ["node_modules", "dist"]
+}
