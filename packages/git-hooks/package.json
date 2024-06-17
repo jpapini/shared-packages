@@ -27,7 +27,7 @@
     ],
     "scripts": {
         "postinstall": "node scripts/install.js",
-        "clean": "rimraf .turbo",
+        "clean": "rimraf .turbo node_modules/.cache",
         "reset": "pnpm run clean; rimraf hooks/_ node_modules"
     },
     "dependencies": {
@@ -42,14 +42,14 @@
     "devDependencies": {
         "npm-run-all2": "6.2.0"
     },
-    "packageManager": "pnpm@9.3.0",
+    "packageManager": "pnpm@9.4.0",
     "engines": {
         "node": "20",
         "pnpm": "9"
     },
     "volta": {
         "node": "20.14.0",
-        "pnpm": "9.3.0"
+        "pnpm": "9.4.0"
     },
     "publishConfig": {
         "access": "public"

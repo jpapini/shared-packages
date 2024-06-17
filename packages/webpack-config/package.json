@@ -33,7 +33,7 @@
         "src"
     ],
     "scripts": {
-        "clean": "rimraf .turbo dist",
+        "clean": "rimraf .turbo dist node_modules/.cache",
         "reset": "pnpm run clean; rimraf node_modules",
         "typecheck": "tsc --noEmit --pretty",
         "build": "vite build"
@@ -74,14 +74,14 @@
         "webpack-cli": "5",
         "webpack-dev-server": "5"
     },
-    "packageManager": "pnpm@9.3.0",
+    "packageManager": "pnpm@9.4.0",
     "engines": {
         "node": "20",
         "pnpm": "9"
     },
     "volta": {
         "node": "20.14.0",
-        "pnpm": "9.3.0"
+        "pnpm": "9.4.0"
     },
     "publishConfig": {
         "access": "public"

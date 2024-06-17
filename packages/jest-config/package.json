@@ -21,36 +21,46 @@
     },
     "license": "UNLICENSED",
     "author": "Julien Papini <julien.papini@gmail.com> (https://github.com/jpapini)",
-    "type": "commonjs",
+    "type": "module",
     "exports": {
-        ".": "./index.js"
+        ".": {
+            "import": "./dist/esm/index.mjs",
+            "require": "./dist/cjs/index.cjs",
+            "types": "./dist/types/index.d.ts"
+        }
     },
     "files": [
-        "*.js"
+        "dist",
+        "src"
     ],
     "scripts": {
-        "clean": "rimraf .turbo",
-        "reset": "pnpm run clean; rimraf node_modules"
+        "clean": "rimraf .turbo dist node_modules/.cache",
+        "reset": "pnpm run clean; rimraf node_modules",
+        "typecheck": "tsc --noEmit --pretty",
+        "build": "vite build"
     },
     "devDependencies": {
+        "@jest/types": "29.6.3",
+        "@jpapini/vite-config": "workspace:*",
         "@swc/core": "1.6.1",
         "@swc/jest": "0.2.36",
         "jest": "29.7.0",
-        "npm-run-all2": "6.2.0"
+        "npm-run-all2": "6.2.0",
+        "typescript": "5.4.5"
     },
     "peerDependencies": {
         "@swc/core": "1",
         "@swc/jest": "0.2",
         "jest": "29"
     },
-    "packageManager": "pnpm@9.3.0",
+    "packageManager": "pnpm@9.4.0",
     "engines": {
         "node": "20",
         "pnpm": "9"
     },
     "volta": {
         "node": "20.14.0",
-        "pnpm": "9.3.0"
+        "pnpm": "9.4.0"
     },
     "publishConfig": {
         "access": "public"
