@@ -1,3 +1,4 @@
+import { createRequire } from 'node:module';
 import path from 'node:path';
 
 import type { Config } from '@swc/types';
@@ -8,9 +9,11 @@ import type { Configuration } from 'webpack';
 
 import type { IWebpackEnv } from '~/types';
 import { loadDotenv } from '~/utils/dotenv.util';
-import { findNodeModulesPath } from '~/utils/node-modules.util';
 
-const NODE_MODULES_PATH = findNodeModulesPath();
+const require = createRequire(import.meta.url);
+const NODE_MODULES_PATH = require
+    .resolve('swc-loader')
+    .replace(/\/node_modules\/swc-loader\/.*$/, '/node_modules/');
 
 export function createCommonWebpackConfig(rootDir: string) {
     return function (env: IWebpackEnv): Configuration {
