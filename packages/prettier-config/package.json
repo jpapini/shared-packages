@@ -22,7 +22,11 @@
     "author": "Julien Papini <julien.papini@gmail.com> (https://github.com/jpapini)",
     "type": "commonjs",
     "exports": {
-        ".": "./index.js"
+        ".": "./index.js",
+        "./prisma": "./prisma.js",
+        "./prisma.js": "./prisma.js",
+        "./tailwind": "./tailwind.js",
+        "./tailwind.js": "./tailwind.js"
     },
     "files": [
         "*.js"
@@ -32,7 +36,9 @@
         "reset": "pnpm run clean; rimraf node_modules"
     },
     "dependencies": {
-        "prettier-plugin-packagejson": "2.5.0"
+        "prettier-plugin-packagejson": "2.5.0",
+        "prettier-plugin-prisma": "5.0.0",
+        "prettier-plugin-tailwindcss": "0.6.4"
     },
     "devDependencies": {
         "npm-run-all2": "6.2.0",
