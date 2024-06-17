@@ -19,7 +19,8 @@
         "test:cov": "turbo run test:cov",
         "test:watch": "turbo run test:watch",
         "build": "turbo run build",
-        "changeset:add": "changeset add"
+        "changeset:add": "changeset add",
+        "changeset:publish": "pnpm run build && changeset publish"
     },
     "commitlint": {
         "extends": "@jpapini/commitlint-config"
