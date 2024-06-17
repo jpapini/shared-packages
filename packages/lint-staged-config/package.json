@@ -1,0 +1,53 @@
+{
+    "name": "@jpapini/lint-staged-config",
+    "version": "0.0.1",
+    "description": "Lint-staged configuration.",
+    "keywords": [
+        "jpapini",
+        "lint-staged-config",
+        "tools",
+        "lint-staged",
+        "config"
+    ],
+    "homepage": "https://github.com/jpapini/shar-shared-tools/tree/main/packages/lint-staged-config#readme",
+    "bugs": {
+        "url": "https://github.com/jpapini/shar-shared-tools/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jpapini/shar-shared-tools.git",
+        "directory": "packages/lint-staged-config"
+    },
+    "license": "UNLICENSED",
+    "author": "Julien Papini <julien.papini@gmail.com> (https://github.com/jpapini)",
+    "type": "commonjs",
+    "exports": {
+        ".": "./index.js"
+    },
+    "files": [
+        "*.js"
+    ],
+    "scripts": {
+        "clean": "rimraf .turbo",
+        "reset": "pnpm run clean; rimraf node_modules"
+    },
+    "devDependencies": {
+        "lint-staged": "15.2.7",
+        "npm-run-all2": "6.2.0"
+    },
+    "peerDependencies": {
+        "lint-staged": "15"
+    },
+    "packageManager": "pnpm@9.3.0",
+    "engines": {
+        "node": "20",
+        "pnpm": "9"
+    },
+    "volta": {
+        "node": "20.14.0",
+        "pnpm": "9.3.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
