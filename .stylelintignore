@@ -6,6 +6,7 @@
 
 ### Dependencies ###
 node_modules
+.pnpm-store
 
 ### Cache ###
 .turbo
@@ -19,3 +20,4 @@ coverage
 
 ### Temporary ###
 old
+*.timestamp-*

@@ -1,0 +1,65 @@
+{
+    "name": "@jpapini/vite-config",
+    "version": "0.0.1",
+    "description": "Vite.js configuration.",
+    "keywords": [
+        "jpapini",
+        "vite-config",
+        "tools",
+        "vite",
+        "bundler"
+    ],
+    "homepage": "https://github.com/jpapini/shar-shared-tools/tree/main/packages/vite-config#readme",
+    "bugs": {
+        "url": "https://github.com/jpapini/shar-shared-tools/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jpapini/shar-shared-tools.git",
+        "directory": "packages/vite-config"
+    },
+    "license": "UNLICENSED",
+    "author": "Julien Papini <julien.papini@gmail.com> (https://github.com/jpapini)",
+    "type": "module",
+    "exports": {
+        ".": {
+            "import": "./dist/esm/index.mjs",
+            "require": "./dist/cjs/index.cjs",
+            "types": "./dist/types/index.d.ts"
+        }
+    },
+    "files": [
+        "dist",
+        "src"
+    ],
+    "scripts": {
+        "clean": "rimraf .turbo dist",
+        "reset": "pnpm run clean; rimraf node_modules",
+        "typecheck": "tsc --noEmit --pretty",
+        "build": "vite build"
+    },
+    "dependencies": {
+        "rollup-plugin-node-externals": "7.1.2",
+        "vite-plugin-dts": "3.9.1",
+        "vite-tsconfig-paths": "4.3.2"
+    },
+    "devDependencies": {
+        "npm-run-all2": "6.2.0",
+        "vite": "5.3.1"
+    },
+    "peerDependencies": {
+        "vite": "5"
+    },
+    "packageManager": "pnpm@9.3.0",
+    "engines": {
+        "node": "20",
+        "pnpm": "9"
+    },
+    "volta": {
+        "node": "20.14.0",
+        "pnpm": "9.3.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}

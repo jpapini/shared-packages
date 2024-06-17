@@ -6,6 +6,11 @@
         },
         "reset": {
             "cache": false
+        },
+        "typecheck": {},
+        "build": {
+            "dependsOn": ["^build"],
+            "outputs": ["dist/**", "*.tsbuildinfo"]
         }
     }
 }

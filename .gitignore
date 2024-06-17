@@ -38,6 +38,7 @@ Thumbs.db
 
 ### Dependencies ###
 node_modules
+.pnpm-store
 
 ### Logs ###
 .pnpm-debug.log*
@@ -56,3 +57,5 @@ coverage
 
 ### Temporary ###
 old
+*.timestamp-*
+
