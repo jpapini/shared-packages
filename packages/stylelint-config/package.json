@@ -1,0 +1,59 @@
+{
+    "name": "@jpapini/stylelint-config",
+    "version": "0.0.1",
+    "description": "Stylelint configuration.",
+    "keywords": [
+        "jpapini",
+        "stylelint-config",
+        "tools",
+        "stylelint",
+        "config",
+        "lint"
+    ],
+    "homepage": "https://github.com/jpapini/shar-shared-tools/tree/main/packages/stylelint-config#readme",
+    "bugs": {
+        "url": "https://github.com/jpapini/shar-shared-tools/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jpapini/shar-shared-tools.git",
+        "directory": "packages/stylelint-config"
+    },
+    "license": "UNLICENSED",
+    "author": "Julien Papini <julien.papini@gmail.com> (https://github.com/jpapini)",
+    "type": "commonjs",
+    "exports": {
+        ".": "./index.js"
+    },
+    "files": [
+        "*.js"
+    ],
+    "scripts": {
+        "clean": "rimraf .turbo",
+        "reset": "pnpm run clean; rimraf node_modules"
+    },
+    "dependencies": {
+        "stylelint-config-clean-order": "6.0.0",
+        "stylelint-config-standard": "36.0.0",
+        "stylelint-config-tailwindcss": "0.0.7"
+    },
+    "devDependencies": {
+        "npm-run-all2": "6.2.0",
+        "stylelint": "16.6.1"
+    },
+    "peerDependencies": {
+        "stylelint": "16"
+    },
+    "packageManager": "pnpm@9.3.0",
+    "engines": {
+        "node": "20",
+        "pnpm": "9"
+    },
+    "volta": {
+        "node": "20.14.0",
+        "pnpm": "9.3.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}

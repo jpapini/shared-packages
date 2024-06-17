@@ -9,9 +9,11 @@
         "lint": "run-s -c lint:*",
         "lint:prettier": "prettier --cache --cache-location node_modules/.cache/prettier/.prettiercache --check -u '**/*'",
         "lint:eslint": "eslint --cache --cache-location node_modules/.cache/eslint/.eslintcache .",
+        "lint:stylelint": "stylelint --cache --cache-location node_modules/.cache/stylelint/.stylelintcache --allow-empty-input '**/*.css'",
         "format": "run-s -c format:*",
         "format:prettier": "prettier --cache --cache-location node_modules/.cache/prettier/.prettiercache --write -u '**/*'",
         "format:eslint": "eslint --cache --cache-location node_modules/.cache/eslint/.eslintcache --fix .",
+        "format:stylelint": "stylelint --cache --cache-location node_modules/.cache/stylelint/.stylelintcache --allow-empty-input --fix '**/*.css'",
         "changeset:add": "changeset add"
     },
     "commitlint": {
@@ -29,6 +31,7 @@
         "@jpapini/eslint-config": "workspace:*",
         "@jpapini/git-hooks": "workspace:*",
         "@jpapini/prettier-config": "workspace:*",
+        "@jpapini/stylelint-config": "workspace:*",
         "@jpapini/typescript-config": "workspace:*",
         "@types/node": "20.14.2",
         "eslint": "8.57.0",
@@ -36,6 +39,7 @@
         "plop": "4.0.1",
         "prettier": "3.3.2",
         "rimraf": "5.0.7",
+        "stylelint": "16.6.1",
         "turbo": "2.0.4",
         "typescript": "5.4.5"
     },
