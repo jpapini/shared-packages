@@ -1,5 +1,6 @@
 import 'webpack-dev-server';
 
+import { createRequire } from 'node:module';
 import path from 'node:path';
 
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
@@ -14,6 +15,8 @@ import type { IWebpackEnv } from '~/types';
 import { mergeConfig } from '~/utils/merge-config.util';
 
 import { createCommonWebpackConfig } from './common.config';
+
+const require = createRequire(import.meta.url);
 
 export type ICreateReactAppWebpackConfigOptions = {
     entryFile?: string;
@@ -72,7 +75,7 @@ export function createReactAppWebpackConfig(
                         test: /\.tsx?$/i,
                         use: [
                             {
-                                loader: 'swc-loader',
+                                loader: require.resolve('swc-loader'),
                                 options: {
                                     jsc: {
                                         target: 'es5',
@@ -95,9 +98,11 @@ export function createReactAppWebpackConfig(
                         test: /\.css$/i,
                         use: [
                             MiniCssExtractPlugin.loader,
-                            'css-loader',
                             {
-                                loader: 'postcss-loader',
+                                loader: require.resolve('css-loader'),
+                            },
+                            {
+                                loader: require.resolve('postcss-loader'),
                                 options: {
                                     implementation: require.resolve('postcss'),
                                     postcssOptions: {

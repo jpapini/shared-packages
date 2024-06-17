@@ -1,3 +1,4 @@
+import { createRequire } from 'node:module';
 import path from 'node:path';
 
 import type { Config } from '@swc/types';
@@ -14,6 +15,8 @@ import { mergeConfig } from '~/utils/merge-config.util';
 import { createCommonWebpackConfig } from './common.config';
 
 const { HotModuleReplacementPlugin } = webpack;
+
+const require = createRequire(import.meta.url);
 
 export type ICreateNestAppWebpackConfigOptions = {
     entryFile?: string;
@@ -59,7 +62,7 @@ export function createNestAppWebpackConfig(
                         test: /\.tsx?$/i,
                         use: [
                             {
-                                loader: 'swc-loader',
+                                loader: require.resolve('swc-loader'),
                                 options: {
                                     jsc: {
                                         target: 'es2022',
