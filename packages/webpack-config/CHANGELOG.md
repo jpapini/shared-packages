@@ -1,5 +1,11 @@
 # @jpapini/webpack-config
 
+## 1.2.1
+
+### Patch Changes
+
+-   [`c21a1da`](https://github.com/jpapini/shar-shared-tools/commit/c21a1dac4b05eb8874fcf7dc145dc9f761c32145) Thanks [@jpapini](https://github.com/jpapini)! - Fixing require.resolve for loaders.
+
 ## 1.2.0
 
 ### Minor Changes
