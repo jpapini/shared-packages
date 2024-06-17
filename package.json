@@ -14,6 +14,9 @@
         "format:eslint": "eslint --cache --cache-location node_modules/.cache/eslint/.eslintcache --fix .",
         "changeset:add": "changeset add"
     },
+    "commitlint": {
+        "extends": "@jpapini/commitlint-config"
+    },
     "prettier": "@jpapini/prettier-config",
     "eslintConfig": {
         "extends": "@jpapini/eslint-config"
@@ -21,6 +24,8 @@
     "devDependencies": {
         "@changesets/changelog-github": "0.5.0",
         "@changesets/cli": "2.27.5",
+        "@commitlint/cli": "19.3.0",
+        "@jpapini/commitlint-config": "workspace:*",
         "@jpapini/eslint-config": "workspace:*",
         "@jpapini/prettier-config": "workspace:*",
         "@jpapini/typescript-config": "workspace:*",
