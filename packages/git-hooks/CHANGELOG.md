@@ -1,5 +1,15 @@
 # @jpapini/git-hooks
 
+## 1.0.1
+
+### Patch Changes
+
+-   [`849986e`](https://github.com/jpapini/shar-shared-tools/commit/849986e9cee2065f5096b69e5523f72076ec7a1e) Thanks [@jpapini](https://github.com/jpapini)! - Updating dependencies.
+
+-   Updated dependencies [[`849986e`](https://github.com/jpapini/shar-shared-tools/commit/849986e9cee2065f5096b69e5523f72076ec7a1e)]:
+    -   @jpapini/lint-staged-config@1.0.1
+    -   @jpapini/commitlint-config@1.0.1
+
 ## 1.0.0
 
 ### Major Changes
