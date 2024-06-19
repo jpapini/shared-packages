@@ -1,5 +1,11 @@
 # @jpapini/jest-config
 
+## 1.1.1
+
+### Patch Changes
+
+-   [`7c92e6c`](https://github.com/jpapini/shar-shared-tools/commit/7c92e6c4aab35e0efdca2d85b1622d20acafb21a) Thanks [@jpapini](https://github.com/jpapini)! - Updating dependencies.
+
 ## 1.1.0
 
 ### Minor Changes
