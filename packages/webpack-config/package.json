@@ -58,7 +58,7 @@
     },
     "devDependencies": {
         "@jpapini/vite-config": "workspace:*",
-        "@swc/core": "1.6.1",
+        "@swc/core": "1.6.3",
         "@swc/types": "0.1.8",
         "@types/webpack": "5.28.5",
         "@types/webpack-node-externals": "3.0.4",
