@@ -9,6 +9,7 @@ import webpack from 'webpack';
 import nodeExternals from 'webpack-node-externals';
 
 import type { IWebpackEnv } from '~/types';
+import { shorternPath } from '~/utils/find-root.util';
 import { mergeConfig } from '~/utils/merge-config.util';
 
 import { createCommonWebpackConfig } from './common.config';
@@ -36,9 +37,9 @@ export function createNestAppWebpackConfig(
         const outputDir = path.join(rootDir, options.outputDir ?? 'dist');
         const outputFilename = options.outputFilename ?? 'main.js';
 
-        logger.info('Entry file:', colors.blue(entryFile));
-        logger.info('Output directory:', colors.blue(outputDir));
-        logger.info('Output file:', colors.blue(outputFilename));
+        logger.info('Entry file:', colors.blue(shorternPath(entryFile)));
+        logger.info('Output directory:', colors.blue(shorternPath(outputDir)));
+        logger.info('Output file:', colors.blue(shorternPath(outputFilename)));
 
         const nestAppConfig: Configuration = {
             name: 'nest-app',

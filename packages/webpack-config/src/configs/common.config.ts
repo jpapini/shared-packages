@@ -8,6 +8,7 @@ import type { Configuration } from 'webpack';
 
 import type { IWebpackEnv } from '~/types';
 import { loadDotenv } from '~/utils/dotenv.util';
+import { shorternPath } from '~/utils/find-root.util';
 
 const require = createRequire(import.meta.url);
 
@@ -22,9 +23,9 @@ export function createCommonWebpackConfig(rootDir: string) {
             isProduction ? colors.green('PRODUCTION') : colors.yellow('DEVELOPMENT'),
         );
         logger.info('Serve:', env.WEBPACK_SERVE ? colors.green('YES') : colors.red('NO'));
-        logger.info('Root:', colors.blue(rootDir));
-        logger.info('Cache:', colors.blue(cacheDirectory));
-        logger.info('TSConfig:', colors.blue(tsconfigPath));
+        logger.info('Root:', colors.blue(shorternPath(rootDir)));
+        logger.info('Cache:', colors.blue(shorternPath(cacheDirectory)));
+        logger.info('TSConfig:', colors.blue(shorternPath(tsconfigPath)));
 
         loadDotenv(rootDir);
 

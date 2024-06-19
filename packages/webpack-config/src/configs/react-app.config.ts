@@ -11,6 +11,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import type { Configuration } from 'webpack';
 
 import type { IWebpackEnv } from '~/types';
+import { shorternPath } from '~/utils/find-root.util';
 import { mergeConfig } from '~/utils/merge-config.util';
 
 import { createCommonWebpackConfig } from './common.config';
@@ -38,9 +39,9 @@ export function createReactAppWebpackConfig(
         const publicUrl = process.env.PUBLIC_URL ?? 'http://localhost:3000/';
         const parsedPublicUrl = new URL(publicUrl);
 
-        logger.info('Entry file:', colors.blue(entryFile));
-        logger.info('Output directory:', colors.blue(outputDir));
-        logger.info('Template file:', colors.blue(templateFile));
+        logger.info('Entry file:', colors.blue(shorternPath(entryFile)));
+        logger.info('Output directory:', colors.blue(shorternPath(outputDir)));
+        logger.info('Template file:', colors.blue(shorternPath(templateFile)));
         logger.info('Public URL:', colors.blue(publicUrl));
 
         const reactAppConfig: Configuration = {
