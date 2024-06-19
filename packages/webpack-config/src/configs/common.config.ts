@@ -1,9 +1,8 @@
 import { createRequire } from 'node:module';
 import path from 'node:path';
 
+import { colors, logger } from '@jpapini/logger';
 import type { Config } from '@swc/types';
-import colors from 'colors';
-import consola from 'consola';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 import type { Configuration } from 'webpack';
 
@@ -18,17 +17,14 @@ export function createCommonWebpackConfig(rootDir: string) {
         const tsconfigPath = path.join(rootDir, 'tsconfig.json');
         const cacheDirectory = path.join(rootDir, 'node_modules/.cache/webpack');
 
-        consola.info(
+        logger.info(
             'Mode:',
-            isProduction ? colors.green.bold('PRODUCTION') : colors.yellow.bold('DEVELOPMENT'),
+            isProduction ? colors.green('PRODUCTION') : colors.yellow('DEVELOPMENT'),
         );
-        consola.info(
-            'Serve:',
-            env.WEBPACK_SERVE ? colors.green.bold('YES') : colors.red.bold('NO'),
-        );
-        consola.info('Root:', colors.blue.bold(rootDir));
-        consola.info('Cache:', colors.blue.bold(cacheDirectory));
-        consola.info('TSConfig:', colors.blue.bold(tsconfigPath));
+        logger.info('Serve:', env.WEBPACK_SERVE ? colors.green('YES') : colors.red('NO'));
+        logger.info('Root:', colors.blue(rootDir));
+        logger.info('Cache:', colors.blue(cacheDirectory));
+        logger.info('TSConfig:', colors.blue(tsconfigPath));
 
         loadDotenv(rootDir);
 

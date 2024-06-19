@@ -1,7 +1,7 @@
 {
     "name": "@jpapini/webpack-config",
     "version": "1.2.1",
-    "description": "Webpack configuration.",
+    "description": "Custom Webpack configuration for bundling projects.",
     "keywords": [
         "jpapini",
         "webpack-config",
@@ -39,10 +39,9 @@
         "build": "vite build"
     },
     "dependencies": {
+        "@jpapini/logger": "workspace:*",
         "@pmmmwh/react-refresh-webpack-plugin": "0.5.15",
         "autoprefixer": "10.4.19",
-        "colors": "1.4.0",
-        "consola": "3.2.3",
         "css-loader": "7.1.2",
         "dotenv": "16.4.5",
         "html-webpack-plugin": "5.6.0",

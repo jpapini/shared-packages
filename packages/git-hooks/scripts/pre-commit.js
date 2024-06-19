@@ -3,7 +3,6 @@
 import { spawnSync } from 'node:child_process';
 import { createRequire } from 'node:module';
 
-import consola from 'consola';
 import resolveBin from 'resolve-bin';
 
 const require = createRequire(import.meta.url);
@@ -13,7 +12,7 @@ const config = require.resolve('@jpapini/lint-staged-config');
 const result = spawnSync(bin, ['--config', config], { stdio: 'inherit' });
 
 if (result.error) {
-    consola.error(result.error.message);
+    console.error(result.error.message);
     process.exit(1);
 }
 

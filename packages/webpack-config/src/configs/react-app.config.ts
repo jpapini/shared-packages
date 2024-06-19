@@ -3,10 +3,9 @@ import 'webpack-dev-server';
 import { createRequire } from 'node:module';
 import path from 'node:path';
 
+import { colors, logger } from '@jpapini/logger';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import type { Config } from '@swc/types';
-import colors from 'colors';
-import consola from 'consola';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import type { Configuration } from 'webpack';
@@ -39,10 +38,10 @@ export function createReactAppWebpackConfig(
         const publicUrl = process.env.PUBLIC_URL ?? 'http://localhost:3000/';
         const parsedPublicUrl = new URL(publicUrl);
 
-        consola.info('Entry file:', colors.blue.bold(entryFile));
-        consola.info('Output directory:', colors.blue.bold(outputDir));
-        consola.info('Template file:', colors.blue.bold(templateFile));
-        consola.info('Public URL:', colors.blue.bold(publicUrl));
+        logger.info('Entry file:', colors.blue(entryFile));
+        logger.info('Output directory:', colors.blue(outputDir));
+        logger.info('Template file:', colors.blue(templateFile));
+        logger.info('Public URL:', colors.blue(publicUrl));
 
         const reactAppConfig: Configuration = {
             name: 'react-app',

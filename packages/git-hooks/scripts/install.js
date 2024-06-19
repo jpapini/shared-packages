@@ -4,11 +4,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import url from 'node:url';
 
-import consola from 'consola';
 import husky from 'husky';
 
 if (process.env.CI !== undefined || process.env.NODE_ENV === 'production') {
-    consola.warn('CI or production environment, skipping Husky installation.');
+    console.log('CI or production environment, skipping Husky installation.');
     process.exit(0);
 }
 
@@ -25,7 +24,7 @@ function findGitFolderPath() {
 
 const gitFolderPath = findGitFolderPath();
 if (!gitFolderPath) {
-    consola.error('Could not find .git folder.');
+    console.error('Could not find .git folder.');
     process.exit(1);
 }
 

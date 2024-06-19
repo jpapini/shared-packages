@@ -1,13 +1,14 @@
 {
     "name": "@jpapini/commitlint-config",
     "version": "1.0.1",
-    "description": "Commitlint configuration.",
+    "description": "Custom commitlint configuration.",
     "keywords": [
         "jpapini",
         "commitlint-config",
         "tools",
         "commitlint",
-        "lint"
+        "lint",
+        "commit"
     ],
     "homepage": "https://github.com/jpapini/shar-shared-tools/tree/main/packages/commitlint-config#readme",
     "bugs": {

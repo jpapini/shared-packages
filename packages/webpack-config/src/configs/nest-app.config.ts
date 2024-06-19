@@ -1,9 +1,8 @@
 import { createRequire } from 'node:module';
 import path from 'node:path';
 
+import { colors, logger } from '@jpapini/logger';
 import type { Config } from '@swc/types';
-import colors from 'colors';
-import consola from 'consola';
 import { RunScriptWebpackPlugin } from 'run-script-webpack-plugin';
 import type { Configuration } from 'webpack';
 import webpack from 'webpack';
@@ -37,9 +36,9 @@ export function createNestAppWebpackConfig(
         const outputDir = path.join(rootDir, options.outputDir ?? 'dist');
         const outputFilename = options.outputFilename ?? 'main.js';
 
-        consola.info('Entry file:', colors.blue.bold(entryFile));
-        consola.info('Output directory:', colors.blue.bold(outputDir));
-        consola.info('Output file:', colors.blue.bold(outputFilename));
+        logger.info('Entry file:', colors.blue(entryFile));
+        logger.info('Output directory:', colors.blue(outputDir));
+        logger.info('Output file:', colors.blue(outputFilename));
 
         const nestAppConfig: Configuration = {
             name: 'nest-app',

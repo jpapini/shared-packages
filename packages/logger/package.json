@@ -1,21 +1,20 @@
 {
-    "name": "@jpapini/nest-utils",
-    "version": "1.0.1",
-    "description": "Shared Nest.js utilities.",
+    "name": "@jpapini/logger",
+    "version": "1.0.0",
+    "description": "Custom logger using consola for pretty output.",
     "keywords": [
         "jpapini",
-        "nest-utils",
-        "utils",
-        "nestjs"
+        "logger",
+        "utils"
     ],
-    "homepage": "https://github.com/jpapini/shar-shared-tools/tree/main/packages/nest-utils#readme",
+    "homepage": "https://github.com/jpapini/shar-shared-tools/tree/main/packages/logger#readme",
     "bugs": {
         "url": "https://github.com/jpapini/shar-shared-tools/issues"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/jpapini/shar-shared-tools.git",
-        "directory": "packages/nest-utils"
+        "directory": "packages/logger"
     },
     "license": "UNLICENSED",
     "author": "Julien Papini <julien.papini@gmail.com> (https://github.com/jpapini)",
@@ -35,23 +34,14 @@
         "clean": "rimraf .turbo dist node_modules/.cache",
         "reset": "pnpm run clean; rimraf node_modules",
         "typecheck": "tsc --noEmit --pretty",
-        "test": "jest --color --passWithNoTests",
-        "test:watch": "pnpm run test --watch",
-        "test:cov": "pnpm run test --coverage",
         "build": "vite build"
     },
     "dependencies": {
-        "uid": "2.0.2"
+        "consola": "3.2.3"
     },
     "devDependencies": {
         "@jpapini/vite-config": "workspace:*",
-        "@nestjs/common": "10.3.9",
-        "npm-run-all2": "6.2.0",
-        "reflect-metadata": "0.2.2",
-        "rxjs": "7.8.1"
-    },
-    "peerDependencies": {
-        "@nestjs/common": "10"
+        "npm-run-all2": "6.2.0"
     },
     "packageManager": "pnpm@9.4.0",
     "engines": {
