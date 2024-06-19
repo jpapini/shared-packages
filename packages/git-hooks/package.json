@@ -34,7 +34,7 @@
         "@commitlint/cli": "19.3.0",
         "@jpapini/commitlint-config": "workspace:*",
         "@jpapini/lint-staged-config": "workspace:*",
-        "consola": "3.2.3",
+        "@jpapini/logger": "workspace:*",
         "husky": "9.0.11",
         "lint-staged": "15.2.7",
         "resolve-bin": "1.0.1"

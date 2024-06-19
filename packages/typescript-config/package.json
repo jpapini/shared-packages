@@ -1,7 +1,7 @@
 {
     "name": "@jpapini/typescript-config",
     "version": "1.0.1",
-    "description": "Typescript configurations.",
+    "description": "Custom Typescript configurations.",
     "keywords": [
         "jpapini",
         "typescript-config",

@@ -1,13 +1,15 @@
 {
     "name": "@jpapini/eslint-config",
     "version": "1.0.1",
-    "description": "ESLint configuration.",
+    "description": "Custom ESLint configuration for JavaScript and TypeScript projects.",
     "keywords": [
         "jpapini",
         "eslint-config",
         "tools",
         "lint",
-        "eslint"
+        "eslint",
+        "nestjs",
+        "react"
     ],
     "homepage": "https://github.com/jpapini/shar-shared-tools/tree/main/packages/eslint-config#readme",
     "bugs": {

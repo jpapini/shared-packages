@@ -151,9 +151,9 @@ importers:
       '@jpapini/lint-staged-config':
         specifier: workspace:*
         version: link:../lint-staged-config
-      consola:
-        specifier: 3.2.3
-        version: 3.2.3
+      '@jpapini/logger':
+        specifier: workspace:*
+        version: link:../logger
       husky:
         specifier: 9.0.11
         version: 9.0.11
@@ -213,6 +213,19 @@ importers:
       lint-staged:
         specifier: 15.2.7
         version: 15.2.7
+      npm-run-all2:
+        specifier: 6.2.0
+        version: 6.2.0
+
+  packages/logger:
+    dependencies:
+      consola:
+        specifier: 3.2.3
+        version: 3.2.3
+    devDependencies:
+      '@jpapini/vite-config':
+        specifier: workspace:*
+        version: link:../vite-config
       npm-run-all2:
         specifier: 6.2.0
         version: 6.2.0
@@ -316,18 +329,15 @@ importers:
 
   packages/webpack-config:
     dependencies:
+      '@jpapini/logger':
+        specifier: workspace:*
+        version: link:../logger
       '@pmmmwh/react-refresh-webpack-plugin':
         specifier: 0.5.15
         version: 0.5.15(@types/webpack@5.28.5(@swc/core@1.6.1)(webpack-cli@5.1.4(webpack-dev-server@5.0.4)(webpack@5.92.0)))(react-refresh@0.14.2)(type-fest@0.21.3)(webpack-dev-server@5.0.4(webpack-cli@5.1.4)(webpack@5.92.0))(webpack@5.92.0(@swc/core@1.6.1)(webpack-cli@5.1.4))
       autoprefixer:
         specifier: 10.4.19
         version: 10.4.19(postcss@8.4.38)
-      colors:
-        specifier: 1.4.0
-        version: 1.4.0
-      consola:
-        specifier: 3.2.3
-        version: 3.2.3
       css-loader:
         specifier: 7.1.2
         version: 7.1.2(webpack@5.92.0(@swc/core@1.6.1)(webpack-cli@5.1.4))
@@ -2126,10 +2136,6 @@ packages:
 
   colorette@2.0.20:
     resolution: {integrity: sha512-IfEDxwoWIjkeXL1eXcDiow4UbKjhLdq6/EuSVR9GMN7KVH3r9gQ83e73hsz1Nd1T3ijd5xv1wcWRYO+D6kCI2w==}
-
-  colors@1.4.0:
-    resolution: {integrity: sha512-a+UqTh4kgZg/SlGvfbzDHpgRu7AAQOmmqRHJnxhRZICKFUT91brVhNNt58CMWU9PsBbv3PDCZUHbVxuDiH2mtA==}
-    engines: {node: '>=0.1.90'}
 
   commander@10.0.1:
     resolution: {integrity: sha512-y4Mg2tXshplEbSGzx7amzPwKKOCGuoSRP/CjEdwwk0FOGlUbq6lKuoyDZTNZkmxHdJtp54hdfY/JUrdL7Xfdug==}
@@ -7990,8 +7996,6 @@ snapshots:
   colord@2.9.3: {}
 
   colorette@2.0.20: {}
-
-  colors@1.4.0: {}
 
   commander@10.0.1: {}
 

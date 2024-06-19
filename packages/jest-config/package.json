@@ -1,14 +1,15 @@
 {
     "name": "@jpapini/jest-config",
     "version": "1.0.1",
-    "description": "Jest configuration.",
+    "description": "Jest configuration and utilities for JavaScript and TypeScript projects.",
     "keywords": [
         "jpapini",
         "jest-config",
         "tools",
         "jest",
         "config",
-        "testing"
+        "testing",
+        "swc"
     ],
     "homepage": "https://github.com/jpapini/shar-shared-tools/tree/main/packages/jest-config#readme",
     "bugs": {
