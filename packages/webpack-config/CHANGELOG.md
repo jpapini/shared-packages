@@ -1,5 +1,11 @@
 # @jpapini/webpack-config
 
+## 1.4.0
+
+### Minor Changes
+
+-   [`4f85949`](https://github.com/jpapini/shar-shared-tools/commit/4f859494e69d95e1ae3dcfaffead5981860624bc) Thanks [@jpapini](https://github.com/jpapini)! - Short path for logging.
+
 ## 1.3.1
 
 ### Patch Changes
