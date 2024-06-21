@@ -1,0 +1,33 @@
+name: Generate changeset for Renovate
+
+on:
+    merge_group:
+    pull_request_target:
+        paths:
+            - '.github/workflows/changesets-renovate.yml'
+            - '**/pnpm-lock.yaml'
+            - '**/package.json'
+
+jobs:
+    generate-changesets:
+        name: Generate changesets
+        runs-on: ubuntu-latest
+        timeout-minutes: 5
+        if: github.actor == 'renovate[bot]'
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 2
+                  ref: ${{ github.head_ref }}
+
+            - name: Git Identity
+              run: |
+                  git config --global user.name 'github-actions'
+                  git config --global user.email 'github-actions@github.com'
+
+            - name: Setup PNPM
+              uses: pnpm/action-setup@v4
+
+            - name: Run changesets-renovate
+              run: pnpm dlx @scaleway/changesets-renovate
