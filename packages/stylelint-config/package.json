@@ -34,7 +34,7 @@
     },
     "dependencies": {
         "stylelint-config-clean-order": "6.0.0",
-        "stylelint-config-standard": "36.0.0",
+        "stylelint-config-standard": "36.0.1",
         "stylelint-config-tailwindcss": "0.0.7"
     },
     "devDependencies": {
@@ -50,7 +50,7 @@
         "pnpm": "9"
     },
     "volta": {
-        "node": "20.14.0",
+        "node": "20.15.0",
         "pnpm": "9.4.0"
     },
     "publishConfig": {
