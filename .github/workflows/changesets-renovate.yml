@@ -23,8 +23,8 @@ jobs:
 
             - name: Git Identity
               run: |
-                  git config --global user.name 'github-actions'
-                  git config --global user.email 'github-actions@github.com'
+                  git config --global user.name 'renovate[bot]'
+                  git config --global user.email '29139614+renovate[bot]@users.noreply.github.com'
 
             - name: Setup PNPM
               uses: pnpm/action-setup@v4
