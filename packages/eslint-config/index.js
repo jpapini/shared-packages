@@ -107,8 +107,6 @@ const config = {
                 '@typescript-eslint/prefer-function-type': 'error',
                 // Require using namespace keyword over module keyword to declare custom TypeScript modules.
                 '@typescript-eslint/prefer-namespace-keyword': 'error',
-                // Enforce using the nullish coalescing operator instead of logical assignments or chaining.
-                '@typescript-eslint/prefer-nullish-coalescing': 'error',
                 // Enforce using concise optional chain expressions instead of chained logical ands, negated logical ors, or empty objects.
                 '@typescript-eslint/prefer-optional-chain': 'error',
                 // Enforce using String#startsWith and String#endsWith over other equivalent methods of checking substrings.
