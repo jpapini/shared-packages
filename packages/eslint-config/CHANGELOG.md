@@ -1,5 +1,11 @@
 # @jpapini/eslint-config
 
+## 1.2.0
+
+### Minor Changes
+
+-   [`8d97475`](https://github.com/jpapini/shar-shared-tools/commit/8d97475202550239a896ec78bda860e2fdc549fe) Thanks [@jpapini](https://github.com/jpapini)! - Removing @typescript-eslint/prefer-nullish-coalescing
+
 ## 1.1.2
 
 ### Patch Changes

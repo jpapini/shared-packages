@@ -1,5 +1,13 @@
 # @jpapini/webpack-config
 
+## 1.4.2
+
+### Patch Changes
+
+-   [#14](https://github.com/jpapini/shar-shared-tools/pull/14) [`2168959`](https://github.com/jpapini/shar-shared-tools/commit/2168959e21b17ad30fff7e772d15fdf2fee6eb29) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@swc/core` to `1.6.5`.
+    Updated dependency `@types/node` to `20.14.8`.
+    Updated dependency `@swc/types` to `0.1.9`.
+
 ## 1.4.1
 
 ### Patch Changes
