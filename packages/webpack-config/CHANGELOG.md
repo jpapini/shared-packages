@@ -1,5 +1,14 @@
 # @jpapini/webpack-config
 
+## 1.4.3
+
+### Patch Changes
+
+-   [`c189d84`](https://github.com/jpapini/shar-shared-tools/commit/c189d845dd2e12474dfb4955277a4595b47ba0ed) Thanks [@jpapini](https://github.com/jpapini)! - Dependencies update.
+
+-   Updated dependencies [[`c189d84`](https://github.com/jpapini/shar-shared-tools/commit/c189d845dd2e12474dfb4955277a4595b47ba0ed)]:
+    -   @jpapini/logger@1.1.2
+
 ## 1.4.2
 
 ### Patch Changes
