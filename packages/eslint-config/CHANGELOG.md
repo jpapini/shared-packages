@@ -1,5 +1,15 @@
 # @jpapini/eslint-config
 
+## 1.3.0
+
+### Minor Changes
+
+-   [`1460e0e`](https://github.com/jpapini/shar-shared-tools/commit/1460e0eda1f1a92616fe375e567ede8d6b40c44c) Thanks [@jpapini](https://github.com/jpapini)! - Improving ESLint config.
+
+### Patch Changes
+
+-   [`c189d84`](https://github.com/jpapini/shar-shared-tools/commit/c189d845dd2e12474dfb4955277a4595b47ba0ed) Thanks [@jpapini](https://github.com/jpapini)! - Dependencies update.
+
 ## 1.2.0
 
 ### Minor Changes
