@@ -5,6 +5,7 @@
     "prHourlyLimit": 0,
     "prConcurrentLimit": 0,
     "semanticCommits": "enabled",
+    "gitIgnoredAuthors": ["41898282+github-actions[bot]@users.noreply.github.com"],
     "packageRules": [
         {
             "matchUpdateTypes": ["patch", "minor"],

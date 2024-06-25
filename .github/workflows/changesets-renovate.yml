@@ -1,33 +1,20 @@
-name: Generate changeset for Renovate
+name: Add changeset to Renovate updates
 
 on:
-    merge_group:
     pull_request_target:
-        paths:
-            - '.github/workflows/changesets-renovate.yml'
-            - '**/pnpm-lock.yaml'
-            - '**/package.json'
+        types: [opened, synchronize, labeled]
 
 jobs:
     generate-changesets:
         name: Generate changesets
         runs-on: ubuntu-latest
         timeout-minutes: 5
-        if: github.actor == 'renovate[bot]'
+        if: contains(github.event.pull_request.labels.*.name, 'dependencies')
         steps:
-            - name: Checkout repository
-              uses: actions/checkout@v4
+            - name: Update Pull Request
+              uses: mscharley/dependency-changesets-action@v1.0.10
               with:
-                  fetch-depth: 2
-                  ref: ${{ github.head_ref }}
-
-            - name: Git Identity
-              run: |
-                  git config --global user.name 'renovate[bot]'
-                  git config --global user.email '29139614+renovate[bot]@users.noreply.github.com'
-
-            - name: Setup PNPM
-              uses: pnpm/action-setup@v4
-
-            - name: Run changesets-renovate
-              run: pnpm dlx @scaleway/changesets-renovate
+                  token: ${{ secrets.DEPENDENCY_UPDATE_GITHUB_TOKEN }}
+                  use-conventional-commits: false
+                  author-name: github-actions[bot]
+                  author-email: 41898282+github-actions[bot]@users.noreply.github.com

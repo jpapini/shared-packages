@@ -30,3 +30,6 @@ coverage
 ### Temporary ###
 old
 *.timestamp-*
+
+### Changesets ###
+.changeset/*.md
