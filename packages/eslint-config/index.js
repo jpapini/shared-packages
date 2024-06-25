@@ -21,6 +21,7 @@ const config = {
         curly: ['error', 'multi-or-nest', 'consistent'],
         // Require template literals instead of string concatenation.
         'prefer-template': 'error',
+        quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: false }],
 
         // Enforces `node:` prefix. (Example: `import fs from 'node:fs';`)
         'unicorn/prefer-node-protocol': 'error',
@@ -149,6 +150,11 @@ const config = {
                         modifiers: ['private'],
                         format: ['camelCase'],
                         leadingUnderscore: 'require',
+                    },
+                    {
+                        selector: ['interface', 'typeAlias'],
+                        format: ['PascalCase'],
+                        prefix: ['I'],
                     },
                 ],
             },

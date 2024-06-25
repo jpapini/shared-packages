@@ -1,16 +1,16 @@
 import type { Config } from '@jest/types';
 import type { CompilerOptions } from 'typescript';
 
-type TsPathMapping = Exclude<CompilerOptions['paths'], undefined>;
-type JestPathMapping = Config.InitialOptions['moduleNameMapper'];
+type ITsPathMapping = Exclude<CompilerOptions['paths'], undefined>;
+type IJestPathMapping = Config.InitialOptions['moduleNameMapper'];
 
 const escapeRegex = (str: string) => str.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&');
 
 export const pathsToModuleNameMapper = (
-    mapping: TsPathMapping,
+    mapping: ITsPathMapping,
     { prefix = '', useESM = false }: { prefix?: string; useESM?: boolean } = {},
-): JestPathMapping => {
-    const jestMap: JestPathMapping = {};
+): IJestPathMapping => {
+    const jestMap: IJestPathMapping = {};
     for (const fromPath of Object.keys(mapping)) {
         const toPaths = mapping[fromPath]!;
         if (toPaths.length === 0) continue;

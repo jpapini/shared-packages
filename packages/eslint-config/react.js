@@ -91,6 +91,26 @@ const config = {
                 ],
             },
         },
+        {
+            files: ['**/*.tsx'],
+            rules: {
+                // Enforces naming conventions for everything across a codebase.
+                '@typescript-eslint/naming-convention': [
+                    'error',
+                    {
+                        selector: 'typeParameter',
+                        format: ['PascalCase'],
+                        prefix: ['T', 'K', 'U', 'V'],
+                    },
+                    {
+                        selector: ['method', 'parameterProperty', 'property'],
+                        modifiers: ['private'],
+                        format: ['camelCase'],
+                        leadingUnderscore: 'require',
+                    },
+                ],
+            },
+        },
     ],
 };
 
