@@ -92,6 +92,7 @@ export function createNestAppWebpackConfig(
                 nodeExternals({
                     allowlist: ['webpack/hot/poll?100'],
                 }),
+                ...(options.externals ?? []),
             ];
             nestAppConfig.plugins?.push(new HotModuleReplacementPlugin());
             nestAppConfig.plugins?.push(
