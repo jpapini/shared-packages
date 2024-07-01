@@ -1,5 +1,11 @@
 # @jpapini/webpack-config
 
+## 1.5.0
+
+### Minor Changes
+
+-   [`e52cd4e`](https://github.com/jpapini/shar-shared-tools/commit/e52cd4e2bbcbb68ba0d818d3734ea28fb296c140) Thanks [@jpapini](https://github.com/jpapini)! - Adding `externals` option for nest config.
+
 ## 1.4.4
 
 ### Patch Changes

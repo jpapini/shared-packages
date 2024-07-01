@@ -1,5 +1,11 @@
 # @jpapini/nest-utils
 
+## 1.1.3
+
+### Patch Changes
+
+-   [#22](https://github.com/jpapini/shar-shared-tools/pull/22) [`6d22b8d`](https://github.com/jpapini/shar-shared-tools/commit/6d22b8dd44b902b15f47f3f06f7d98eaa2294abf) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@nestjs/common` to `10.3.10`.
+
 ## 1.1.2
 
 ### Patch Changes
