@@ -1,5 +1,11 @@
 # @jpapini/webpack-config
 
+## 1.5.1
+
+### Patch Changes
+
+-   [`f28e6f3`](https://github.com/jpapini/shar-shared-tools/commit/f28e6f3305101c2bf82327a8779c4189c79d6a8d) Thanks [@jpapini](https://github.com/jpapini)! - Fixing externals for webpack watch.
+
 ## 1.5.0
 
 ### Minor Changes
