@@ -45,7 +45,7 @@
     },
     "devDependencies": {
         "@jpapini/vite-config": "workspace:*",
-        "@nestjs/common": "10.3.9",
+        "@nestjs/common": "10.3.10",
         "npm-run-all2": "6.2.0",
         "reflect-metadata": "0.2.2",
         "rxjs": "7.8.1"
