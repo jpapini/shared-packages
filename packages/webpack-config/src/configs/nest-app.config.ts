@@ -8,7 +8,7 @@ import type { Configuration } from 'webpack';
 import webpack from 'webpack';
 import nodeExternals from 'webpack-node-externals';
 
-import type { IWebpackEnv } from '~/types';
+import type { IExternalItem, IWebpackEnv } from '~/types';
 import { shorternPath } from '~/utils/find-root.util';
 import { mergeConfig } from '~/utils/merge-config.util';
 
@@ -22,6 +22,7 @@ export type ICreateNestAppWebpackConfigOptions = {
     entryFile?: string;
     outputDir?: string;
     outputFilename?: string;
+    externals?: IExternalItem[];
 };
 
 export function createNestAppWebpackConfig(
@@ -50,7 +51,7 @@ export function createNestAppWebpackConfig(
                 __filename: false,
             },
             externalsPresets: { node: true },
-            externals: [nodeExternals()],
+            externals: [nodeExternals(), ...(options.externals ?? [])],
             entry: [entryFile],
             output: {
                 path: outputDir,
