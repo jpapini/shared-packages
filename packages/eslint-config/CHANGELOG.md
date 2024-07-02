@@ -1,5 +1,11 @@
 # @jpapini/eslint-config
 
+## 1.4.1
+
+### Patch Changes
+
+-   [`28d760f`](https://github.com/jpapini/shar-shared-tools/commit/28d760fee67275511db89150a67f6074e3f950eb) Thanks [@jpapini](https://github.com/jpapini)! - Fixing @typescript-eslint/member-ordering rule.
+
 ## 1.4.0
 
 ### Minor Changes
