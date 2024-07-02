@@ -1,5 +1,13 @@
 # @jpapini/typescript-config
 
+## 1.1.3
+
+### Patch Changes
+
+-   [#25](https://github.com/jpapini/shar-shared-tools/pull/25) [`5e1502c`](https://github.com/jpapini/shar-shared-tools/commit/5e1502c633539e9b344ed5c0cc3f1a13977215d1) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `typescript` to `5.5.3`.
+    Updated dependency `@typescript-eslint/eslint-plugin` to `7.15.0`.
+    Updated dependency `@typescript-eslint/parser` to `7.15.0`.
+
 ## 1.1.2
 
 ### Patch Changes
