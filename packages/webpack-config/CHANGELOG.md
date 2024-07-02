@@ -1,5 +1,11 @@
 # @jpapini/webpack-config
 
+## 1.5.2
+
+### Patch Changes
+
+-   [#26](https://github.com/jpapini/shar-shared-tools/pull/26) [`7551bfd`](https://github.com/jpapini/shar-shared-tools/commit/7551bfd67d9ee8658943c9d8eb8de3f52eed1807) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `webpack-merge` to `6.0.1`.
+
 ## 1.5.1
 
 ### Patch Changes
