@@ -165,131 +165,21 @@ const config = {
                             'call-signature',
 
                             // Fields
-                            'public-static-field',
-                            'protected-static-field',
-                            'private-static-field',
-                            '#private-static-field',
-
-                            'public-instance-field',
-                            'protected-instance-field',
-                            'private-instance-field',
-                            '#private-instance-field',
-
-                            'public-abstract-field',
-                            'protected-abstract-field',
-
-                            'public-field',
-                            'protected-field',
-                            'private-field',
-                            '#private-field',
-
-                            'static-field',
-                            'instance-field',
-                            'abstract-field',
-
                             'field',
 
                             // Static initialization
                             'static-initialization',
 
                             // Constructors
-                            'public-constructor',
-                            'protected-constructor',
-                            'private-constructor',
-
                             'constructor',
 
                             // Accessors
-                            'public-static-accessor',
-                            'protected-static-accessor',
-                            'private-static-accessor',
-                            '#private-static-accessor',
-
-                            'public-instance-accessor',
-                            'protected-instance-accessor',
-                            'private-instance-accessor',
-                            '#private-instance-accessor',
-
-                            'public-abstract-accessor',
-                            'protected-abstract-accessor',
-
-                            'public-accessor',
-                            'protected-accessor',
-                            'private-accessor',
-                            '#private-accessor',
-
-                            'static-accessor',
-                            'instance-accessor',
-                            'abstract-accessor',
-
                             'accessor',
 
                             // Getters / Setters
-                            'public-static-get',
-                            'public-static-set',
-                            'protected-static-get',
-                            'protected-static-set',
-                            'private-static-get',
-                            'private-static-set',
-                            '#private-static-get',
-                            '#private-static-set',
-
-                            'public-instance-get',
-                            'public-instance-set',
-                            'protected-instance-get',
-                            'protected-instance-set',
-                            'private-instance-get',
-                            'private-instance-set',
-                            '#private-instance-get',
-                            '#private-instance-set',
-
-                            'public-abstract-get',
-                            'public-abstract-set',
-                            'protected-abstract-get',
-                            'protected-abstract-set',
-
-                            'public-get',
-                            'public-set',
-                            'protected-get',
-                            'protected-set',
-                            'private-get',
-                            'private-set',
-                            '#private-get',
-                            '#private-set',
-
-                            'static-get',
-                            'static-set',
-                            'instance-get',
-                            'instance-set',
-                            'abstract-get',
-                            'abstract-set',
-
-                            'get',
-                            'set',
+                            ['get', 'set'],
 
                             // Methods
-                            'public-static-method',
-                            'protected-static-method',
-                            'private-static-method',
-                            '#private-static-method',
-
-                            'public-instance-method',
-                            'protected-instance-method',
-                            'private-instance-method',
-                            '#private-instance-method',
-
-                            'public-abstract-method',
-                            'protected-abstract-method',
-
-                            'public-method',
-                            'protected-method',
-                            'private-method',
-                            '#private-method',
-
-                            'static-method',
-                            'instance-method',
-                            'abstract-method',
-
                             'method',
                         ],
                     },
