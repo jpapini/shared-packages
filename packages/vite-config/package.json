@@ -1,6 +1,6 @@
 {
     "name": "@jpapini/vite-config",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "description": "Custom Vite.js configuration for TypeScript libraries.",
     "keywords": [
         "jpapini",
