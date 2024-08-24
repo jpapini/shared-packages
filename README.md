@@ -1,140 +1,46 @@
-# Shared tools
+# Shared packages <!-- omit in toc -->
 
-## Complete setup for new projects
+Shared packages and utilities across JavaScript projects.
 
-1. Install the package and its required peer dependencies:
+## Table of contents <!-- omit in toc -->
 
-```bash
-pnpm add -D \
-    npm-run-all2 rimraf \
-    @jpapini/commitlint-config @commitlint/cli \
-    @jpapini/eslint-config eslint@^8 \
-    @jpapini/git-hooks \
-    @jpapini/jest-config @swc/jest jest @types/jest \
-    @jpapini/prettier-config prettier \
-    @jpapini/stylelint-config stylelint \
-    @jpapini/typescript-config typescript @types/node \
-    @jpapini/vite-config vite \
-    @jpapini/webpack-config @swc/core webpack webpack-cli webpack-dev-server
-```
+-   [Packages](#packages)
+    -   [Config packages](#config-packages)
+    -   [JavaScript utilities](#javascript-utilities)
+    -   [Nest.js utilities](#nestjs-utilities)
+-   [Author](#author)
 
-2. Edit your root `package.json` file to include the following:
+## Packages
 
-```json
-{
-    "scripts": {
-        "clean": "rimraf node_modules/.cache",
-        "reset": "rimraf node_modules",
-        "lint": "run-s -c lint:*",
-        "lint:prettier": "prettier --cache --cache-location node_modules/.cache/prettier/.prettiercache --check -u '**/*'",
-        "lint:eslint": "eslint --cache --cache-location node_modules/.cache/eslint/.eslintcache .",
-        "lint:stylelint": "stylelint --cache --cache-location node_modules/.cache/stylelint/.stylelintcache --allow-empty-input '**/*.css'",
-        "format": "run-s -c format:*",
-        "format:prettier": "prettier --cache --cache-location node_modules/.cache/prettier/.prettiercache --write -u '**/*'",
-        "format:eslint": "eslint --cache --cache-location node_modules/.cache/eslint/.eslintcache --fix .",
-        "format:stylelint": "stylelint --cache --cache-location node_modules/.cache/stylelint/.stylelintcache --allow-empty-input --fix '**/*.css'"
-    },
-    "commitlint": {
-        "extends": "@jpapini/commitlint-config"
-    },
-    "prettier": "@jpapini/prettier-config",
-    "eslintConfig": {
-        "extends": "@jpapini/eslint-config"
-    },
-    "stylelint": {
-        "extends": "@jpapini/stylelint-config"
-    }
-}
-```
+### Config packages
 
-3. Add a `.eslintignore` file in the root of your project with the following content:
+| Name                                                                   | Description                                                              | Version                                                                                                                                   |
+| ---------------------------------------------------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| [@jpapini/commitlint-config](./packages/commitlint-config/README.md)   | Custom commitlint configuration.                                         | [![NPM Version](https://img.shields.io/npm/v/%40jpapini%2Fcommitlint-config)](https://www.npmjs.com/package/@jpapini/commitlint-config)   |
+| [@jpapini/eslint-config](./packages/eslint-config/README.md)           | Custom ESLint configuration for JavaScript and TypeScript projects.      | [![NPM Version](https://img.shields.io/npm/v/%40jpapini%2Feslint-config)](https://www.npmjs.com/package/@jpapini/eslint-config)           |
+| [@jpapini/git-hooks](./packages/git-hooks/README.md)                   | Git hooks configuration.                                                 | [![NPM Version](https://img.shields.io/npm/v/%40jpapini%2Fgit-hooks)](https://www.npmjs.com/package/@jpapini/git-hooks)                   |
+| [@jpapini/http-server](./packages/http-server/README.md)               | Wrapper around http-server for handling .env files.                      | [![NPM Version](https://img.shields.io/npm/v/%40jpapini%2Fhttp-server)](https://www.npmjs.com/package/@jpapini/http-server)               |
+| [@jpapini/jest-config](./packages/jest-config/README.md)               | Jest configuration and utilities for JavaScript and TypeScript projects. | [![NPM Version](https://img.shields.io/npm/v/%40jpapini%2Fjest-config)](https://www.npmjs.com/package/@jpapini/jest-config)               |
+| [@jpapini/lint-staged-config](./packages/lint-staged-config/README.md) | Lint-staged configuration for linting and formatting staged files.       | [![NPM Version](https://img.shields.io/npm/v/%40jpapini%2Flint-staged-config)](https://www.npmjs.com/package/@jpapini/lint-staged-config) |
+| [@jpapini/logger](./packages/logger/README.md)                         | Custom logger using consola for pretty output.                           | [![NPM Version](https://img.shields.io/npm/v/%40jpapini%2Flogger)](https://www.npmjs.com/package/@jpapini/logger)                         |
+| [@jpapini/prettier-config](./packages/prettier-config/README.md)       | Custom Prettier configuration for JavaScript and TypeScript projects.    | [![NPM Version](https://img.shields.io/npm/v/%40jpapini%2Fprettier-config)](https://www.npmjs.com/package/@jpapini/prettier-config)       |
+| [@jpapini/stylelint-config](./packages/stylelint-config/README.md)     | Custom Stylelint configuration for Tailwind CSS projects.                | [![NPM Version](https://img.shields.io/npm/v/%40jpapini%2Fstylelint-config)](https://www.npmjs.com/package/@jpapini/stylelint-config)     |
+| [@jpapini/typescript-config](./packages/typescript-config/README.md)   | Custom Typescript configurations.                                        | [![NPM Version](https://img.shields.io/npm/v/%40jpapini%2Ftypescript-config)](https://www.npmjs.com/package/@jpapini/typescript-config)   |
+| [@jpapini/vite-config](./packages/vite-config/README.md)               | Custom Vite.js configuration for TypeScript libraries.                   | [![NPM Version](https://img.shields.io/npm/v/%40jpapini%2Fvite-config)](https://www.npmjs.com/package/@jpapini/vite-config)               |
+| [@jpapini/webpack-config](./packages/webpack-config/README.md)         | Custom Webpack configuration for bundling projects.                      | [![NPM Version](https://img.shields.io/npm/v/%40jpapini%2Fwebpack-config)](https://www.npmjs.com/package/@jpapini/webpack-config)         |
 
-```text
-### Jetbrains IDEs ###
-.idea
+### JavaScript utilities
 
-### Visual Studio Code ###
-.vscode
+| Name                                                   | Description                                                           | Version                                                                                                                   |
+| ------------------------------------------------------ | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| [@jpapini/type-check](./packages/type-check/README.md) | This package provides a set of utilities to check the type of values. | [![NPM Version](https://img.shields.io/npm/v/%40jpapini%2Ftype-check)](https://www.npmjs.com/package/@jpapini/type-check) |
 
-### Dependencies ###
-node_modules
-.pnpm-store
+### Nest.js utilities
 
-### Cache ###
-.turbo
+| Name                                                   | Description               | Version                                                                                                                   |
+| ------------------------------------------------------ | ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| [@jpapini/nest-utils](./packages/nest-utils/README.md) | Shared Nest.js utilities. | [![NPM Version](https://img.shields.io/npm/v/%40jpapini%2Fnest-utils)](https://www.npmjs.com/package/@jpapini/nest-utils) |
 
-### Compiled outputs ###
-dist
-generated
+## Author
 
-### Tests ###
-coverage
-
-### Temporary ###
-old
-*.timestamp-*
-```
-
-4. Add a `.prettierignore` file with the following content:
-
-```text
-### Jetbrains IDEs ###
-.idea
-
-### Visual Studio Code ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
-
-### Dependencies ###
-node_modules
-.pnpm-store
-pnpm-lock.yaml
-
-### Template files ###
-*.hbs
-
-### Cache ###
-.turbo
-
-### Compiled outputs ###
-dist
-generated
-
-### Tests ###
-coverage
-
-### Temporary ###
-old
-*.timestamp-*
-```
-
-5. Add a `.stylelintignore` file with the following content:
-
-```text
-### Jetbrains IDEs ###
-.idea
-
-### Visual Studio Code ###
-.vscode
-
-### Dependencies ###
-node_modules
-.pnpm-store
-
-### Cache ###
-.turbo
-
-### Compiled outputs ###
-dist
-generated
-
-### Tests ###
-coverage
-
-### Temporary ###
-old
-```
+-   [Julien Papini](mailto:julien.papini@gmail.com)

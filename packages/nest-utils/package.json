@@ -17,7 +17,7 @@
         "url": "git+https://github.com/jpapini/shared-packages.git",
         "directory": "packages/nest-utils"
     },
-    "license": "UNLICENSED",
+    "license": "MIT",
     "author": "Julien Papini <julien.papini@gmail.com> (https://github.com/jpapini)",
     "type": "module",
     "exports": {

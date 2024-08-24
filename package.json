@@ -1,5 +1,5 @@
 {
-    "name": "@jpapini/shared-tools",
+    "name": "@jpapini/shared-packages",
     "private": true,
     "type": "module",
     "scripts": {
