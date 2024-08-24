@@ -11,13 +11,13 @@
         "nestjs",
         "react"
     ],
-    "homepage": "https://github.com/jpapini/shar-shared-tools/tree/main/packages/eslint-config#readme",
+    "homepage": "https://github.com/jpapini/shared-packages/tree/main/packages/eslint-config#readme",
     "bugs": {
-        "url": "https://github.com/jpapini/shar-shared-tools/issues"
+        "url": "https://github.com/jpapini/shared-packages/issues"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/jpapini/shar-shared-tools.git",
+        "url": "git+https://github.com/jpapini/shared-packages.git",
         "directory": "packages/eslint-config"
     },
     "license": "UNLICENSED",

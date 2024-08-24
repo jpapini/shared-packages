@@ -7,13 +7,13 @@
         "logger",
         "utils"
     ],
-    "homepage": "https://github.com/jpapini/shar-shared-tools/tree/main/packages/logger#readme",
+    "homepage": "https://github.com/jpapini/shared-packages/tree/main/packages/logger#readme",
     "bugs": {
-        "url": "https://github.com/jpapini/shar-shared-tools/issues"
+        "url": "https://github.com/jpapini/shared-packages/issues"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/jpapini/shar-shared-tools.git",
+        "url": "git+https://github.com/jpapini/shared-packages.git",
         "directory": "packages/logger"
     },
     "license": "UNLICENSED",

@@ -9,13 +9,13 @@
         "lint-staged",
         "config"
     ],
-    "homepage": "https://github.com/jpapini/shar-shared-tools/tree/main/packages/lint-staged-config#readme",
+    "homepage": "https://github.com/jpapini/shared-packages/tree/main/packages/lint-staged-config#readme",
     "bugs": {
-        "url": "https://github.com/jpapini/shar-shared-tools/issues"
+        "url": "https://github.com/jpapini/shared-packages/issues"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/jpapini/shar-shared-tools.git",
+        "url": "git+https://github.com/jpapini/shared-packages.git",
         "directory": "packages/lint-staged-config"
     },
     "license": "UNLICENSED",

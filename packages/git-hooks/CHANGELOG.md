@@ -4,16 +4,16 @@
 
 ### Patch Changes
 
--   [#41](https://github.com/jpapini/shar-shared-tools/pull/41) [`59ebd10`](https://github.com/jpapini/shar-shared-tools/commit/59ebd1010cde89bf711dff74b9e36362aeeb8388) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@9.8.0`.
+-   [#41](https://github.com/jpapini/shared-packages/pull/41) [`59ebd10`](https://github.com/jpapini/shared-packages/commit/59ebd1010cde89bf711dff74b9e36362aeeb8388) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@9.8.0`.
     Updated dependency `node` to `20.17.0`.
     Updated dependency `pnpm` to `9.8.0`.
     Updated dependency `prettier-plugin-packagejson` to `2.5.2`.
     Updated dependency `@swc/core` to `1.7.18`.
     Updated dependency `webpack` to `5.94.0`.
 
--   [#39](https://github.com/jpapini/shar-shared-tools/pull/39) [`32d2c42`](https://github.com/jpapini/shar-shared-tools/commit/32d2c42bd85ccc135e20c399d1cc8eba623548eb) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `husky` to `9.1.5`.
+-   [#39](https://github.com/jpapini/shared-packages/pull/39) [`32d2c42`](https://github.com/jpapini/shared-packages/commit/32d2c42bd85ccc135e20c399d1cc8eba623548eb) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `husky` to `9.1.5`.
     Updated dependency `vite` to `5.4.2`.
--   Updated dependencies [[`59ebd10`](https://github.com/jpapini/shar-shared-tools/commit/59ebd1010cde89bf711dff74b9e36362aeeb8388)]:
+-   Updated dependencies [[`59ebd10`](https://github.com/jpapini/shared-packages/commit/59ebd1010cde89bf711dff74b9e36362aeeb8388)]:
     -   @jpapini/commitlint-config@1.1.5
     -   @jpapini/lint-staged-config@1.1.5
 
@@ -21,7 +21,7 @@
 
 ### Patch Changes
 
--   [#37](https://github.com/jpapini/shar-shared-tools/pull/37) [`d301d95`](https://github.com/jpapini/shar-shared-tools/commit/d301d95fdc24c4a1a26d7eb1e4d31c6e38161eb5) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `rollup-plugin-node-externals` to `7.1.3`.
+-   [#37](https://github.com/jpapini/shared-packages/pull/37) [`d301d95`](https://github.com/jpapini/shared-packages/commit/d301d95fdc24c4a1a26d7eb1e4d31c6e38161eb5) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `rollup-plugin-node-externals` to `7.1.3`.
     Updated dependency `vite-plugin-dts` to `4.0.3`.
     Updated dependency `vite` to `5.4.1`.
     Updated dependency `packageManager` to `pnpm@9.7.1`.
@@ -34,7 +34,7 @@
     Updated dependency `turbo` to `2.0.14`.
     Updated dependency `mini-css-extract-plugin` to `2.9.1`.
     Updated dependency `tailwindcss` to `3.4.10`.
--   Updated dependencies [[`d301d95`](https://github.com/jpapini/shar-shared-tools/commit/d301d95fdc24c4a1a26d7eb1e4d31c6e38161eb5)]:
+-   Updated dependencies [[`d301d95`](https://github.com/jpapini/shared-packages/commit/d301d95fdc24c4a1a26d7eb1e4d31c6e38161eb5)]:
     -   @jpapini/commitlint-config@1.1.4
     -   @jpapini/lint-staged-config@1.1.4
 
@@ -42,7 +42,7 @@
 
 ### Patch Changes
 
--   [#29](https://github.com/jpapini/shar-shared-tools/pull/29) [`1679cdf`](https://github.com/jpapini/shar-shared-tools/commit/1679cdf896b339aa237b04f128b314cb4ec37253) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `npm-run-all2` to `6.2.2`.
+-   [#29](https://github.com/jpapini/shared-packages/pull/29) [`1679cdf`](https://github.com/jpapini/shared-packages/commit/1679cdf896b339aa237b04f128b314cb4ec37253) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `npm-run-all2` to `6.2.2`.
     Updated dependency `vite` to `5.4.0`.
     Updated dependency `packageManager` to `pnpm@9.7.0`.
     Updated dependency `node` to `20.16.0`.
@@ -72,7 +72,7 @@
     Updated dependency `tailwindcss` to `3.4.9`.
     Updated dependency `@swc/types` to `0.1.12`.
     Updated dependency `webpack` to `5.93.0`.
--   Updated dependencies [[`1679cdf`](https://github.com/jpapini/shar-shared-tools/commit/1679cdf896b339aa237b04f128b314cb4ec37253)]:
+-   Updated dependencies [[`1679cdf`](https://github.com/jpapini/shared-packages/commit/1679cdf896b339aa237b04f128b314cb4ec37253)]:
     -   @jpapini/commitlint-config@1.1.3
     -   @jpapini/lint-staged-config@1.1.3
 
@@ -80,9 +80,9 @@
 
 ### Patch Changes
 
--   [`c189d84`](https://github.com/jpapini/shar-shared-tools/commit/c189d845dd2e12474dfb4955277a4595b47ba0ed) Thanks [@jpapini](https://github.com/jpapini)! - Dependencies update.
+-   [`c189d84`](https://github.com/jpapini/shared-packages/commit/c189d845dd2e12474dfb4955277a4595b47ba0ed) Thanks [@jpapini](https://github.com/jpapini)! - Dependencies update.
 
--   Updated dependencies [[`c189d84`](https://github.com/jpapini/shar-shared-tools/commit/c189d845dd2e12474dfb4955277a4595b47ba0ed)]:
+-   Updated dependencies [[`c189d84`](https://github.com/jpapini/shared-packages/commit/c189d845dd2e12474dfb4955277a4595b47ba0ed)]:
     -   @jpapini/commitlint-config@1.1.2
     -   @jpapini/lint-staged-config@1.1.2
 
@@ -90,13 +90,13 @@
 
 ### Patch Changes
 
--   [#12](https://github.com/jpapini/shar-shared-tools/pull/12) [`69c10b2`](https://github.com/jpapini/shar-shared-tools/commit/69c10b24607fbc7c554162901fdb0fbefe7bc8fd) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `node` to `20.15.0`.
+-   [#12](https://github.com/jpapini/shared-packages/pull/12) [`69c10b2`](https://github.com/jpapini/shared-packages/commit/69c10b24607fbc7c554162901fdb0fbefe7bc8fd) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `node` to `20.15.0`.
     Updated dependency `typescript` to `5.5.2`.
     Updated dependency `stylelint-config-standard` to `36.0.1`.
     Updated dependency `eslint-plugin-jsx-a11y` to `6.9.0`.
     Updated dependency `@types/node` to `20.14.7`.
     Updated dependency `webpack` to `5.92.1`.
--   Updated dependencies [[`69c10b2`](https://github.com/jpapini/shar-shared-tools/commit/69c10b24607fbc7c554162901fdb0fbefe7bc8fd)]:
+-   Updated dependencies [[`69c10b2`](https://github.com/jpapini/shared-packages/commit/69c10b24607fbc7c554162901fdb0fbefe7bc8fd)]:
     -   @jpapini/commitlint-config@1.1.1
     -   @jpapini/lint-staged-config@1.1.1
 
@@ -104,11 +104,11 @@
 
 ### Minor Changes
 
--   [`188e24e`](https://github.com/jpapini/shar-shared-tools/commit/188e24e00821ee32eef97e1e22099f7de5e85a46) Thanks [@jpapini](https://github.com/jpapini)! - Updating documentation and loggers.
+-   [`188e24e`](https://github.com/jpapini/shared-packages/commit/188e24e00821ee32eef97e1e22099f7de5e85a46) Thanks [@jpapini](https://github.com/jpapini)! - Updating documentation and loggers.
 
 ### Patch Changes
 
--   Updated dependencies [[`188e24e`](https://github.com/jpapini/shar-shared-tools/commit/188e24e00821ee32eef97e1e22099f7de5e85a46)]:
+-   Updated dependencies [[`188e24e`](https://github.com/jpapini/shared-packages/commit/188e24e00821ee32eef97e1e22099f7de5e85a46)]:
     -   @jpapini/lint-staged-config@1.1.0
     -   @jpapini/commitlint-config@1.1.0
 
@@ -116,9 +116,9 @@
 
 ### Patch Changes
 
--   [`849986e`](https://github.com/jpapini/shar-shared-tools/commit/849986e9cee2065f5096b69e5523f72076ec7a1e) Thanks [@jpapini](https://github.com/jpapini)! - Updating dependencies.
+-   [`849986e`](https://github.com/jpapini/shared-packages/commit/849986e9cee2065f5096b69e5523f72076ec7a1e) Thanks [@jpapini](https://github.com/jpapini)! - Updating dependencies.
 
--   Updated dependencies [[`849986e`](https://github.com/jpapini/shar-shared-tools/commit/849986e9cee2065f5096b69e5523f72076ec7a1e)]:
+-   Updated dependencies [[`849986e`](https://github.com/jpapini/shared-packages/commit/849986e9cee2065f5096b69e5523f72076ec7a1e)]:
     -   @jpapini/lint-staged-config@1.0.1
     -   @jpapini/commitlint-config@1.0.1
 
@@ -126,12 +126,12 @@
 
 ### Major Changes
 
--   [`8d654ae`](https://github.com/jpapini/shar-shared-tools/commit/8d654aec92158cda9d89308e7851675e4e65ffa8) Thanks [@jpapini](https://github.com/jpapini)! - Releasing packages.
+-   [`8d654ae`](https://github.com/jpapini/shared-packages/commit/8d654aec92158cda9d89308e7851675e4e65ffa8) Thanks [@jpapini](https://github.com/jpapini)! - Releasing packages.
 
 ### Patch Changes
 
--   [`c55dce6`](https://github.com/jpapini/shar-shared-tools/commit/c55dce669e18535762058260688e75cd175086cd) Thanks [@jpapini](https://github.com/jpapini)! - Run commitlint and lint-staged when commiting.
+-   [`c55dce6`](https://github.com/jpapini/shared-packages/commit/c55dce669e18535762058260688e75cd175086cd) Thanks [@jpapini](https://github.com/jpapini)! - Run commitlint and lint-staged when commiting.
 
--   Updated dependencies [[`8d654ae`](https://github.com/jpapini/shar-shared-tools/commit/8d654aec92158cda9d89308e7851675e4e65ffa8), [`666fa7a`](https://github.com/jpapini/shar-shared-tools/commit/666fa7a6006c4e56800c411fb2891f56329d18fc), [`afda3e5`](https://github.com/jpapini/shar-shared-tools/commit/afda3e51b9e775cc41c0e7ba08405c00face50ec)]:
+-   Updated dependencies [[`8d654ae`](https://github.com/jpapini/shared-packages/commit/8d654aec92158cda9d89308e7851675e4e65ffa8), [`666fa7a`](https://github.com/jpapini/shared-packages/commit/666fa7a6006c4e56800c411fb2891f56329d18fc), [`afda3e5`](https://github.com/jpapini/shared-packages/commit/afda3e51b9e775cc41c0e7ba08405c00face50ec)]:
     -   @jpapini/commitlint-config@1.0.0
     -   @jpapini/lint-staged-config@1.0.0
