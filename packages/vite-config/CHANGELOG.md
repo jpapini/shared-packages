@@ -1,5 +1,19 @@
 # @jpapini/vite-config
 
+## 1.1.6
+
+### Patch Changes
+
+-   [#41](https://github.com/jpapini/shar-shared-tools/pull/41) [`59ebd10`](https://github.com/jpapini/shar-shared-tools/commit/59ebd1010cde89bf711dff74b9e36362aeeb8388) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@9.8.0`.
+    Updated dependency `node` to `20.17.0`.
+    Updated dependency `pnpm` to `9.8.0`.
+    Updated dependency `prettier-plugin-packagejson` to `2.5.2`.
+    Updated dependency `@swc/core` to `1.7.18`.
+    Updated dependency `webpack` to `5.94.0`.
+
+-   [#39](https://github.com/jpapini/shar-shared-tools/pull/39) [`32d2c42`](https://github.com/jpapini/shar-shared-tools/commit/32d2c42bd85ccc135e20c399d1cc8eba623548eb) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `husky` to `9.1.5`.
+    Updated dependency `vite` to `5.4.2`.
+
 ## 1.1.5
 
 ### Patch Changes

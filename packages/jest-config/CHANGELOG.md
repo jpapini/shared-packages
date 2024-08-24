@@ -1,5 +1,16 @@
 # @jpapini/jest-config
 
+## 1.2.5
+
+### Patch Changes
+
+-   [#41](https://github.com/jpapini/shar-shared-tools/pull/41) [`59ebd10`](https://github.com/jpapini/shar-shared-tools/commit/59ebd1010cde89bf711dff74b9e36362aeeb8388) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@9.8.0`.
+    Updated dependency `node` to `20.17.0`.
+    Updated dependency `pnpm` to `9.8.0`.
+    Updated dependency `prettier-plugin-packagejson` to `2.5.2`.
+    Updated dependency `@swc/core` to `1.7.18`.
+    Updated dependency `webpack` to `5.94.0`.
+
 ## 1.2.4
 
 ### Patch Changes
