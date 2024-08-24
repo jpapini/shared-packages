@@ -43,7 +43,7 @@
     "devDependencies": {
         "@jest/types": "29.6.3",
         "@jpapini/vite-config": "workspace:*",
-        "@swc/core": "1.7.14",
+        "@swc/core": "1.7.18",
         "@swc/jest": "0.2.36",
         "jest": "29.7.0",
         "npm-run-all2": "6.2.2",
@@ -54,14 +54,14 @@
         "@swc/jest": "0.2",
         "jest": "29"
     },
-    "packageManager": "pnpm@9.7.1",
+    "packageManager": "pnpm@9.8.0",
     "engines": {
         "node": "20",
         "pnpm": "9"
     },
     "volta": {
-        "node": "20.16.0",
-        "pnpm": "9.7.1"
+        "node": "20.17.0",
+        "pnpm": "9.8.0"
     },
     "publishConfig": {
         "access": "public"

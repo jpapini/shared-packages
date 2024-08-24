@@ -38,7 +38,7 @@
         "@jpapini/prettier-config": "workspace:*",
         "@jpapini/typescript-config": "workspace:*",
         "@jpapini/vite-config": "workspace:*",
-        "@swc/core": "1.7.14",
+        "@swc/core": "1.7.18",
         "@swc/jest": "0.2.36",
         "@types/jest": "29.5.12",
         "@types/node": "20.16.1",
@@ -52,13 +52,13 @@
         "typescript": "5.5.4",
         "vite": "5.4.2"
     },
-    "packageManager": "pnpm@9.7.1",
+    "packageManager": "pnpm@9.8.0",
     "engines": {
         "node": "20",
         "pnpm": "9"
     },
     "volta": {
-        "node": "20.16.0",
-        "pnpm": "9.7.1"
+        "node": "20.17.0",
+        "pnpm": "9.8.0"
     }
 }
