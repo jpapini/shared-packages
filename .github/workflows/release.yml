@@ -18,19 +18,18 @@ jobs:
                   token: ${{ secrets.BOT_PAT_TOKEN }}
                   persist-credentials: false
 
-            - name: Setup SSH Agent
-              uses: webfactory/ssh-agent@v0.9.0
-              with:
-                  ssh-private-key: ${{ secrets.BOT_SSH_PRIVATE_KEY }}
-
             - name: Setup Git user
               run: |
                   git config --global user.name 'Julien Papini [bot]'
                   git config --global user.email 'julien.papini+github-bot@gmail.com'
+
                   git config --global commit.gpgSign true
                   git config --global tag.gpgSign true
                   git config --global gpg.format ssh
-                  git config --global user.signingkey key::${{ secrets.BOT_SSH_PUBLIC_KEY }}
+                  git config --global user.signingkey 'key::${{ secrets.BOT_SSH_PUBLIC_KEY }}'
+
+                  eval `ssh-agent -s`
+                  ssh-add - <<< '${{ secrets.BOT_SSH_PRIVATE_KEY }}'
 
             - name: Setup PNPM
               uses: pnpm/action-setup@v4
