@@ -7,29 +7,46 @@ on:
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
+env:
+    GITHUB_TOKEN: ${{ secrets.BOT_PAT_TOKEN }}
+    NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+    SSH_PUBLIC_KEY: ${{ secrets.BOT_SSH_PUBLIC_KEY }}
+    SSH_PRIVATE_KEY: ${{ secrets.BOT_SSH_PRIVATE_KEY }}
+    GIT_COMMITTER_NAME: 'Julien Papini [bot]'
+    GIT_COMMITTER_EMAIL: 'julien.papini+github-bot@gmail.com'
+
 jobs:
     release:
         name: Release
         runs-on: ubuntu-latest
         steps:
+            - name: Setup Git and SSH
+              run: |
+                  mkdir ~/.ssh
+
+                  echo -e "$SSH_PRIVATE_KEY" >> ~/.ssh/signing_key
+                  chmod 600 ~/.ssh/signing_key
+                  echo -e "$SSH_PUBLIC_KEY" >> ~/.ssh/signing_key.pub
+                  chmod 600 ~/.ssh/signing_key.pub
+
+                  echo "$GIT_COMMITTER_EMAIL $SSH_PUBLIC_KEY" > ~/.ssh/allowed_signers
+
+                  eval `ssh-agent -s`
+                  ssh-add ~/.ssh/signing_key
+
+                  git config --global user.name "$GIT_COMMITTER_NAME"
+                  git config --global user.email "$GIT_COMMITTER_EMAIL"
+
+                  git config --global gpg.format ssh
+                  git config --global user.signingkey ~/.ssh/signing_key
+                  git config --global gpg.ssh.allowedSignersFile ~/.ssh/allowed_signers
+                  git config --global commit.gpgSign true
+                  git config --global tag.gpgSign true
+
             - name: Checkout repository
               uses: actions/checkout@v4
               with:
-                  token: ${{ secrets.BOT_PAT_TOKEN }}
-                  persist-credentials: false
-
-            - name: Setup Git user
-              run: |
-                  git config --global user.name 'Julien Papini [bot]'
-                  git config --global user.email 'julien.papini+github-bot@gmail.com'
-
-                  git config --global commit.gpgSign true
-                  git config --global tag.gpgSign true
-                  git config --global gpg.format ssh
-                  git config --global user.signingkey 'key::${{ secrets.BOT_SSH_PUBLIC_KEY }}'
-
-                  eval `ssh-agent -s`
-                  echo '${{ secrets.BOT_SSH_PRIVATE_KEY }}' | tr -d '\r' | ssh-add -
+                  ssh-key: ${{ env.SSH_PRIVATE_KEY }}
 
             - name: Setup PNPM
               uses: pnpm/action-setup@v4
@@ -40,8 +57,6 @@ jobs:
                   registry-url: 'https://registry.npmjs.org/'
                   node-version-file: package.json
                   cache: pnpm
-              env:
-                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
             - name: Install dependencies
               run: pnpm install --frozen-lockfile
@@ -54,6 +69,3 @@ jobs:
                   title: 'Release package(s)'
                   commit: 'chore(version): bump package(s) version'
                   publish: pnpm changeset:publish
-              env:
-                  GITHUB_TOKEN: ${{ secrets.BOT_PAT_TOKEN }}
-                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
