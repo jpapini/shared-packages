@@ -1,5 +1,12 @@
 # @jpapini/stylelint-config
 
+## 1.1.6
+
+### Patch Changes
+
+-   [#43](https://github.com/jpapini/shared-packages/pull/43) [`d090d6b`](https://github.com/jpapini/shared-packages/commit/d090d6b29762128853e48d60fb3f43cdf859e584) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@9.9.0`.
+    Updated dependency `pnpm` to `9.9.0`.
+
 ## 1.1.5
 
 ### Patch Changes
