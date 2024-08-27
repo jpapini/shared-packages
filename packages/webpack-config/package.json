@@ -74,14 +74,14 @@
         "webpack-cli": "5",
         "webpack-dev-server": "5"
     },
-    "packageManager": "pnpm@9.8.0",
+    "packageManager": "pnpm@9.9.0",
     "engines": {
         "node": "20",
         "pnpm": "9"
     },
     "volta": {
         "node": "20.17.0",
-        "pnpm": "9.8.0"
+        "pnpm": "9.9.0"
     },
     "publishConfig": {
         "access": "public"
