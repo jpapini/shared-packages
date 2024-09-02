@@ -1,6 +1,6 @@
 {
     "name": "@jpapini/eslint-config",
-    "version": "1.4.5",
+    "version": "1.4.6",
     "description": "Custom ESLint configuration for JavaScript and TypeScript projects.",
     "keywords": [
         "jpapini",
