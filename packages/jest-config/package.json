@@ -43,7 +43,7 @@
     "devDependencies": {
         "@jest/types": "29.6.3",
         "@jpapini/vite-config": "workspace:*",
-        "@swc/core": "1.7.22",
+        "@swc/core": "1.7.24",
         "@swc/jest": "0.2.36",
         "jest": "29.7.0",
         "npm-run-all2": "6.2.2",
