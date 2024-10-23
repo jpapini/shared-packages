@@ -34,7 +34,7 @@
         "reset": "pnpm run clean; rimraf node_modules"
     },
     "devDependencies": {
-        "npm-run-all2": "6.2.2",
+        "npm-run-all2": "7.0.1",
         "typescript": "5.5.4"
     },
     "peerDependencies": {
