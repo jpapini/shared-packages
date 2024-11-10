@@ -1,5 +1,14 @@
 # @jpapini/webpack-config
 
+## 1.5.9
+
+### Patch Changes
+
+-   [`6048508`](https://github.com/jpapini/shared-packages/commit/604850829e3c4a4fefa7edec43cf09ac59d9b494) Thanks [@jpapini](https://github.com/jpapini)! - Updating dependencies.
+
+-   Updated dependencies [[`6048508`](https://github.com/jpapini/shared-packages/commit/604850829e3c4a4fefa7edec43cf09ac59d9b494)]:
+    -   @jpapini/logger@1.1.7
+
 ## 1.5.8
 
 ### Patch Changes

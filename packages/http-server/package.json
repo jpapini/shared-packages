@@ -1,6 +1,6 @@
 {
     "name": "@jpapini/http-server",
-    "version": "1.1.6",
+    "version": "1.1.7",
     "description": "Wrapper around http-server for handling .env files.",
     "keywords": [
         "jpapini",
