@@ -1,5 +1,11 @@
 # @jpapini/logger
 
+## 1.1.7
+
+### Patch Changes
+
+-   [`6048508`](https://github.com/jpapini/shared-packages/commit/604850829e3c4a4fefa7edec43cf09ac59d9b494) Thanks [@jpapini](https://github.com/jpapini)! - Updating dependencies.
+
 ## 1.1.6
 
 ### Patch Changes

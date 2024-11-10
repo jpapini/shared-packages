@@ -1,5 +1,15 @@
 # @jpapini/git-hooks
 
+## 1.1.8
+
+### Patch Changes
+
+-   [`6048508`](https://github.com/jpapini/shared-packages/commit/604850829e3c4a4fefa7edec43cf09ac59d9b494) Thanks [@jpapini](https://github.com/jpapini)! - Updating dependencies.
+
+-   Updated dependencies [[`6048508`](https://github.com/jpapini/shared-packages/commit/604850829e3c4a4fefa7edec43cf09ac59d9b494)]:
+    -   @jpapini/commitlint-config@1.1.8
+    -   @jpapini/lint-staged-config@1.1.8
+
 ## 1.1.7
 
 ### Patch Changes
