@@ -36,9 +36,9 @@
         "reset": "pnpm run clean; rimraf node_modules"
     },
     "dependencies": {
-        "prettier-plugin-packagejson": "2.5.3",
+        "prettier-plugin-packagejson": "2.5.5",
         "prettier-plugin-prisma": "5.0.0",
-        "prettier-plugin-tailwindcss": "0.6.8"
+        "prettier-plugin-tailwindcss": "0.6.9"
     },
     "devDependencies": {
         "npm-run-all2": "7.0.1",
@@ -47,14 +47,14 @@
     "peerDependencies": {
         "prettier": "3"
     },
-    "packageManager": "pnpm@9.12.3",
+    "packageManager": "pnpm@9.14.2",
     "engines": {
         "node": "22",
         "pnpm": "9"
     },
     "volta": {
         "node": "22.11.0",
-        "pnpm": "9.12.3"
+        "pnpm": "9.14.2"
     },
     "publishConfig": {
         "access": "public"
