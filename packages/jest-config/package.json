@@ -1,6 +1,6 @@
 {
     "name": "@jpapini/jest-config",
-    "version": "1.2.9",
+    "version": "1.2.10",
     "description": "Jest configuration and utilities for JavaScript and TypeScript projects.",
     "keywords": [
         "jpapini",
