@@ -1,14 +1,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { colors, logger } from '@jpapini/logger';
 import dotenv from 'dotenv';
 
-import { shorternPath } from './find-root.util';
-
-export function loadDotenv(rootDir: string) {
+export function loadDotenv(rootDir: string, dotenvFiles: string[] = ['.env']): string[] {
     const loadedEnvFiles: string[] = [];
-    ['.env']
+
+    dotenvFiles
         .map((name) => path.join(rootDir, name))
         .filter((file) => fs.existsSync(file))
         .forEach((file) => {
@@ -16,7 +14,5 @@ export function loadDotenv(rootDir: string) {
             loadedEnvFiles.push(file);
         });
 
-    logger.info(`Loading environment variables from:`);
-    if (loadedEnvFiles.length === 0) logger.log('  -', colors.red('No environment files found'));
-    else loadedEnvFiles.forEach((file) => logger.log('  -', colors.blue(shorternPath(file))));
+    return loadedEnvFiles;
 }

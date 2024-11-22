@@ -3,5 +3,5 @@
     "interactive": true,
     "packageFile": "**/package.{json,json.hbs}",
     "upgrade": true,
-    "target": "latest"
+    "target": "minor"
 }
