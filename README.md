@@ -4,11 +4,11 @@ Shared packages and utilities across JavaScript projects.
 
 ## Table of contents <!-- omit in toc -->
 
--   [Packages](#packages)
-    -   [Config packages](#config-packages)
-    -   [JavaScript utilities](#javascript-utilities)
-    -   [Nest.js utilities](#nestjs-utilities)
--   [Author](#author)
+- [Packages](#packages)
+    - [Config packages](#config-packages)
+    - [JavaScript utilities](#javascript-utilities)
+    - [Nest.js utilities](#nestjs-utilities)
+- [Author](#author)
 
 ## Packages
 
@@ -43,4 +43,4 @@ Shared packages and utilities across JavaScript projects.
 
 ## Author
 
--   [Julien Papini](mailto:julien.papini@gmail.com)
+- [Julien Papini](mailto:julien.papini@gmail.com)

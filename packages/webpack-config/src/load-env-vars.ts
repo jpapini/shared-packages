@@ -5,7 +5,7 @@ import { shorternPath } from './utils/shortern-path.util';
 import { NodeEnv } from './enums';
 import type { IWebpackEnv } from './types';
 
-export function loadEnvVars(rootDir: string, env?: IWebpackEnv | undefined) {
+export function loadEnvVars(rootDir: string, env?: IWebpackEnv) {
     const loadedEnvFiles = loadDotenv(rootDir);
 
     logger.info(`Loading environment variables from:`);

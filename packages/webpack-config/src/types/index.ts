@@ -1,2 +1,2 @@
-export * from './preset.type';
-export * from './webpack.type';
+export type * from './preset.type';
+export type * from './webpack.type';

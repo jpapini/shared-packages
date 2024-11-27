@@ -64,10 +64,12 @@ const config = {
     overrides: [
         {
             files: ['**/*.{ts,tsx}'],
-            extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
+            extends: [
+                'plugin:@typescript-eslint/recommended-type-checked',
+                'plugin:prettier/recommended',
+            ],
             parserOptions: {
-                // In a monorepo project, use deepest tsconfig.json first.
-                project: ['*/**/tsconfig.json', '**/tsconfig.json'],
+                projectService: true,
             },
             rules: {
                 // Marks all names in the import as type-only and applies to named, default, and namespace.
@@ -84,8 +86,6 @@ const config = {
                 '@typescript-eslint/consistent-type-exports': 'error',
                 // Allow the declaration of empty interfaces.
                 '@typescript-eslint/no-empty-interface': 'off',
-                // Only allow unused variables for rest siblings.
-                '@typescript-eslint/no-unused-vars': ['error', { ignoreRestSiblings: true }],
                 // Enforces usage of `type` keyword instead of `interface` keyword.
                 '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
                 // Require that function overload signatures be consecutive.
@@ -104,8 +104,6 @@ const config = {
                 '@typescript-eslint/no-inferrable-types': 'error',
                 // Enforce using function types instead of interfaces with call signatures.
                 '@typescript-eslint/prefer-function-type': 'error',
-                // Require using namespace keyword over module keyword to declare custom TypeScript modules.
-                '@typescript-eslint/prefer-namespace-keyword': 'error',
                 // Enforce using concise optional chain expressions instead of chained logical ands, negated logical ors, or empty objects.
                 '@typescript-eslint/prefer-optional-chain': 'error',
                 // Enforce using String#startsWith and String#endsWith over other equivalent methods of checking substrings.
@@ -121,6 +119,19 @@ const config = {
                 // Disallow variable declarations from shadowing variables declared in the outer scope.
                 'no-shadow': 'off',
                 '@typescript-eslint/no-shadow': 'error',
+                // Only allow unused variables for rest siblings.
+                '@typescript-eslint/no-unused-vars': [
+                    'error',
+                    {
+                        args: 'all',
+                        argsIgnorePattern: '^_',
+                        caughtErrors: 'all',
+                        caughtErrorsIgnorePattern: '^_',
+                        destructuredArrayIgnorePattern: '^_',
+                        varsIgnorePattern: '^_',
+                        ignoreRestSiblings: true,
+                    },
+                ],
                 // Require explicit accessibility modifiers on class properties and methods.
                 '@typescript-eslint/explicit-member-accessibility': [
                     'error',
@@ -163,22 +174,16 @@ const config = {
                             // Index signature
                             'signature',
                             'call-signature',
-
                             // Fields
                             'field',
-
                             // Static initialization
                             'static-initialization',
-
                             // Constructors
                             'constructor',
-
                             // Accessors
                             'accessor',
-
                             // Getters / Setters
                             ['get', 'set'],
-
                             // Methods
                             'method',
                         ],
@@ -199,7 +204,24 @@ const config = {
             files: ['**/*.enum.ts'],
             rules: {
                 // Allow all naming conventions in declaration files.
-                '@typescript-eslint/naming-convention': 'off',
+                '@typescript-eslint/naming-convention': [
+                    'error',
+                    {
+                        selector: 'typeParameter',
+                        format: ['PascalCase'],
+                        prefix: ['T', 'K', 'U', 'V'],
+                    },
+                    {
+                        selector: ['method', 'parameterProperty', 'property'],
+                        modifiers: ['private'],
+                        format: ['camelCase'],
+                        leadingUnderscore: 'require',
+                    },
+                    {
+                        selector: ['interface', 'typeAlias'],
+                        format: ['PascalCase'],
+                    },
+                ],
             },
         },
         {

@@ -34,4 +34,4 @@ export default createLibraryViteConfig({
 
 ## Author
 
--   Julien Papini <julien.papini@gmail.com>
+- Julien Papini <julien.papini@gmail.com>

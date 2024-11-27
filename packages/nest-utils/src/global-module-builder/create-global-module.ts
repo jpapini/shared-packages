@@ -2,7 +2,7 @@ import type { DynamicModule, Provider } from '@nestjs/common';
 import { ConfigurableModuleBuilder, Module } from '@nestjs/common';
 import { uid } from 'uid';
 
-const DEFAULT_FACTORY_CLASS_METHOD_KEY = 'create' as const;
+const DEFAULT_FACTORY_CLASS_METHOD_KEY = 'create';
 
 export function createGlobalModule<
     TModuleOptions,
@@ -15,34 +15,37 @@ export function createGlobalModule<
     const optionsInjectionToken = uid(21);
     const providerInjectionToken = uid(21);
 
-    const { ConfigurableModuleClass, OPTIONS_TYPE, ASYNC_OPTIONS_TYPE } =
-        new ConfigurableModuleBuilder<TModuleOptions, 'forRoot'>({
-            optionsInjectionToken,
-        })
-            .setClassMethodName('forRoot')
-            .setFactoryMethodName(factoryClassMethodKey ?? DEFAULT_FACTORY_CLASS_METHOD_KEY)
-            .setExtras({}, (definition) => {
-                const provider: Provider = {
-                    provide: providerInjectionToken,
-                    inject: [optionsInjectionToken],
-                    useFactory: (options: TModuleOptions) => new providerClass(options),
-                };
+    const {
+        ConfigurableModuleClass,
+        OPTIONS_TYPE: _OPTIONS_TYPE,
+        ASYNC_OPTIONS_TYPE: _ASYNC_OPTIONS_TYPE,
+    } = new ConfigurableModuleBuilder<TModuleOptions, 'forRoot'>({
+        optionsInjectionToken,
+    })
+        .setClassMethodName('forRoot')
+        .setFactoryMethodName(factoryClassMethodKey ?? DEFAULT_FACTORY_CLASS_METHOD_KEY)
+        .setExtras({}, (definition) => {
+            const provider: Provider = {
+                provide: providerInjectionToken,
+                inject: [optionsInjectionToken],
+                useFactory: (options: TModuleOptions) => new providerClass(options),
+            };
 
-                return {
-                    ...definition,
-                    global: true,
-                    providers: [...(definition.providers ?? []), provider],
-                    exports: [...(definition.exports ?? []), provider],
-                };
-            })
-            .build();
+            return {
+                ...definition,
+                global: true,
+                providers: [...(definition.providers ?? []), provider],
+                exports: [...(definition.exports ?? []), provider],
+            };
+        })
+        .build();
 
     @Module({})
     class CoreModule extends ConfigurableModuleClass {}
 
     @Module({})
     class GlobalModule {
-        public static forRoot(options: typeof OPTIONS_TYPE): DynamicModule {
+        public static forRoot(options: typeof _OPTIONS_TYPE): DynamicModule {
             const providers: Provider[] = [
                 {
                     provide: providerClass,
@@ -58,7 +61,7 @@ export function createGlobalModule<
             };
         }
 
-        public static forRootAsync(options: typeof ASYNC_OPTIONS_TYPE): DynamicModule {
+        public static forRootAsync(options: typeof _ASYNC_OPTIONS_TYPE): DynamicModule {
             const providers: Provider[] = [
                 {
                     provide: providerClass,

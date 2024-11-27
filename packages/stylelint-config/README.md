@@ -53,4 +53,4 @@ old
 
 ## Author
 
--   Julien Papini <julien.papini@gmail.com>
+- Julien Papini <julien.papini@gmail.com>

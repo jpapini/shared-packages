@@ -80,15 +80,7 @@ const config = {
             files: ['**/*.{ts,tsx}'],
             rules: {
                 // Allow {} type with React.
-                '@typescript-eslint/ban-types': [
-                    'error',
-                    {
-                        extendDefaults: true,
-                        types: {
-                            '{}': false,
-                        },
-                    },
-                ],
+                '@typescript-eslint/no-empty-object-type': 'off',
             },
         },
         {
@@ -107,6 +99,10 @@ const config = {
                         modifiers: ['private'],
                         format: ['camelCase'],
                         leadingUnderscore: 'require',
+                    },
+                    {
+                        selector: ['interface', 'typeAlias'],
+                        format: ['PascalCase'],
                     },
                 ],
             },

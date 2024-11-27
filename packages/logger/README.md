@@ -20,4 +20,4 @@ logger.info('Hello, world!');
 
 ## Author
 
--   Julien Papini <julien.papini@gmail.com>
+- Julien Papini <julien.papini@gmail.com>

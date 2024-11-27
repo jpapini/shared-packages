@@ -4,8 +4,8 @@ Custom ESLint configuration for JavaScript and TypeScript projects.
 
 Additional configurations are available for:
 
--   React projects: `@jpapini/eslint-config/react`
--   Nest.js projects: `@jpapini/eslint-config/nest`
+- React projects: `@jpapini/eslint-config/react`
+- Nest.js projects: `@jpapini/eslint-config/nest`
 
 ## How to use
 
@@ -62,4 +62,4 @@ old
 
 ## Author
 
--   Julien Papini <julien.papini@gmail.com>
+- Julien Papini <julien.papini@gmail.com>

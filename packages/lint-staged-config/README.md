@@ -12,4 +12,4 @@ pnpm add -D @jpapini/lint-staged-config lint-staged
 
 ## Author
 
--   Julien Papini <julien.papini@gmail.com>
+- Julien Papini <julien.papini@gmail.com>
