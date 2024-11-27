@@ -19,7 +19,7 @@
         },
         {
             "matchPackageNames": ["node"],
-            "allowedVersions": "20"
+            "allowedVersions": "22"
         },
         {
             "matchPackageNames": ["eslint"],
