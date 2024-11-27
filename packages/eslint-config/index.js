@@ -1,75 +1,88 @@
-require('@rushstack/eslint-patch/modern-module-resolution');
+// @ts-check
+const eslint = require('@eslint/js');
+const globals = require('globals');
+const importPlugin = require('eslint-plugin-import');
+const jestPlugin = require('eslint-plugin-jest');
+const prettierPlugin = require('eslint-plugin-prettier/recommended');
+const simpleImportSortPlugin = require('eslint-plugin-simple-import-sort');
+const tseslint = require('typescript-eslint');
+const unicornPlugin = require('eslint-plugin-unicorn');
 
-/** @type {import("eslint").Linter.Config} */
-const config = {
-    extends: ['eslint:recommended', 'plugin:prettier/recommended'],
-    plugins: ['import', 'simple-import-sort', 'unicorn'],
-    parserOptions: {
-        // ECMAScript modules.
-        sourceType: 'module',
-    },
-    env: {
-        // Node.js global variables and Node.js scoping.
-        node: true,
-        // Adds all ECMAScript 2022 globals and automatically sets the ecmaVersion parser option to 13.
-        es2022: true,
-    },
-    rules: {
-        // Require or disallow method and property shorthand syntax for object literals.
-        'object-shorthand': 'error',
-        // Enforce consistent brace style for all control statements.
-        curly: ['error', 'multi-or-nest', 'consistent'],
-        // Require template literals instead of string concatenation.
-        'prefer-template': 'error',
-        quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: false }],
+const { includeGitIgnore } = require('./util');
 
-        // Enforces `node:` prefix. (Example: `import fs from 'node:fs';`)
-        'unicorn/prefer-node-protocol': 'error',
+module.exports = (rootDir) =>
+    tseslint.config(
+        ...includeGitIgnore(rootDir),
+        eslint.configs.recommended,
+        {
+            plugins: {
+                'simple-import-sort': simpleImportSortPlugin,
+                unicorn: unicornPlugin,
+                ...importPlugin.flatConfigs?.recommended.plugins,
+            },
+            languageOptions: {
+                ecmaVersion: 2022,
+                sourceType: 'module',
+                globals: {
+                    ...globals.node,
+                    ...globals.es2022,
+                },
+            },
+            rules: {
+                // Require or disallow method and property shorthand syntax for object literals.
+                'object-shorthand': 'error',
+                // Enforce consistent brace style for all control statements.
+                curly: ['error', 'multi-or-nest', 'consistent'],
+                // Require template literals instead of string concatenation.
+                'prefer-template': 'error',
+                quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: false }],
 
-        // Enforces usage of kebab-case for filenames.
-        'unicorn/filename-case': ['error', { case: 'kebabCase' }],
+                // Enforces `node:` prefix. (Example: `import fs from 'node:fs';`)
+                'unicorn/prefer-node-protocol': 'error',
 
-        // Reports any imports that come after non-import statements.
-        'import/first': 'error',
-        // Enforces having one or more empty lines after the last top-level import statement or require call.
-        'import/newline-after-import': 'error',
-        // Reports if a resolved path is imported more than once.
-        'import/no-duplicates': 'error',
+                // Enforces usage of kebab-case for filenames.
+                'unicorn/filename-case': ['error', { case: 'kebabCase' }],
 
-        // Sort and group exports.
-        'simple-import-sort/exports': 'error',
-        // Sort and group imports.
-        'simple-import-sort/imports': [
-            'error',
-            {
-                groups: [
-                    // Side effect imports.
-                    ['^\\u0000'],
-                    // Node.js builtins prefixed with `node:`.
-                    ['^node:'],
-                    // Packages.
-                    ['^react', '^@nestjs', '^@?\\w'],
-                    // Internal modules.
-                    ['^~[^/]*/[^/]+(/.*|$)'],
-                    // Parent imports. Put `..` last.
-                    ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
-                    // Other relative imports. Put same-folder imports and `.` last.
-                    ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
-                    // Style imports.
-                    ['^.+\\.s?css$'],
+                // Reports any imports that come after non-import statements.
+                'import/first': 'error',
+                // Enforces having one or more empty lines after the last top-level import statement or require call.
+                'import/newline-after-import': 'error',
+                // Reports if a resolved path is imported more than once.
+                'import/no-duplicates': 'error',
+
+                // Sort and group exports.
+                'simple-import-sort/exports': 'error',
+                // Sort and group imports.
+                'simple-import-sort/imports': [
+                    'error',
+                    {
+                        groups: [
+                            // Side effect imports.
+                            ['^\\u0000'],
+                            // Node.js builtins prefixed with `node:`.
+                            ['^node:'],
+                            // Packages.
+                            ['^react', '^@nestjs', '^@?\\w'],
+                            // Internal modules.
+                            ['^~[^/]*/[^/]+(/.*|$)'],
+                            // Parent imports. Put `..` last.
+                            ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+                            // Other relative imports. Put same-folder imports and `.` last.
+                            ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+                            // Style imports.
+                            ['^.+\\.s?css$'],
+                        ],
+                    },
                 ],
             },
-        ],
-    },
-    overrides: [
+        },
         {
             files: ['**/*.{ts,tsx}'],
-            extends: [
-                'plugin:@typescript-eslint/recommended-type-checked',
-                'plugin:prettier/recommended',
-            ],
-            parserOptions: {
-                projectService: true,
+            extends: [tseslint.configs.recommendedTypeChecked],
+            languageOptions: {
+                parserOptions: {
+                    projectService: true,
+                },
             },
             rules: {
                 // Marks all names in the import as type-only and applies to named, default, and namespace.
@@ -225,12 +238,32 @@ const config = {
             },
         },
         {
+            files: ['**/*.enum.ts'],
+            rules: {
+                // Allow all naming conventions in declaration files.
+                '@typescript-eslint/naming-convention': [
+                    'error',
+                    {
+                        selector: 'typeParameter',
+                        format: ['PascalCase'],
+                        prefix: ['T', 'K', 'U', 'V'],
+                    },
+                    {
+                        selector: ['method', 'parameterProperty', 'property'],
+                        modifiers: ['private'],
+                        format: ['camelCase'],
+                        leadingUnderscore: 'require',
+                    },
+                    {
+                        selector: ['interface', 'typeAlias'],
+                        format: ['PascalCase'],
+                    },
+                ],
+            },
+        },
+        {
             files: ['**/*.{spec,test}.{js,jsx,ts,tsx}'],
-            extends: [
-                'plugin:jest/recommended',
-                'plugin:jest/style',
-                'plugin:prettier/recommended',
-            ],
+            extends: [jestPlugin.configs['flat/recommended'], jestPlugin.configs['flat/style']],
             rules: {
                 // Enforce it usage conventions.
                 'jest/consistent-test-it': ['error', { fn: 'it' }],
@@ -252,7 +285,5 @@ const config = {
                 'jest/unbound-method': 'error',
             },
         },
-    ],
-};
-
-module.exports = config;
+        prettierPlugin,
+    );

@@ -1,8 +1,7 @@
-require('@rushstack/eslint-patch/modern-module-resolution');
+// @ts-check
+const prettierPlugin = require('eslint-plugin-prettier/recommended');
+const tseslint = require('typescript-eslint');
 
-/** @type {import("eslint").Linter.Config} */
-const config = {
-    extends: [require.resolve('./index'), 'plugin:prettier/recommended'],
-};
+const base = require('./index');
 
-module.exports = config;
+module.exports = (rootDir) => tseslint.config(base(rootDir), prettierPlugin);

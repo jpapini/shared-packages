@@ -3,7 +3,7 @@ const config = {
         const files = filenames.join(' ');
         return [
             `prettier --cache --cache-location node_modules/.cache/prettier/.prettiercache --write -u ${files}`,
-            `eslint --cache --cache-location node_modules/.cache/eslint/.eslintcache --fix ${files}`,
+            `eslint --flag unstable_config_lookup_from_file --cache --cache-location node_modules/.cache/eslint/.eslintcache --fix ${files}`,
         ];
     },
     '**/*.css': (filenames) => {
