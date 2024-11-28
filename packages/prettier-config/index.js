@@ -1,5 +1,5 @@
 /** @type {import("prettier").Config} */
-const config = {
+module.exports = {
     // Specify the line length that the printer will wrap on.
     printWidth: 100,
     // Specify the number of spaces per indentation-level.
@@ -12,5 +12,3 @@ const config = {
     // Plugins
     plugins: [require.resolve('prettier-plugin-packagejson')],
 };
-
-module.exports = config;

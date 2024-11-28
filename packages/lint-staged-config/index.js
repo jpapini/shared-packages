@@ -1,4 +1,5 @@
-const config = {
+// @ts-check
+module.exports = {
     '**/*.{js,jsx,cjs,mjs,ts,tsx,cts,mts}': (filenames) => {
         const files = filenames.join(' ');
         return [
@@ -20,5 +21,3 @@ const config = {
         ];
     },
 };
-
-module.exports = config;

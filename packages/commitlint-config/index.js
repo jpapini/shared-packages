@@ -1,5 +1,4 @@
-const config = {
+// @ts-check
+module.exports = {
     extends: [require.resolve('@commitlint/config-conventional')],
 };
-
-module.exports = config;

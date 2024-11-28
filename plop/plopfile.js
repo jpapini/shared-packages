@@ -1,3 +1,4 @@
+// @ts-check
 import url from 'node:url';
 
 const ROOT_DIR = url.fileURLToPath(new URL('..', import.meta.url));
@@ -30,10 +31,11 @@ export default function (plop) {
         ],
 
         actions: (answers) => {
+            if (!answers) return [];
             const type = answers.packageType;
 
             if (type === 'cjs') {
-                /** @type {import('plop'.ActionType[])} */
+                /** @type {import('plop').ActionType[]} */
                 return [
                     {
                         type: 'addMany',
@@ -46,7 +48,7 @@ export default function (plop) {
                     },
                 ];
             } else if (type === 'ts') {
-                /** @type {import('plop'.ActionType[])} */
+                /** @type {import('plop').ActionType[]} */
                 return [
                     {
                         type: 'addMany',
@@ -59,6 +61,8 @@ export default function (plop) {
                     },
                 ];
             }
+
+            return [];
         },
     });
 }

@@ -22,10 +22,16 @@
     "type": "module",
     "exports": {
         ".": {
-            "types": "./dist/types/index.d.ts",
-            "import": "./dist/esm/index.mjs",
-            "require": "./dist/cjs/index.cjs"
-        }
+            "import": {
+                "types": "./dist/index.d.ts",
+                "default": "./dist/index.mjs"
+            },
+            "require": {
+                "types": "./dist/index.d.cts",
+                "default": "./dist/index.cjs"
+            }
+        },
+        "./package.json": "./package.json"
     },
     "files": [
         "dist",
@@ -38,13 +44,12 @@
         "test": "jest --color --passWithNoTests",
         "test:watch": "pnpm run test --watch",
         "test:cov": "pnpm run test --coverage",
-        "build": "vite build"
+        "build": "tsup"
     },
     "dependencies": {
         "uid": "2.0.2"
     },
     "devDependencies": {
-        "@jpapini/vite-config": "workspace:*",
         "@nestjs/common": "10.4.11",
         "npm-run-all2": "7.0.1",
         "reflect-metadata": "0.2.2",

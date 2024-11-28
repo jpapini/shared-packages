@@ -21,10 +21,16 @@
     "type": "module",
     "exports": {
         ".": {
-            "types": "./dist/types/index.d.ts",
-            "import": "./dist/esm/index.mjs",
-            "require": "./dist/cjs/index.cjs"
-        }
+            "import": {
+                "types": "./dist/index.d.ts",
+                "default": "./dist/index.mjs"
+            },
+            "require": {
+                "types": "./dist/index.d.cts",
+                "default": "./dist/index.cjs"
+            }
+        },
+        "./package.json": "./package.json"
     },
     "files": [
         "dist",
@@ -37,10 +43,9 @@
         "test": "jest --color --passWithNoTests",
         "test:watch": "pnpm run test --watch",
         "test:cov": "pnpm run test --coverage",
-        "build": "vite build"
+        "build": "tsup"
     },
     "devDependencies": {
-        "@jpapini/vite-config": "workspace:*",
         "npm-run-all2": "7.0.1"
     },
     "packageManager": "pnpm@9.14.2",
