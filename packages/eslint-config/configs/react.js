@@ -25,6 +25,11 @@ const reactConfig = tseslint.config(
                 ...globals.browser,
             },
         },
+        settings: {
+            react: {
+                version: 'detect',
+            },
+        },
         rules: {
             // Enforce boolean attributes notation in JSX.
             'react/jsx-boolean-value': ['error', 'never'],
