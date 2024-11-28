@@ -1,5 +1,21 @@
 # @jpapini/git-hooks
 
+## 1.2.0
+
+### Minor Changes
+
+- [#57](https://github.com/jpapini/shared-packages/pull/57) [`d7f1b99`](https://github.com/jpapini/shared-packages/commit/d7f1b99315dcfbc41b8f3017fe67d4c86b41f92a) Thanks [@jpapini](https://github.com/jpapini)! - Removing Vite.js and adding tsup for bundling libs.
+
+### Patch Changes
+
+- [#57](https://github.com/jpapini/shared-packages/pull/57) [`d406c14`](https://github.com/jpapini/shared-packages/commit/d406c14930efb676bbf082a92dcacdae6e6454fe) Thanks [@jpapini](https://github.com/jpapini)! - Update typscript-eslint-plugin to v8.
+
+- [#57](https://github.com/jpapini/shared-packages/pull/57) [`3487ddd`](https://github.com/jpapini/shared-packages/commit/3487ddd20805742e5bd511b747caaefb2bc1559c) Thanks [@jpapini](https://github.com/jpapini)! - Upgrade ESLint to version 9.
+
+- Updated dependencies [[`d406c14`](https://github.com/jpapini/shared-packages/commit/d406c14930efb676bbf082a92dcacdae6e6454fe), [`3487ddd`](https://github.com/jpapini/shared-packages/commit/3487ddd20805742e5bd511b747caaefb2bc1559c), [`d7f1b99`](https://github.com/jpapini/shared-packages/commit/d7f1b99315dcfbc41b8f3017fe67d4c86b41f92a)]:
+    - @jpapini/lint-staged-config@1.2.0
+    - @jpapini/commitlint-config@1.2.0
+
 ## 1.1.9
 
 ### Patch Changes

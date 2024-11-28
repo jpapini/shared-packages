@@ -1,6 +1,6 @@
 {
     "name": "@jpapini/type-check",
-    "version": "1.1.8",
+    "version": "1.2.0",
     "description": "This package provides a set of utilities to check the type of values.",
     "keywords": [
         "jpapini",
