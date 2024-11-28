@@ -8,7 +8,6 @@
 '@jpapini/eslint-config': patch
 '@jpapini/http-server': patch
 '@jpapini/jest-config': patch
-'@jpapini/vite-config': patch
 '@jpapini/nest-utils': patch
 '@jpapini/type-check': patch
 '@jpapini/git-hooks': patch
