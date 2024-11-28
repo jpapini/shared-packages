@@ -59,14 +59,14 @@
         "@swc/jest": "0.2",
         "jest": "29"
     },
-    "packageManager": "pnpm@9.14.2",
+    "packageManager": "pnpm@9.14.3",
     "engines": {
         "node": "22",
         "pnpm": "9"
     },
     "volta": {
         "node": "22.11.0",
-        "pnpm": "9.14.2"
+        "pnpm": "9.14.3"
     },
     "publishConfig": {
         "access": "public"
