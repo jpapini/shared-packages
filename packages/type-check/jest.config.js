@@ -1,3 +1,4 @@
+// @ts-check
 import { createRequire } from 'node:module';
 import url from 'node:url';
 

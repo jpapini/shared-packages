@@ -25,4 +25,4 @@ pnpm add -D @jpapini/commitlint-config @commitlint/cli
 
 ## Author
 
--   Julien Papini <julien.papini@gmail.com>
+- Julien Papini <julien.papini@gmail.com>

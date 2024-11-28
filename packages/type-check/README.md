@@ -21,4 +21,4 @@ console.log(isString(42)); // false
 
 ## Author
 
--   Julien Papini <julien.papini@gmail.com>
+- Julien Papini <julien.papini@gmail.com>

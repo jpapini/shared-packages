@@ -1,9 +1,10 @@
-const config = {
+// @ts-check
+module.exports = {
     '**/*.{js,jsx,cjs,mjs,ts,tsx,cts,mts}': (filenames) => {
         const files = filenames.join(' ');
         return [
             `prettier --cache --cache-location node_modules/.cache/prettier/.prettiercache --write -u ${files}`,
-            `eslint --cache --cache-location node_modules/.cache/eslint/.eslintcache --fix ${files}`,
+            `eslint --flag unstable_config_lookup_from_file --cache --cache-location node_modules/.cache/eslint/.eslintcache --fix ${files}`,
         ];
     },
     '**/*.css': (filenames) => {
@@ -20,5 +21,3 @@ const config = {
         ];
     },
 };
-
-module.exports = config;

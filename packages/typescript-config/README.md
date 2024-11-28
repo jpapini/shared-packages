@@ -4,9 +4,9 @@ Custom Typescript configurations.
 
 Available configurations:
 
--   Node.js projects: `@jpapini/typescript-config/tsconfig.node.json`
--   React.js projects: `@jpapini/typescript-config/tsconfig.react.json`
--   Nest.js projects: `@jpapini/typescript-config/tsconfig.nest.json`
+- Node.js projects: `@jpapini/typescript-config/tsconfig.node.json`
+- React.js projects: `@jpapini/typescript-config/tsconfig.react.json`
+- Nest.js projects: `@jpapini/typescript-config/tsconfig.nest.json`
 
 ## How to use
 
@@ -35,4 +35,4 @@ pnpm add -D @jpapini/typescript-config typescript @types/node
 
 ## Author
 
--   Julien Papini <julien.papini@gmail.com>
+- Julien Papini <julien.papini@gmail.com>

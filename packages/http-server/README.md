@@ -18,4 +18,4 @@ PUBLIC_URL=http://localhost:8080/
 
 ## Author
 
--   Julien Papini <julien.papini@gmail.com>
+- Julien Papini <julien.papini@gmail.com>

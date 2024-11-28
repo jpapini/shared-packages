@@ -4,8 +4,8 @@ Custom Prettier configuration for JavaScript and TypeScript projects.
 
 Additional configurations are available for:
 
--   Prisma projects: `@jpapini/prettier-config/prisma`
--   Tailwind CSS projects: `@jpapini/prettier-config/tailwind`
+- Prisma projects: `@jpapini/prettier-config/prisma`
+- Tailwind CSS projects: `@jpapini/prettier-config/tailwind`
 
 ## How to use
 
@@ -66,4 +66,4 @@ old
 
 ## Author
 
--   Julien Papini <julien.papini@gmail.com>
+- Julien Papini <julien.papini@gmail.com>

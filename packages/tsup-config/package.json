@@ -1,0 +1,53 @@
+{
+    "name": "@jpapini/tsup-config",
+    "version": "1.0.0",
+    "description": "Custom tsup configuration for TypeScript libraries.",
+    "keywords": [
+        "jpapini",
+        "tsup-config",
+        "tools",
+        "tsup",
+        "bundler"
+    ],
+    "homepage": "https://github.com/jpapini/shared-packages/tree/main/packages/tsup-config#readme",
+    "bugs": {
+        "url": "https://github.com/jpapini/shared-packages/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jpapini/shared-packages.git",
+        "directory": "packages/tsup-config"
+    },
+    "license": "MIT",
+    "author": "Julien Papini <julien.papini@gmail.com> (https://github.com/jpapini)",
+    "type": "commonjs",
+    "exports": {
+        ".": "./index.js"
+    },
+    "files": [
+        "*.js"
+    ],
+    "scripts": {
+        "clean": "rimraf .turbo node_modules/.cache",
+        "reset": "pnpm run clean; rimraf node_modules"
+    },
+    "devDependencies": {
+        "npm-run-all2": "7.0.1",
+        "tsup": "8.3.5"
+    },
+    "peerDependencies": {
+        "tsup": "8"
+    },
+    "packageManager": "pnpm@9.14.3",
+    "engines": {
+        "node": "22",
+        "pnpm": "9"
+    },
+    "volta": {
+        "node": "22.11.0",
+        "pnpm": "9.14.3"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}

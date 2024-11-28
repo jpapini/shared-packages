@@ -12,4 +12,4 @@ pnpm add @jpapini/nest-utils @nestjs/common
 
 ## Author
 
--   Julien Papini <julien.papini@gmail.com>
+- Julien Papini <julien.papini@gmail.com>

@@ -23,7 +23,7 @@ export function createBuildConfiguration(
     rootDir: string,
     getOptions: () => ICreateBuildConfigurationOptions | Promise<ICreateBuildConfigurationOptions>,
 ) {
-    return async function (env?: IWebpackEnv | undefined): Promise<IWebpackConfiguration> {
+    return async function (env?: IWebpackEnv): Promise<IWebpackConfiguration> {
         const { nodeEnv, publicUrl } = loadEnvVars(rootDir);
         const options = await getOptions();
 

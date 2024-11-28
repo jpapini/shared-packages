@@ -24,25 +24,24 @@
     "author": "Julien Papini <julien.papini@gmail.com> (https://github.com/jpapini)",
     "type": "commonjs",
     "exports": {
-        ".": "./index.js",
-        "./react": "./react.js",
-        "./react.js": "./react.js",
-        "./nest": "./nest.js",
-        "./nest.js": "./nest.js"
+        ".": "./configs/base.js",
+        "./react": "./configs/react.js",
+        "./react.js": "./configs/react.js",
+        "./nest": "./configs/nest.js",
+        "./nest.js": "./configs/nest.js"
     },
     "files": [
-        "*.js"
+        "configs",
+        "utils"
     ],
     "scripts": {
         "clean": "rimraf .turbo node_modules/.cache",
         "reset": "pnpm run clean; rimraf node_modules"
     },
     "dependencies": {
-        "@rushstack/eslint-patch": "1.10.4",
-        "@typescript-eslint/eslint-plugin": "7.18.0",
-        "@typescript-eslint/parser": "7.18.0",
+        "@eslint/compat": "1.2.3",
+        "@eslint/js": "9.15.0",
         "eslint-config-prettier": "9.1.0",
-        "eslint-plugin-10x": "1.5.2",
         "eslint-plugin-import": "2.31.0",
         "eslint-plugin-jest": "28.9.0",
         "eslint-plugin-jsx-a11y": "6.10.2",
@@ -50,23 +49,26 @@
         "eslint-plugin-react": "7.37.2",
         "eslint-plugin-react-hooks": "5.0.0",
         "eslint-plugin-simple-import-sort": "12.1.1",
-        "eslint-plugin-unicorn": "56.0.1"
+        "eslint-plugin-unicorn": "56.0.1",
+        "globals": "15.12.0",
+        "memoize-one": "6.0.0",
+        "typescript-eslint": "8.16.0"
     },
     "devDependencies": {
-        "eslint": "8.57.1",
+        "eslint": "9.15.0",
         "npm-run-all2": "7.0.1"
     },
     "peerDependencies": {
-        "eslint": "8"
+        "eslint": "9"
     },
-    "packageManager": "pnpm@9.14.2",
+    "packageManager": "pnpm@9.14.3",
     "engines": {
         "node": "22",
         "pnpm": "9"
     },
     "volta": {
         "node": "22.11.0",
-        "pnpm": "9.14.2"
+        "pnpm": "9.14.3"
     },
     "publishConfig": {
         "access": "public"

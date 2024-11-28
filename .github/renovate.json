@@ -19,11 +19,7 @@
         },
         {
             "matchPackageNames": ["node"],
-            "allowedVersions": "20"
-        },
-        {
-            "matchPackageNames": ["eslint"],
-            "allowedVersions": "8"
+            "allowedVersions": "22"
         }
     ],
     "vulnerabilityAlerts": {

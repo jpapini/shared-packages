@@ -12,4 +12,4 @@ pnpm add -D @jpapini/git-hooks
 
 ## Author
 
--   Julien Papini <julien.papini@gmail.com>
+- Julien Papini <julien.papini@gmail.com>

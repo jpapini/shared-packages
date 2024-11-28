@@ -4,8 +4,8 @@ Custom Webpack configuration for bundling projects.
 
 Available configurations:
 
--   React.js projects: `createReactAppWebpackConfig`
--   Nest.js projects: `createNestAppWebpackConfig`
+- React.js projects: `createReactAppWebpackConfig`
+- Nest.js projects: `createNestAppWebpackConfig`
 
 ## How to use
 
@@ -49,4 +49,4 @@ module.exports = createNestAppWebpackConfig(path.resolve(__dirname));
 
 ## Author
 
--   Julien Papini <julien.papini@gmail.com>
+- Julien Papini <julien.papini@gmail.com>

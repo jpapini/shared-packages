@@ -1,5 +1,7 @@
+// @ts-check
+
 /** @type {import("stylelint").Config} */
-const config = {
+module.exports = {
     extends: [
         'stylelint-config-standard',
         'stylelint-config-clean-order',
@@ -10,5 +12,3 @@ const config = {
         'selector-class-pattern': null,
     },
 };
-
-module.exports = config;
