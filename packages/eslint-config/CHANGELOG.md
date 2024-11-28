@@ -1,5 +1,11 @@
 # @jpapini/eslint-config
 
+## 1.5.1
+
+### Patch Changes
+
+- [`61a43fb`](https://github.com/jpapini/shared-packages/commit/61a43fb08e7c793ce6cce835768e9ceaf273a580) Thanks [@jpapini](https://github.com/jpapini)! - Detect React.js version.
+
 ## 1.5.0
 
 ### Minor Changes
