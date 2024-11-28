@@ -1,5 +1,22 @@
 # @jpapini/webpack-config
 
+## 2.1.0
+
+### Minor Changes
+
+- [#57](https://github.com/jpapini/shared-packages/pull/57) [`d7f1b99`](https://github.com/jpapini/shared-packages/commit/d7f1b99315dcfbc41b8f3017fe67d4c86b41f92a) Thanks [@jpapini](https://github.com/jpapini)! - Removing Vite.js and adding tsup for bundling libs.
+
+### Patch Changes
+
+- [#57](https://github.com/jpapini/shared-packages/pull/57) [`d406c14`](https://github.com/jpapini/shared-packages/commit/d406c14930efb676bbf082a92dcacdae6e6454fe) Thanks [@jpapini](https://github.com/jpapini)! - Update typscript-eslint-plugin to v8.
+
+- [#57](https://github.com/jpapini/shared-packages/pull/57) [`b8768a6`](https://github.com/jpapini/shared-packages/commit/b8768a62f18609d3978111dbd69829ccd2346e42) Thanks [@jpapini](https://github.com/jpapini)! - Sort types key in exports.
+
+- [#57](https://github.com/jpapini/shared-packages/pull/57) [`3487ddd`](https://github.com/jpapini/shared-packages/commit/3487ddd20805742e5bd511b747caaefb2bc1559c) Thanks [@jpapini](https://github.com/jpapini)! - Upgrade ESLint to version 9.
+
+- Updated dependencies [[`d406c14`](https://github.com/jpapini/shared-packages/commit/d406c14930efb676bbf082a92dcacdae6e6454fe), [`b8768a6`](https://github.com/jpapini/shared-packages/commit/b8768a62f18609d3978111dbd69829ccd2346e42), [`3487ddd`](https://github.com/jpapini/shared-packages/commit/3487ddd20805742e5bd511b747caaefb2bc1559c), [`d7f1b99`](https://github.com/jpapini/shared-packages/commit/d7f1b99315dcfbc41b8f3017fe67d4c86b41f92a)]:
+    - @jpapini/logger@1.2.0
+
 ## 2.0.0
 
 ### Major Changes
