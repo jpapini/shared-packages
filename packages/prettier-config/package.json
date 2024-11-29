@@ -1,6 +1,6 @@
 {
     "name": "@jpapini/prettier-config",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "Custom Prettier configuration for JavaScript and TypeScript projects.",
     "keywords": [
         "jpapini",
