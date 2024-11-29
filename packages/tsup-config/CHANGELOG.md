@@ -1,5 +1,13 @@
 # @jpapini/tsup-config
 
+## 1.1.1
+
+### Patch Changes
+
+- [#55](https://github.com/jpapini/shared-packages/pull/55) [`6e27ba1`](https://github.com/jpapini/shared-packages/commit/6e27ba19dfe2aceb5c8c335ca9a648c35e3c38d5) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@9.14.4`.
+  Updated dependency `pnpm` to `9.14.4`.
+  Updated dependency `@nestjs/common` to `10.4.12`.
+
 ## 1.1.0
 
 ### Minor Changes
