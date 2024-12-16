@@ -1,5 +1,30 @@
 # @jpapini/nest-utils
 
+## 1.2.2
+
+### Patch Changes
+
+- [#61](https://github.com/jpapini/shared-packages/pull/61) [`7c78e5e`](https://github.com/jpapini/shared-packages/commit/7c78e5e63abf2d34bd234cf80956353c2e4e519b) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@9.15.0`.
+  Updated dependency `node` to `22.12.0`.
+  Updated dependency `pnpm` to `9.15.0`.
+  Updated dependency `stylelint` to `16.12.0`.
+  Updated dependency `prettier` to `3.4.2`.
+  Updated dependency `@nestjs/common` to `10.4.15`.
+  Updated dependency `lint-staged` to `15.2.11`.
+  Updated dependency `@swc/core` to `1.10.1`.
+  Updated dependency `dotenv` to `16.4.7`.
+  Updated dependency `@commitlint/cli` to `19.6.1`.
+  Updated dependency `@eslint/compat` to `1.2.4`.
+  Updated dependency `@eslint/js` to `9.17.0`.
+  Updated dependency `eslint-plugin-react-hooks` to `5.1.0`.
+  Updated dependency `globals` to `15.13.0`.
+  Updated dependency `typescript-eslint` to `8.18.0`.
+  Updated dependency `eslint` to `9.17.0`.
+  Updated dependency `@types/node` to `22.10.2`.
+  Updated dependency `tailwindcss` to `3.4.16`.
+  Updated dependency `webpack` to `5.97.1`.
+  Updated dependency `webpack-dev-server` to `5.2.0`.
+
 ## 1.2.1
 
 ### Patch Changes
