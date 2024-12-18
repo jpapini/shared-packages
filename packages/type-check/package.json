@@ -46,7 +46,7 @@
         "build": "tsup"
     },
     "devDependencies": {
-        "npm-run-all2": "7.0.1"
+        "npm-run-all2": "7.0.2"
     },
     "packageManager": "pnpm@9.15.0",
     "engines": {
