@@ -27,6 +27,7 @@
         ".": "./index.js"
     },
     "files": [
+        "configs",
         "*.js"
     ],
     "scripts": {
