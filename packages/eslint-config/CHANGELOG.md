@@ -1,5 +1,11 @@
 # @jpapini/eslint-config
 
+## 1.7.0
+
+### Minor Changes
+
+- [`b25988f`](https://github.com/jpapini/shared-packages/commit/b25988f551fd93d9be9863ae8611b3cae5fe31bd) Thanks [@jpapini](https://github.com/jpapini)! - Disable react/jsx-filename-extension
+
 ## 1.6.1
 
 ### Patch Changes
