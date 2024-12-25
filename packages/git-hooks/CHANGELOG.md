@@ -1,5 +1,17 @@
 # @jpapini/git-hooks
 
+## 1.3.0
+
+### Minor Changes
+
+- [`b9518a2`](https://github.com/jpapini/shared-packages/commit/b9518a25ade7c656d7a93364e0588308c71e5e3d) Thanks [@jpapini](https://github.com/jpapini)! - Use the new ESLint configuration.
+
+### Patch Changes
+
+- Updated dependencies [[`b9518a2`](https://github.com/jpapini/shared-packages/commit/b9518a25ade7c656d7a93364e0588308c71e5e3d)]:
+    - @jpapini/lint-staged-config@1.3.0
+    - @jpapini/commitlint-config@1.3.0
+
 ## 1.2.3
 
 ### Patch Changes

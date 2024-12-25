@@ -1,5 +1,16 @@
 # @jpapini/webpack-config
 
+## 2.2.0
+
+### Minor Changes
+
+- [`b9518a2`](https://github.com/jpapini/shared-packages/commit/b9518a25ade7c656d7a93364e0588308c71e5e3d) Thanks [@jpapini](https://github.com/jpapini)! - Use the new ESLint configuration.
+
+### Patch Changes
+
+- Updated dependencies [[`b9518a2`](https://github.com/jpapini/shared-packages/commit/b9518a25ade7c656d7a93364e0588308c71e5e3d)]:
+    - @jpapini/logger@1.3.0
+
 ## 2.1.3
 
 ### Patch Changes

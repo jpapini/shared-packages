@@ -1,5 +1,11 @@
 # @jpapini/eslint-config
 
+## 1.6.0
+
+### Minor Changes
+
+- [`b9518a2`](https://github.com/jpapini/shared-packages/commit/b9518a25ade7c656d7a93364e0588308c71e5e3d) Thanks [@jpapini](https://github.com/jpapini)! - Use the new ESLint configuration.
+
 ## 1.5.4
 
 ### Patch Changes
