@@ -1,5 +1,20 @@
 # @jpapini/tsup-config
 
+## 1.1.3
+
+### Patch Changes
+
+- [#63](https://github.com/jpapini/shared-packages/pull/63) [`1593023`](https://github.com/jpapini/shared-packages/commit/15930237caae46e689fadf7724a6f4860f83c826) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `npm-run-all2` to `7.0.2`.
+  Updated dependency `packageManager` to `pnpm@9.15.1`.
+  Updated dependency `pnpm` to `9.15.1`.
+  Updated dependency `consola` to `3.3.1`.
+  Updated dependency `eslint-plugin-jest` to `28.10.0`.
+  Updated dependency `eslint-plugin-react` to `7.37.3`.
+  Updated dependency `globals` to `15.14.0`.
+  Updated dependency `typescript-eslint` to `8.18.2`.
+  Updated dependency `@changesets/cli` to `2.27.11`.
+  Updated dependency `tailwindcss` to `3.4.17`.
+
 ## 1.1.2
 
 ### Patch Changes
