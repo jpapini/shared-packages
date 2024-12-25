@@ -1,5 +1,11 @@
 # @jpapini/eslint-config
 
+## 1.6.1
+
+### Patch Changes
+
+- [`a97cbd9`](https://github.com/jpapini/shared-packages/commit/a97cbd9d7105b3f84248f77501e6d23e8ef0a8d1) Thanks [@jpapini](https://github.com/jpapini)! - Fix package.json files field.
+
 ## 1.6.0
 
 ### Minor Changes
