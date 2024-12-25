@@ -1,5 +1,5 @@
-import type { DynamicModule, Provider } from '@nestjs/common';
 import { ConfigurableModuleBuilder, Module } from '@nestjs/common';
+import type { DynamicModule, Provider } from '@nestjs/common';
 import { uid } from 'uid';
 
 const DEFAULT_FACTORY_CLASS_METHOD_KEY = 'create';
@@ -9,7 +9,7 @@ export function createGlobalModule<
     TProviderClass,
     TFactoryClassMethodKey extends string = typeof DEFAULT_FACTORY_CLASS_METHOD_KEY,
 >(
-    providerClass: new (options: TModuleOptions) => TProviderClass,
+    ProviderClass: new (options: TModuleOptions) => TProviderClass,
     factoryClassMethodKey?: TFactoryClassMethodKey,
 ) {
     const optionsInjectionToken = uid(21);
@@ -28,7 +28,7 @@ export function createGlobalModule<
             const provider: Provider = {
                 provide: providerInjectionToken,
                 inject: [optionsInjectionToken],
-                useFactory: (options: TModuleOptions) => new providerClass(options),
+                useFactory: (options: TModuleOptions) => new ProviderClass(options),
             };
 
             return {
@@ -48,7 +48,7 @@ export function createGlobalModule<
         public static forRoot(options: typeof _OPTIONS_TYPE): DynamicModule {
             const providers: Provider[] = [
                 {
-                    provide: providerClass,
+                    provide: ProviderClass,
                     useExisting: providerInjectionToken,
                 },
             ];
@@ -64,7 +64,7 @@ export function createGlobalModule<
         public static forRootAsync(options: typeof _ASYNC_OPTIONS_TYPE): DynamicModule {
             const providers: Provider[] = [
                 {
-                    provide: providerClass,
+                    provide: ProviderClass,
                     useExisting: providerInjectionToken,
                 },
             ];
@@ -80,7 +80,7 @@ export function createGlobalModule<
         public static forFeature(): DynamicModule {
             const providers: Provider[] = [
                 {
-                    provide: providerClass,
+                    provide: ProviderClass,
                     useExisting: providerInjectionToken,
                 },
             ];

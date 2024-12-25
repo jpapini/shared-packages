@@ -1,24 +1,33 @@
 {
     "$schema": "https://turbo.build/schema.json",
+    "ui": "tui",
     "tasks": {
         "clean": {
-            "cache": false
+            "cache": false,
+            "outputLogs": "errors-only"
         },
         "reset": {
-            "cache": false
+            "cache": false,
+            "outputLogs": "errors-only"
         },
-        "typecheck": {},
-        "test": {},
+        "typecheck": {
+            "dependsOn": ["^build"]
+        },
+        "test": {
+            "dependsOn": ["^build"]
+        },
+        "test:cov": {
+            "dependsOn": ["^build"],
+            "outputs": ["coverage/**"]
+        },
         "test:watch": {
+            "dependsOn": ["^build"],
             "cache": false,
             "persistent": true
         },
-        "test:cov": {
-            "outputs": ["coverage/**"]
-        },
         "build": {
             "dependsOn": ["^build"],
-            "outputs": ["dist/**", "*.tsbuildinfo"]
+            "outputs": ["dist/**"]
         }
     }
 }

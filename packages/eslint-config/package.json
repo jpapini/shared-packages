@@ -24,15 +24,10 @@
     "author": "Julien Papini <julien.papini@gmail.com> (https://github.com/jpapini)",
     "type": "commonjs",
     "exports": {
-        ".": "./configs/base.js",
-        "./react": "./configs/react.js",
-        "./react.js": "./configs/react.js",
-        "./nest": "./configs/nest.js",
-        "./nest.js": "./configs/nest.js"
+        ".": "./index.js"
     },
     "files": [
-        "configs",
-        "utils"
+        "*.js"
     ],
     "scripts": {
         "clean": "rimraf .turbo node_modules/.cache",
@@ -41,20 +36,22 @@
     "dependencies": {
         "@eslint/compat": "1.2.4",
         "@eslint/js": "9.17.0",
+        "@stylistic/eslint-plugin": "2.12.1",
         "eslint-config-prettier": "9.1.0",
-        "eslint-plugin-import": "2.31.0",
+        "eslint-import-resolver-typescript": "3.7.0",
+        "eslint-plugin-import-x": "4.6.1",
         "eslint-plugin-jest": "28.10.0",
         "eslint-plugin-jsx-a11y": "6.10.2",
         "eslint-plugin-prettier": "5.2.1",
         "eslint-plugin-react": "7.37.3",
         "eslint-plugin-react-hooks": "5.1.0",
-        "eslint-plugin-simple-import-sort": "12.1.1",
         "eslint-plugin-unicorn": "56.0.1",
         "globals": "15.14.0",
         "memoize-one": "6.0.0",
         "typescript-eslint": "8.18.2"
     },
     "devDependencies": {
+        "@types/eslint-plugin-jsx-a11y": "6.10.0",
         "eslint": "9.17.0",
         "npm-run-all2": "7.0.2"
     },

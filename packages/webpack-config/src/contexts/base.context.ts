@@ -7,7 +7,7 @@ import { findFilePathOrThrow } from '~/utils/find-file-path.util';
 import { findProjectRoot } from '~/utils/find-project-root.util';
 import { shorternPath } from '~/utils/shortern-path.util';
 
-export type IBaseContextOptions<TBuildType extends BuildType = BuildType> = {
+export type BaseContextOptions<TBuildType extends BuildType = BuildType> = {
     buildType: TBuildType;
     id: string;
 
@@ -49,7 +49,7 @@ export abstract class BaseContext<TBuildType extends BuildType = BuildType> {
 
     protected _publicUrl: URL;
 
-    constructor(options: IBaseContextOptions<TBuildType>) {
+    constructor(options: BaseContextOptions<TBuildType>) {
         this._buildType = options.buildType;
         this._id = options.id;
 

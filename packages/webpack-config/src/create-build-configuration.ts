@@ -1,33 +1,32 @@
 import { colors, logger } from '@jpapini/logger';
 
-import { mergePresets } from './utils/merge-presets.util';
-import type { IContextOptions } from './context.factory';
 import { contextFactory } from './context.factory';
+import type { ContextOptions } from './context.factory';
 import { NestAppContext, ReactAppContext } from './contexts';
 import { NodeEnv } from './enums';
 import { loadEnvVars } from './load-env-vars';
 import { createBasePreset, createNestAppPreset, createReactAppPreset } from './presets';
-import type { IWebpackConfiguration, IWebpackEnv } from './types';
+import type { WebpackConfiguration, WebpackEnv } from './types';
+import { mergePresets } from './utils/merge-presets.util';
 
-// eslint-disable-next-line @typescript-eslint/naming-convention
 type KeysOfUnion<T> = T extends unknown ? keyof T : never;
-// eslint-disable-next-line @typescript-eslint/naming-convention
+
 type DistributedOmit<T, K extends KeysOfUnion<T>> = T extends unknown ? Omit<T, K> : never;
 
-export type ICreateBuildConfigurationOptions = DistributedOmit<
-    IContextOptions,
+export type CreateBuildConfigurationOptions = DistributedOmit<
+    ContextOptions,
     'rootDir' | 'nodeEnv' | 'isProduction' | 'isDevServer' | 'isWatchMode' | 'publicUrl'
 >;
 
 export function createBuildConfiguration(
     rootDir: string,
-    getOptions: () => ICreateBuildConfigurationOptions | Promise<ICreateBuildConfigurationOptions>,
+    getOptions: () => CreateBuildConfigurationOptions | Promise<CreateBuildConfigurationOptions>,
 ) {
-    return async function (env?: IWebpackEnv): Promise<IWebpackConfiguration> {
+    return async function (env?: WebpackEnv): Promise<WebpackConfiguration> {
         const { nodeEnv, publicUrl } = loadEnvVars(rootDir);
         const options = await getOptions();
 
-        const contextOptions: IContextOptions = {
+        const contextOptions: ContextOptions = {
             ...options,
             rootDir,
             nodeEnv,
@@ -46,8 +45,10 @@ export function createBuildConfiguration(
             ...(context instanceof ReactAppContext ? [createReactAppPreset] : []),
         ]);
 
-        logger.info(`Loaded presets:`);
-        loadedPresets.forEach((presetName) => logger.log('  -', colors.blue(presetName)));
+        logger.info('Loaded presets:');
+        loadedPresets.forEach((presetName) => {
+            logger.log('  -', colors.blue(presetName));
+        });
 
         return config;
     };

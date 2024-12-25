@@ -1,20 +1,20 @@
 import type { Config } from '@jest/types';
 import type { CompilerOptions } from 'typescript';
 
-type ITsPathMapping = Exclude<CompilerOptions['paths'], undefined>;
-type IJestPathMapping = Config.InitialOptions['moduleNameMapper'];
+type TsPathMapping = Exclude<CompilerOptions['paths'], undefined>;
+type JestPathMapping = Config.InitialOptions['moduleNameMapper'];
 
-const escapeRegex = (str: string) => str.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&');
+const escapeRegex = (str: string) => str.replace(/[-\\^$*+?.()|[\]{}]/gu, '\\$&');
 
 export const pathsToModuleNameMapper = (
-    mapping: ITsPathMapping,
+    mapping: TsPathMapping,
     { prefix = '', useESM = false }: { prefix?: string; useESM?: boolean } = {},
-): IJestPathMapping => {
-    const jestMap: IJestPathMapping = {};
+): JestPathMapping => {
+    const jestMap: JestPathMapping = {};
     for (const fromPath of Object.keys(mapping)) {
         const toPaths = mapping[fromPath]!;
         if (toPaths.length === 0) continue;
-        const segments = fromPath.split(/\*/g);
+        const segments = fromPath.split(/\*/gu);
         if (segments.length === 1) {
             const paths = toPaths.map((target) => {
                 const enrichedPrefix =
@@ -33,7 +33,7 @@ export const pathsToModuleNameMapper = (
                 const enrichedPrefix =
                     prefix !== '' && !prefix.endsWith('/') ? `${prefix}/` : prefix;
 
-                return `${enrichedPrefix}${enrichedTarget.replace(/\*/g, '$1')}`;
+                return `${enrichedPrefix}${enrichedTarget.replace(/\*/gu, '$1')}`;
             });
             if (useESM) {
                 const esmPattern = `^${escapeRegex(segments[0]!)}(.*)${escapeRegex(segments[1]!)}\\.js$`;

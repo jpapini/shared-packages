@@ -1,10 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import memo from 'memoize-one';
+import memoizeOne from 'memoize-one';
 
-function _findProjectRoot(currentDir?: string): string {
-    let dir = currentDir ?? process.cwd();
+function _findProjectRoot(currentDir = process.cwd()): string {
+    let dir = currentDir;
 
     while (dir !== '/') {
         if (fs.existsSync(path.join(dir, '.git'))) return dir;
@@ -14,4 +14,4 @@ function _findProjectRoot(currentDir?: string): string {
     throw new Error(`Project root not found for directory: ${currentDir}`);
 }
 
-export const findProjectRoot = memo(_findProjectRoot);
+export const findProjectRoot = memoizeOne(_findProjectRoot);

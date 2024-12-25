@@ -1,6 +1,5 @@
-// @ts-check
 import url from 'node:url';
 
-import eslintConfig from '@jpapini/eslint-config';
+import { createBaseEslintConfig } from '@jpapini/eslint-config';
 
-export default eslintConfig(url.fileURLToPath(new URL('.', import.meta.url)));
+export default createBaseEslintConfig(url.fileURLToPath(new URL('.', import.meta.url)));

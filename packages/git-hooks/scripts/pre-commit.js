@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-// @ts-check
 import { spawnSync } from 'node:child_process';
 import { createRequire } from 'node:module';
 

@@ -1,4 +1,3 @@
-// @ts-check
 import url from 'node:url';
 
 const ROOT_DIR = url.fileURLToPath(new URL('..', import.meta.url));

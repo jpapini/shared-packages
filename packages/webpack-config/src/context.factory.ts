@@ -1,10 +1,10 @@
-import type { BaseContext, INestAppContextOptions, IReactAppContextOptions } from './contexts';
 import { NestAppContext, ReactAppContext } from './contexts';
+import type { BaseContext, NestAppContextOptions, ReactAppContextOptions } from './contexts';
 import { BuildType } from './enums';
 
-export type IContextOptions = INestAppContextOptions | IReactAppContextOptions;
+export type ContextOptions = NestAppContextOptions | ReactAppContextOptions;
 
-export function contextFactory(options: IContextOptions): BaseContext {
+export function contextFactory(options: ContextOptions): BaseContext {
     switch (true) {
         case options.buildType === BuildType.NEST_APP:
             return new NestAppContext(options);

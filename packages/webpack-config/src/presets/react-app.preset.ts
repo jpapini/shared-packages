@@ -13,11 +13,11 @@ import {
     TS_RULE_TEST,
 } from '~/constants';
 import { ReactAppContext } from '~/contexts';
-import type { IPresetFunc } from '~/types';
+import type { PresetFunc } from '~/types';
 
 const require = createRequire(import.meta.url);
 
-export const createReactAppPreset: IPresetFunc = (context) => {
+export const createReactAppPreset: PresetFunc = (context) => {
     if (!(context instanceof ReactAppContext)) throw new Error('Invalid context');
 
     return {

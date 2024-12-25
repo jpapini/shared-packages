@@ -7,13 +7,13 @@ import nodeExternals from 'webpack-node-externals';
 
 import { TS_RULE_TEST } from '~/constants';
 import { NestAppContext } from '~/contexts';
-import type { IPresetFunc } from '~/types';
+import type { PresetFunc } from '~/types';
 
 const { HotModuleReplacementPlugin } = webpack;
 
 const require = createRequire(import.meta.url);
 
-export const createNestAppPreset: IPresetFunc = (context) => {
+export const createNestAppPreset: PresetFunc = (context) => {
     if (!(context instanceof NestAppContext)) throw new Error('Invalid context');
 
     return {

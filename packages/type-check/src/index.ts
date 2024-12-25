@@ -33,10 +33,9 @@ export const isObject = (value: unknown): value is object =>
 export const isPlainObject = (value: unknown): value is Record<string, unknown> => {
     if (!isObject(value)) return false;
     const proto: unknown = Object.getPrototypeOf(value);
-    if (proto === null) return true;
+    if (proto === null || proto === undefined) return true;
     const ctor =
-        Object.prototype.hasOwnProperty.call(proto, 'constructor') &&
-        (proto as { constructor: unknown }).constructor;
+        Object.hasOwn(proto, 'constructor') && (proto as { constructor: unknown }).constructor;
     return (
         typeof ctor === 'function' &&
         ctor instanceof ctor &&

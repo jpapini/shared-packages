@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-// @ts-check
 import { spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -9,8 +8,8 @@ import resolveBin from 'resolve-bin';
 
 ['.env']
     .map((name) => path.join(process.cwd(), name))
-    .filter((path) => fs.existsSync(path))
-    .forEach((path) => dotenv.config({ path }));
+    .filter((p) => fs.existsSync(p))
+    .forEach((p) => void dotenv.config({ path: p }));
 
 const publicUrl = new URL(process.env.PUBLIC_URL || 'http://localhost:3000/');
 

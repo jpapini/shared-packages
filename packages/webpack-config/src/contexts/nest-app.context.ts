@@ -3,17 +3,17 @@ import { colors, logger } from '@jpapini/logger';
 import type { BuildType } from '~/enums';
 import { shorternPath } from '~/utils/shortern-path.util';
 
-import type { IBaseContextOptions } from './base.context';
 import { BaseContext } from './base.context';
+import type { BaseContextOptions } from './base.context';
 
-export type INestAppContextOptions = IBaseContextOptions<typeof BuildType.NEST_APP> & {
+export type NestAppContextOptions = BaseContextOptions<typeof BuildType.NEST_APP> & {
     outFilename?: string | undefined;
 };
 
 export class NestAppContext extends BaseContext<typeof BuildType.NEST_APP> {
     protected _outFilename: string;
 
-    constructor({ outFilename, ...options }: INestAppContextOptions) {
+    constructor({ outFilename, ...options }: NestAppContextOptions) {
         super(options);
 
         this._outFilename = outFilename ?? 'main.js';

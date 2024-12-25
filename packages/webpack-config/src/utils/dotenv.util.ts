@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import dotenv from 'dotenv';
+import { config } from 'dotenv';
 
 export function loadDotenv(rootDir: string, dotenvFiles: string[] = ['.env']): string[] {
     const loadedEnvFiles: string[] = [];
@@ -10,7 +10,7 @@ export function loadDotenv(rootDir: string, dotenvFiles: string[] = ['.env']): s
         .map((name) => path.join(rootDir, name))
         .filter((file) => fs.existsSync(file))
         .forEach((file) => {
-            dotenv.config({ path: file });
+            config({ path: file });
             loadedEnvFiles.push(file);
         });
 

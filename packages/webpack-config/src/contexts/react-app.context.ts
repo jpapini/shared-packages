@@ -4,17 +4,17 @@ import type { BuildType } from '~/enums';
 import { findFilePath } from '~/utils/find-file-path.util';
 import { shorternPath } from '~/utils/shortern-path.util';
 
-import type { IBaseContextOptions } from './base.context';
 import { BaseContext } from './base.context';
+import type { BaseContextOptions } from './base.context';
 
-export type IReactAppContextOptions = IBaseContextOptions<typeof BuildType.REACT_APP> & {
+export type ReactAppContextOptions = BaseContextOptions<typeof BuildType.REACT_APP> & {
     htmlTemplateFile?: string | undefined;
 };
 
 export class ReactAppContext extends BaseContext<typeof BuildType.REACT_APP> {
     protected _htmlTemplateFile: string | null;
 
-    constructor({ htmlTemplateFile, ...options }: IReactAppContextOptions) {
+    constructor({ htmlTemplateFile, ...options }: ReactAppContextOptions) {
         super(options);
 
         this._htmlTemplateFile = findFilePath(

@@ -4,60 +4,36 @@ Custom ESLint configuration for JavaScript and TypeScript projects.
 
 Additional configurations are available for:
 
-- React projects: `@jpapini/eslint-config/react`
-- Nest.js projects: `@jpapini/eslint-config/nest`
+- Node.js projects: `createBaseEslintConfig`
+- React projects: `createReactEslintConfig`
 
 ## How to use
 
 1. Install the package and its required peer dependencies:
 
 ```bash
-pnpm add -D @jpapini/eslint-config eslint@^8
+pnpm add -D @jpapini/eslint-config eslint
 ```
 
-> [!WARNING]
-> Use ESLint version 8, because the configuration is not compatible with version 9.
-
-2. Edit your `package.json` file to include the following:
+1. Edit your `package.json` file to include the following:
 
 ```json
 {
     "scripts": {
-        "lint:eslint": "eslint --cache --cache-location node_modules/.cache/eslint/.eslintcache .",
-        "format:eslint": "eslint --cache --cache-location node_modules/.cache/eslint/.eslintcache --fix ."
-    },
-    "eslintConfig": {
-        "extends": "@jpapini/eslint-config"
+        "lint:eslint": "eslint --flag unstable_config_lookup_from_file --cache --cache-location node_modules/.cache/eslint/.eslintcache .",
+        "format:eslint": "eslint --flag unstable_config_lookup_from_file --cache --cache-location node_modules/.cache/eslint/.eslintcache --fix ."
     }
 }
 ```
 
-3. Add a `.eslintignore` file with the following content:
+3. Create a `eslint.config.js` file with the following content:
 
-```text
-### Jetbrains IDEs ###
-.idea
+```javascript
+import url from 'node:url';
 
-### Visual Studio Code ###
-.vscode
+import { createBaseEslintConfig } from '@jpapini/eslint-config';
 
-### Dependencies ###
-node_modules
-.pnpm-store
-
-### Cache ###
-.turbo
-
-### Compiled outputs ###
-dist
-generated
-
-### Tests ###
-coverage
-
-### Temporary ###
-old
-*.timestamp-*
+export default createBaseEslintConfig(url.fileURLToPath(new URL('.', import.meta.url)));
 ```
 
 ## Author

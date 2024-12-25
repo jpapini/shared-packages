@@ -13,7 +13,6 @@ pnpm add -D @jpapini/tsup-config tsup
 2. Create a `tsup.config.js` file with the following content:
 
 ```javascript
-// @ts-check
 import { fileURLToPath } from 'node:url';
 
 import { createLibraryConfiguration } from '@jpapini/tsup-config';

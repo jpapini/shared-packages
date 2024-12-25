@@ -7,13 +7,13 @@ import webpack from 'webpack';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 import { HASHED_JS_FILENAME_PATTERN, TS_RULE_TEST } from '~/constants';
-import type { IPresetFunc } from '~/types';
+import type { PresetFunc } from '~/types';
 
 const { EnvironmentPlugin, SourceMapDevToolPlugin } = webpack;
 
 const require = createRequire(import.meta.url);
 
-export const createBasePreset: IPresetFunc = (context, config) => {
+export const createBasePreset: PresetFunc = (context, config) => {
     return {
         presetName: 'base',
 
@@ -46,7 +46,7 @@ export const createBasePreset: IPresetFunc = (context, config) => {
             rules: [
                 {
                     test: TS_RULE_TEST,
-                    exclude: [/dist\//, /node_modules\//],
+                    exclude: [/dist\//u, /node_modules\//u],
                     use: [
                         {
                             loader: require.resolve('swc-loader'),

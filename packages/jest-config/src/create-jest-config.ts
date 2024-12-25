@@ -1,10 +1,10 @@
 import type { Config } from 'jest';
 
-export type ICreateJestConfigOptions = Exclude<Partial<Config>, 'rootDir'> & {
+export type CreateJestConfigOptions = Exclude<Partial<Config>, 'rootDir'> & {
     rootDir: string;
 };
 
-export function createJestConfig(options: ICreateJestConfigOptions): Config {
+export function createJestConfig(options: CreateJestConfigOptions): Config {
     return {
         ...options,
         rootDir: options.rootDir,

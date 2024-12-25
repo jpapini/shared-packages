@@ -1,7 +1,7 @@
 import type { BaseContext } from '~/contexts/base.context';
 
-import type { IWebpackConfiguration } from './webpack.type';
+import type { WebpackConfiguration } from './webpack.type';
 
-export type IPreset = { presetName: string } & Partial<IWebpackConfiguration>;
+export type Preset = { presetName: string } & Partial<WebpackConfiguration>;
 
-export type IPresetFunc = (context: BaseContext, config: Partial<IWebpackConfiguration>) => IPreset;
+export type PresetFunc = (context: BaseContext, config: Partial<WebpackConfiguration>) => Preset;
