@@ -73,13 +73,13 @@
         "@types/webpack-node-externals": "3.0.4",
         "npm-run-all2": "7.0.2",
         "webpack": "5.97.1",
-        "webpack-cli": "5.1.4",
+        "webpack-cli": "6.0.1",
         "webpack-dev-server": "5.2.0"
     },
     "peerDependencies": {
         "@swc/core": "1",
         "webpack": "5",
-        "webpack-cli": "5",
+        "webpack-cli": "5 || 6",
         "webpack-dev-server": "5"
     },
     "packageManager": "pnpm@9.15.1",
