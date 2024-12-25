@@ -135,12 +135,6 @@ module.exports = tseslint.config({
         'react/jsx-equals-spacing': 'error',
 
         /**
-         * Disallow file extensions that may contain JSX
-         * @url https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
-         */
-        'react/jsx-filename-extension': 'error',
-
-        /**
          * Enforce proper position of the first property in JSX
          * @fixable
          * @url https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md
