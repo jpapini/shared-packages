@@ -16,18 +16,6 @@ module.exports = tseslint.config(
         },
         rules: {
             /**
-             * Require return statements to either always or never specify values
-             * @typecheck
-             * @extension
-             * @url https://typescript-eslint.io/rules/consistent-return
-             */
-            'consistent-return': 'off',
-            '@typescript-eslint/consistent-return': [
-                'error',
-                { treatUndefinedAsUnspecified: true },
-            ],
-
-            /**
              * Enforce consistent usage of type exports
              * @fixable
              * @typecheck

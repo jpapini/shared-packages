@@ -104,12 +104,6 @@ module.exports = tseslint.config({
         'capitalized-comments': ['error', 'always', { ignoreConsecutiveComments: true }],
 
         /**
-         * Require return statements to either always or never specify values
-         * @url https://eslint.org/docs/latest/rules/consistent-return
-         */
-        'consistent-return': ['error', { treatUndefinedAsUnspecified: true }],
-
-        /**
          * Enforce consistent naming when capturing the current execution context
          * @url https://eslint.org/docs/latest/rules/consistent-this
          */
