@@ -1,5 +1,11 @@
 # @jpapini/eslint-config
 
+## 1.12.0
+
+### Minor Changes
+
+- [`258c75f`](https://github.com/jpapini/shared-packages/commit/258c75fb1a00aedbbb0a0d369fa8b8f3668ee510) Thanks [@jpapini](https://github.com/jpapini)! - Remove import-x/exports-last.
+
 ## 1.11.0
 
 ### Minor Changes
