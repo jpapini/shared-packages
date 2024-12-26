@@ -78,12 +78,6 @@ module.exports = tseslint.config(
             'import-x/consistent-type-specifier-style': ['error', 'prefer-top-level'],
 
             /**
-             * Ensure all exports appear after other statements.
-             * @url https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/exports-last.md
-             */
-            'import-x/exports-last': 'error',
-
-            /**
              * Ensure all imports appear before other statements.
              * @fixable
              * @url https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/first.md
