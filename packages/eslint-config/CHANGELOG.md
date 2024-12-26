@@ -1,5 +1,11 @@
 # @jpapini/eslint-config
 
+## 1.9.0
+
+### Minor Changes
+
+- [`307fe89`](https://github.com/jpapini/shared-packages/commit/307fe89cccc02b8ed1ba69d4d453c8967bd234e2) Thanks [@jpapini](https://github.com/jpapini)! - Enable treatUndefinedAsUnspecified for consistent-return rule.
+
 ## 1.8.0
 
 ### Minor Changes
