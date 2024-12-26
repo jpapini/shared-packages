@@ -1,5 +1,11 @@
 # @jpapini/eslint-config
 
+## 1.13.0
+
+### Minor Changes
+
+- [`480aa84`](https://github.com/jpapini/shared-packages/commit/480aa848a25eab72585920c0b5f0c1dfa8e3adaa) Thanks [@jpapini](https://github.com/jpapini)! - Disable capitalized-comments rule.
+
 ## 1.12.0
 
 ### Minor Changes
