@@ -252,10 +252,19 @@ module.exports = tseslint.config(
             '@typescript-eslint/no-extraneous-class': 'off',
 
             /**
-             * Enforces usage of `type` keyword instead of `interface` keyword.
+             * Enforces usage of `type` keyword instead of `interface` keyword
              * @url https://typescript-eslint.io/rules/consistent-type-definitions/
              */
             '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+
+            /**
+             * Require expressions of type void to appear in statement position
+             * @url https://typescript-eslint.io/rules/no-confusing-void-expression/#ignorevoidreturningfunctions
+             */
+            '@typescript-eslint/no-confusing-void-expression': [
+                'error',
+                { ignoreVoidOperator: true, ignoreVoidReturningFunctions: true },
+            ],
         },
     },
     {

@@ -16,7 +16,7 @@ const unicornConfig = require('./configs/unicorn-config');
 /**
  * Base configuration for ESLint
  * @param {string} rootDir The root directory of the project
- * @param {import('typescript-eslint').ConfigWithExtends} [overrides] Additional configuration
+ * @param {import('typescript-eslint').InfiniteDepthConfigWithExtends} [overrides] Additional configuration
  */
 function createBaseEslintConfig(rootDir, overrides = {}) {
     return tseslint.config(
@@ -44,7 +44,7 @@ function createBaseEslintConfig(rootDir, overrides = {}) {
 /**
  * React.js configuration for ESLint
  * @param {string} rootDir The root directory of the project
- * @param {import('typescript-eslint').ConfigWithExtends} [overrides] Additional configuration
+ * @param {import('typescript-eslint').InfiniteDepthConfigWithExtends} [overrides] Additional configuration
  */
 function createReactEslintConfig(rootDir, overrides = {}) {
     return tseslint.config(
