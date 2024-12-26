@@ -1,5 +1,11 @@
 # @jpapini/eslint-config
 
+## 1.10.0
+
+### Minor Changes
+
+- [`2f0ffdc`](https://github.com/jpapini/shared-packages/commit/2f0ffdcde651b147989950d760a9933cb183e916) Thanks [@jpapini](https://github.com/jpapini)! - Disable @typescript-eslint/consistent-return rule.
+
 ## 1.9.0
 
 ### Minor Changes
