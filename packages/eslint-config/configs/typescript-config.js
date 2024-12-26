@@ -22,7 +22,10 @@ module.exports = tseslint.config(
              * @url https://typescript-eslint.io/rules/consistent-return
              */
             'consistent-return': 'off',
-            '@typescript-eslint/consistent-return': 'error',
+            '@typescript-eslint/consistent-return': [
+                'error',
+                { treatUndefinedAsUnspecified: true },
+            ],
 
             /**
              * Enforce consistent usage of type exports
