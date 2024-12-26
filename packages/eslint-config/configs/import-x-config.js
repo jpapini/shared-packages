@@ -38,13 +38,6 @@ module.exports = tseslint.config(
             'import-x/no-unused-modules': 'error',
 
             /**
-             * Forbid import statements with CommonJS module.exports.
-             * @fixable
-             * @url https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-import-module-exports.md
-             */
-            'import-x/no-import-module-exports': 'error',
-
-            /**
              * Forbid import of modules using absolute paths.
              * @fixable
              * @url https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-absolute-path.md
