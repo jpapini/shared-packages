@@ -97,13 +97,6 @@ module.exports = tseslint.config({
         'camelcase': 'error',
 
         /**
-         * Enforce or disallow capitalization of the first letter of a comment
-         * @fixable
-         * @url https://eslint.org/docs/latest/rules/capitalized-comments
-         */
-        'capitalized-comments': ['error', 'always', { ignoreConsecutiveComments: true }],
-
-        /**
          * Enforce consistent naming when capturing the current execution context
          * @url https://eslint.org/docs/latest/rules/consistent-this
          */
