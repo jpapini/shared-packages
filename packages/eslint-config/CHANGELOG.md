@@ -1,5 +1,11 @@
 # @jpapini/eslint-config
 
+## 1.11.0
+
+### Minor Changes
+
+- [`f3b90dc`](https://github.com/jpapini/shared-packages/commit/f3b90dce3383aad6e38e5e5f65c6933398c3d004) Thanks [@jpapini](https://github.com/jpapini)! - Fixing no-confusing-void-expression rule.
+
 ## 1.10.0
 
 ### Minor Changes
