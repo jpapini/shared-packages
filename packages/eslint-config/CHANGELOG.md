@@ -1,5 +1,11 @@
 # @jpapini/eslint-config
 
+## 1.8.0
+
+### Minor Changes
+
+- [`94aca81`](https://github.com/jpapini/shared-packages/commit/94aca81917b0c5ae2fa0110d3a551dfbc5ba2791) Thanks [@jpapini](https://github.com/jpapini)! - Disable import-x/no-import-module-exports.
+
 ## 1.7.0
 
 ### Minor Changes
