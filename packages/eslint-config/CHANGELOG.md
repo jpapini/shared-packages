@@ -1,5 +1,11 @@
 # @jpapini/eslint-config
 
+## 1.14.0
+
+### Minor Changes
+
+- [`c5917cb`](https://github.com/jpapini/shared-packages/commit/c5917cb604f0043edd326b77a0a9b11323d8e8e4) Thanks [@jpapini](https://github.com/jpapini)! - Remove checkForEach for array-callback-return"
+
 ## 1.13.0
 
 ### Minor Changes
