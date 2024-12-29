@@ -14,7 +14,7 @@ module.exports = tseslint.config({
          * @suggestion
          * @url https://eslint.org/docs/latest/rules/array-callback-return
          */
-        'array-callback-return': ['error', { checkForEach: true, allowVoid: true }],
+        'array-callback-return': ['error', { allowVoid: true }],
 
         /**
          * Disallow returning value from constructor
