@@ -265,6 +265,12 @@ module.exports = tseslint.config(
                 'error',
                 { ignoreVoidOperator: true, ignoreVoidReturningFunctions: true },
             ],
+
+            /**
+             * Allow template literal expressions not to be of string type
+             * @url https://typescript-eslint.io/rules/restrict-template-expressions/
+             */
+            '@typescript-eslint/restrict-template-expressions': 'off',
         },
     },
     {
