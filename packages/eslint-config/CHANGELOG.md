@@ -1,5 +1,11 @@
 # @jpapini/eslint-config
 
+## 1.15.0
+
+### Minor Changes
+
+- [`c868a2d`](https://github.com/jpapini/shared-packages/commit/c868a2d8933ef7be190471d91024f988ad1342d8) Thanks [@jpapini](https://github.com/jpapini)! - Allow template literal expressions not to be of string type
+
 ## 1.14.0
 
 ### Minor Changes
