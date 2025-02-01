@@ -1,5 +1,11 @@
 # @jpapini/webpack-config
 
+## 2.4.0
+
+### Minor Changes
+
+- [`760c2bc`](https://github.com/jpapini/shared-packages/commit/760c2bc3345c72ad6d256cdc1439b031b75bccfa) Thanks [@jpapini](https://github.com/jpapini)! - Compatibility with Tailwind CSS v4.
+
 ## 2.3.0
 
 ### Minor Changes
