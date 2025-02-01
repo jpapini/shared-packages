@@ -91,12 +91,7 @@ export const createReactAppPreset: PresetFunc = (context) => {
                             options: {
                                 implementation: require.resolve('postcss'),
                                 postcssOptions: {
-                                    plugins: [
-                                        require.resolve('postcss-import'),
-                                        require.resolve('tailwindcss/nesting'),
-                                        require.resolve('tailwindcss'),
-                                        require.resolve('autoprefixer'),
-                                    ],
+                                    plugins: [require.resolve('@tailwindcss/postcss')],
                                 },
                             },
                         },
