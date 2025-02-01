@@ -1,6 +1,6 @@
 {
     "name": "@jpapini/lint-staged-config",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "description": "Lint-staged configuration for linting and formatting staged files.",
     "keywords": [
         "jpapini",

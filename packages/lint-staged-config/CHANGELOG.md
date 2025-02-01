@@ -1,5 +1,11 @@
 # @jpapini/lint-staged-config
 
+## 1.4.0
+
+### Minor Changes
+
+- [`d14c40a`](https://github.com/jpapini/shared-packages/commit/d14c40a3e92d14a03ef10ac19e6e51ac0049243a) Thanks [@jpapini](https://github.com/jpapini)! - Update dependencies.
+
 ## 1.3.0
 
 ### Minor Changes
