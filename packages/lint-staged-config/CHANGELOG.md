@@ -1,5 +1,11 @@
 # @jpapini/lint-staged-config
 
+## 1.5.0
+
+### Minor Changes
+
+- [`52fb15b`](https://github.com/jpapini/shared-packages/commit/52fb15baf74df75c7c80f84daaa8e17a5ca84f60) Thanks [@jpapini](https://github.com/jpapini)! - Update PNPM version and minor dependencies.
+
 ## 1.4.0
 
 ### Minor Changes
