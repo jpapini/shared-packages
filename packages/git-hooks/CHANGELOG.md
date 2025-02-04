@@ -1,5 +1,12 @@
 # @jpapini/git-hooks
 
+## 1.5.1
+
+### Patch Changes
+
+- Updated dependencies [[`3f8a234`](https://github.com/jpapini/shared-packages/commit/3f8a2347aff55964fdc86366c637ee3cff89c715)]:
+    - @jpapini/lint-staged-config@1.5.1
+
 ## 1.5.0
 
 ### Minor Changes
