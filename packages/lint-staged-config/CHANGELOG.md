@@ -1,5 +1,11 @@
 # @jpapini/lint-staged-config
 
+## 1.5.1
+
+### Patch Changes
+
+- [`3f8a234`](https://github.com/jpapini/shared-packages/commit/3f8a2347aff55964fdc86366c637ee3cff89c715) Thanks [@jpapini](https://github.com/jpapini)! - Fixing empty files array.
+
 ## 1.5.0
 
 ### Minor Changes
