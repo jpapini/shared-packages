@@ -50,22 +50,22 @@
         "uid": "2.0.2"
     },
     "devDependencies": {
-        "@nestjs/common": "11.0.7",
+        "@nestjs/common": "11.0.11",
         "npm-run-all2": "7.0.2",
         "reflect-metadata": "0.2.2",
-        "rxjs": "7.8.1"
+        "rxjs": "7.8.2"
     },
     "peerDependencies": {
         "@nestjs/common": "11"
     },
-    "packageManager": "pnpm@10.2.0",
+    "packageManager": "pnpm@10.5.2",
     "engines": {
         "node": "22",
         "pnpm": "10"
     },
     "volta": {
-        "node": "22.13.1",
-        "pnpm": "10.2.0"
+        "node": "22.14.0",
+        "pnpm": "10.5.2"
     },
     "publishConfig": {
         "access": "public"

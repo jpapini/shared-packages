@@ -38,14 +38,14 @@
     "peerDependencies": {
         "lint-staged": "15"
     },
-    "packageManager": "pnpm@10.2.0",
+    "packageManager": "pnpm@10.5.2",
     "engines": {
         "node": "22",
         "pnpm": "10"
     },
     "volta": {
-        "node": "22.13.1",
-        "pnpm": "10.2.0"
+        "node": "22.14.0",
+        "pnpm": "10.5.2"
     },
     "publishConfig": {
         "access": "public"

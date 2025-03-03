@@ -35,38 +35,38 @@
         "reset": "pnpm run clean; rimraf node_modules"
     },
     "dependencies": {
-        "@eslint/compat": "1.2.6",
-        "@eslint/js": "9.19.0",
-        "@stylistic/eslint-plugin": "3.0.1",
-        "eslint-config-prettier": "10.0.1",
-        "eslint-import-resolver-typescript": "3.7.0",
+        "@eslint/compat": "1.2.7",
+        "@eslint/js": "9.21.0",
+        "@stylistic/eslint-plugin": "3.1.0",
+        "eslint-config-prettier": "10.0.2",
+        "eslint-import-resolver-typescript": "3.8.3",
         "eslint-plugin-import-x": "4.6.1",
         "eslint-plugin-jest": "28.11.0",
         "eslint-plugin-jsx-a11y": "6.10.2",
         "eslint-plugin-prettier": "5.2.3",
         "eslint-plugin-react": "7.37.4",
-        "eslint-plugin-react-hooks": "5.1.0",
+        "eslint-plugin-react-hooks": "5.2.0",
         "eslint-plugin-unicorn": "56.0.1",
-        "globals": "15.14.0",
+        "globals": "15.15.0",
         "memoize-one": "6.0.0",
-        "typescript-eslint": "8.23.0"
+        "typescript-eslint": "8.25.0"
     },
     "devDependencies": {
         "@types/eslint-plugin-jsx-a11y": "6.10.0",
-        "eslint": "9.19.0",
+        "eslint": "9.21.0",
         "npm-run-all2": "7.0.2"
     },
     "peerDependencies": {
         "eslint": "9"
     },
-    "packageManager": "pnpm@10.2.0",
+    "packageManager": "pnpm@10.5.2",
     "engines": {
         "node": "22",
         "pnpm": "10"
     },
     "volta": {
-        "node": "22.13.1",
-        "pnpm": "10.2.0"
+        "node": "22.14.0",
+        "pnpm": "10.5.2"
     },
     "publishConfig": {
         "access": "public"
