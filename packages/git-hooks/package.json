@@ -1,6 +1,6 @@
 {
     "name": "@jpapini/git-hooks",
-    "version": "1.5.1",
+    "version": "1.5.2",
     "description": "Git hooks configuration.",
     "keywords": [
         "jpapini",
