@@ -49,7 +49,7 @@
         "eslint-plugin-unicorn": "56.0.1",
         "globals": "15.15.0",
         "memoize-one": "6.0.0",
-        "typescript-eslint": "8.25.0"
+        "typescript-eslint": "8.26.0"
     },
     "devDependencies": {
         "@types/eslint-plugin-jsx-a11y": "6.10.0",
