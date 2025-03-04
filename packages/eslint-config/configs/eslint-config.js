@@ -1,11 +1,11 @@
-const eslint = require('@eslint/js');
-const tseslint = require('typescript-eslint');
+import eslint from '@eslint/js';
+import tseslint from 'typescript-eslint';
 
 /**
  * ESLint configuration
  * @url https://eslint.org/docs/latest/rules/
  */
-module.exports = tseslint.config({
+export default tseslint.config({
     name: 'eslint-config',
     extends: [eslint.configs.recommended],
     rules: {

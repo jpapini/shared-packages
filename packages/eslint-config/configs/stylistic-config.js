@@ -1,11 +1,11 @@
-const stylistic = require('@stylistic/eslint-plugin');
-const tseslint = require('typescript-eslint');
+import stylistic from '@stylistic/eslint-plugin';
+import tseslint from 'typescript-eslint';
 
 /**
  * Stylistic configuration
  * @url https://eslint.style/packages/default
  */
-module.exports = tseslint.config({
+export default tseslint.config({
     name: 'stylistic-config',
     plugins: {
         // @ts-ignore - @stylistic/eslint-plugin wrongly typed its default export

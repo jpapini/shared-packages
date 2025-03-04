@@ -1,9 +1,9 @@
-const fs = require('node:fs');
-const path = require('node:path');
+import fs from 'node:fs';
+import path from 'node:path';
 
-const { includeIgnoreFile } = require('@eslint/compat');
-const memo = require('memoize-one');
-const tseslint = require('typescript-eslint');
+import { includeIgnoreFile } from '@eslint/compat';
+import memoizeOne from 'memoize-one';
+import tseslint from 'typescript-eslint';
 
 /**
  * Find the .gitignore file in the current directory or any parent directories
@@ -23,14 +23,14 @@ function _findGitIgnore(currentDir) {
 }
 
 // @ts-ignore - memoize-one wrongly typed its default export
-const findGitIgnore = memo(_findGitIgnore);
+const findGitIgnore = memoizeOne(_findGitIgnore);
 
 /**
  * Ignore files that are in the .gitignore file
  * @url https://eslint.org/docs/latest/use/configure/ignore#including-gitignore-files
  * @param {string} rootDir The root directory of the project
  */
-module.exports = (rootDir) => {
+export default (rootDir) => {
     const gitIgnorePath = findGitIgnore(rootDir);
     const ignoreConfig = gitIgnorePath !== null ? includeIgnoreFile(gitIgnorePath) : {};
 

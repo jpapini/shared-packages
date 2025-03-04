@@ -1,12 +1,12 @@
-const tsResolver = require('eslint-import-resolver-typescript');
-const importX = require('eslint-plugin-import-x');
-const tseslint = require('typescript-eslint');
+import * as tsResolver from 'eslint-import-resolver-typescript';
+import importX from 'eslint-plugin-import-x';
+import tseslint from 'typescript-eslint';
 
 /**
  * Import X configuration
  * @url https://github.com/un-ts/eslint-plugin-import-x
  */
-module.exports = tseslint.config(
+export default tseslint.config(
     {
         name: 'import-x-config',
         extends: [importX.flatConfigs.recommended],
@@ -29,7 +29,7 @@ module.exports = tseslint.config(
              * Forbid importing a default export by a different name.
              * @url https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-rename-default.md
              */
-            'import-x/no-rename-default': 'error',
+            'import-x/no-rename-default': 'off',
 
             /**
              * Forbid modules without exports, or exports without matching import in another module.
@@ -96,33 +96,34 @@ module.exports = tseslint.config(
              * @fixable
              * @url https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/order.md
              */
-            'import-x/order': [
-                'error',
-                {
-                    'newlines-between': 'always',
-                    'distinctGroup': true,
-                    'alphabetize': {
-                        order: 'asc',
-                        caseInsensitive: true,
-                    },
-                    'groups': [
-                        'builtin',
-                        'external',
-                        'internal',
-                        'parent',
-                        'sibling',
-                        'index',
-                        'object',
-                    ],
-                    'pathGroups': [
-                        {
-                            pattern: '~/**',
-                            group: 'internal',
-                            position: 'before',
-                        },
-                    ],
-                },
-            ],
+            'import-x/order': 'off',
+            // 'import-x/order': [
+            //     'error',
+            //     {
+            //         'newlines-between': 'always',
+            //         'distinctGroup': true,
+            //         'alphabetize': {
+            //             order: 'asc',
+            //             caseInsensitive: true,
+            //         },
+            //         'groups': [
+            //             'builtin',
+            //             'external',
+            //             'internal',
+            //             'parent',
+            //             'sibling',
+            //             'index',
+            //             'object',
+            //         ],
+            //         'pathGroups': [
+            //             {
+            //                 pattern: '~/**',
+            //                 group: 'internal',
+            //                 position: 'before',
+            //             },
+            //         ],
+            //     },
+            // ],
 
             /**
              * Allow named exports as default

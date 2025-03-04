@@ -1,11 +1,11 @@
-const react = require('eslint-plugin-react');
-const tseslint = require('typescript-eslint');
+import react from 'eslint-plugin-react';
+import tseslint from 'typescript-eslint';
 
 /**
  * React.js configuration
  * @url https://github.com/jsx-eslint/eslint-plugin-react?tab=readme-ov-file#list-of-supported-rules
  */
-module.exports = tseslint.config({
+export default tseslint.config({
     name: 'react-config',
     // @ts-ignore - Ignore `undefined` type
     extends: [react.configs.flat.recommended, react.configs.flat['jsx-runtime']],

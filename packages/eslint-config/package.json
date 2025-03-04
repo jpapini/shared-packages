@@ -22,7 +22,7 @@
     },
     "license": "MIT",
     "author": "Julien Papini <julien.papini@gmail.com> (https://github.com/jpapini)",
-    "type": "commonjs",
+    "type": "module",
     "exports": {
         ".": "./index.js"
     },
@@ -43,6 +43,7 @@
         "eslint-plugin-import-x": "4.6.1",
         "eslint-plugin-jest": "28.11.0",
         "eslint-plugin-jsx-a11y": "6.10.2",
+        "eslint-plugin-perfectionist": "4.9.0",
         "eslint-plugin-prettier": "5.2.3",
         "eslint-plugin-react": "7.37.4",
         "eslint-plugin-react-hooks": "5.2.0",

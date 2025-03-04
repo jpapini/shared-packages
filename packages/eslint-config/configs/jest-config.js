@@ -1,11 +1,11 @@
-const jest = require('eslint-plugin-jest');
-const tseslint = require('typescript-eslint');
+import jest from 'eslint-plugin-jest';
+import tseslint from 'typescript-eslint';
 
 /**
  * Jest configuration
  * @url https://github.com/un-ts/eslint-plugin-import-x
  */
-module.exports = tseslint.config(
+export default tseslint.config(
     {
         name: 'jest-config',
         files: ['**/*.{spec,test}.{js,jsx,ts,tsx}'],

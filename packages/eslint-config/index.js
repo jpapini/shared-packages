@@ -1,17 +1,18 @@
-const globals = require('globals');
-const tseslint = require('typescript-eslint');
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
-const eslintConfig = require('./configs/eslint-config');
-const ignoreConfig = require('./configs/ignore-config');
-const importXConfig = require('./configs/import-x-config');
-const jestConfig = require('./configs/jest-config');
-const jsxA11yConfig = require('./configs/jsx-a11y-config');
-const prettierConfig = require('./configs/prettier-config');
-const reactConfig = require('./configs/react-config');
-const reactHooksConfig = require('./configs/react-hooks-config');
-const stylisticConfig = require('./configs/stylistic-config');
-const typescriptConfig = require('./configs/typescript-config');
-const unicornConfig = require('./configs/unicorn-config');
+import eslintConfig from './configs/eslint-config.js';
+import ignoreConfig from './configs/ignore-config.js';
+import importXConfig from './configs/import-x-config.js';
+import jestConfig from './configs/jest-config.js';
+import jsxA11yConfig from './configs/jsx-a11y-config.js';
+import perfectionistConfig from './configs/perfectionist-config.js';
+import prettierConfig from './configs/prettier-config.js';
+import reactConfig from './configs/react-config.js';
+import reactHooksConfig from './configs/react-hooks-config.js';
+import stylisticConfig from './configs/stylistic-config.js';
+import typescriptConfig from './configs/typescript-config.js';
+import unicornConfig from './configs/unicorn-config.js';
 
 /**
  * Base configuration for ESLint
@@ -24,6 +25,7 @@ function createBaseEslintConfig(rootDir, overrides = {}) {
         eslintConfig,
         stylisticConfig,
         importXConfig,
+        perfectionistConfig,
         unicornConfig,
         typescriptConfig,
         jestConfig,
@@ -73,4 +75,4 @@ function createReactEslintConfig(rootDir, overrides = {}) {
     );
 }
 
-module.exports = { createBaseEslintConfig, createReactEslintConfig };
+export { createBaseEslintConfig, createReactEslintConfig };

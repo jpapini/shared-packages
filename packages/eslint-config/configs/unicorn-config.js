@@ -1,11 +1,11 @@
-const unicorn = require('eslint-plugin-unicorn');
-const tseslint = require('typescript-eslint');
+import unicorn from 'eslint-plugin-unicorn';
+import tseslint from 'typescript-eslint';
 
 /**
  * Unicorn configuration
  * @url https://github.com/sindresorhus/eslint-plugin-unicorn
  */
-module.exports = tseslint.config({
+export default tseslint.config({
     name: 'unicorn-config',
     plugins: {
         unicorn,
