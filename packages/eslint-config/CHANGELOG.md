@@ -1,5 +1,11 @@
 # @jpapini/eslint-config
 
+## 1.18.0
+
+### Minor Changes
+
+- [`9aca467`](https://github.com/jpapini/shared-packages/commit/9aca467277d86875fea45b7811224a18f435b7ce) Thanks [@jpapini](https://github.com/jpapini)! - Add perfectionist plugin and ESM only.
+
 ## 1.17.1
 
 ### Patch Changes

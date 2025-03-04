@@ -1,5 +1,11 @@
 # @jpapini/webpack-config
 
+## 2.5.2
+
+### Patch Changes
+
+- [`9aca467`](https://github.com/jpapini/shared-packages/commit/9aca467277d86875fea45b7811224a18f435b7ce) Thanks [@jpapini](https://github.com/jpapini)! - Update after linting.
+
 ## 2.5.1
 
 ### Patch Changes
