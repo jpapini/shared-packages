@@ -1,5 +1,11 @@
 # @jpapini/eslint-config
 
+## 1.18.1
+
+### Patch Changes
+
+- [#91](https://github.com/jpapini/shared-packages/pull/91) [`41e3edd`](https://github.com/jpapini/shared-packages/commit/41e3eddcc243a880934c3238d0f0fd2fd8ab98f9) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `eslint-plugin-unicorn` to `57.0.0`.
+
 ## 1.18.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @jpapini/jest-config
 
+## 1.6.2
+
+### Patch Changes
+
+- [#97](https://github.com/jpapini/shared-packages/pull/97) [`cf6afbc`](https://github.com/jpapini/shared-packages/commit/cf6afbcc495138cf3f1e78e29ab0ba2d17caeb94) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@swc/core` to `1.11.6`.
+
 ## 1.6.1
 
 ### Patch Changes

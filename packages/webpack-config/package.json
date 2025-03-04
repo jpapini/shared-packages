@@ -1,6 +1,6 @@
 {
     "name": "@jpapini/webpack-config",
-    "version": "2.5.2",
+    "version": "2.5.3",
     "description": "Custom Webpack configuration for bundling projects.",
     "keywords": [
         "jpapini",
