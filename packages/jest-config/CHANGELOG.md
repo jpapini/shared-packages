@@ -1,5 +1,11 @@
 # @jpapini/jest-config
 
+## 1.7.0
+
+### Minor Changes
+
+- [`e189848`](https://github.com/jpapini/shared-packages/commit/e189848913219beeff0242bef97a88b9204d915c) Thanks [@jpapini](https://github.com/jpapini)! - Add swcConfig params to createJestConfig.
+
 ## 1.6.3
 
 ### Patch Changes
