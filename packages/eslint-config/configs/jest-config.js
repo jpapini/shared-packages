@@ -120,7 +120,7 @@ export default tseslint.config(
              * @fixable
              * @url https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-lowercase-title.md
              */
-            'jest/prefer-lowercase-title': 'error',
+            'jest/prefer-lowercase-title': ['error', { ignore: ['describe'] }],
 
             /**
              * Prefer mock resolved/rejected shorthands for promises
