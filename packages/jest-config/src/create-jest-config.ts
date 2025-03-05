@@ -1,10 +1,11 @@
+import type { Config as SwcConfig } from '@swc/types';
 import type { Config } from 'jest';
 
 export type CreateJestConfigOptions = Exclude<Partial<Config>, 'rootDir'> & {
     rootDir: string;
 };
 
-export function createJestConfig(options: CreateJestConfigOptions): Config {
+export function createJestConfig(options: CreateJestConfigOptions, swcConfig?: SwcConfig): Config {
     return {
         ...options,
         rootDir: options.rootDir,
@@ -27,12 +28,19 @@ export function createJestConfig(options: CreateJestConfigOptions): Config {
             '^.+\\.(t|j|mj|cj)sx?$': [
                 '@swc/jest',
                 {
+                    ...swcConfig,
                     jsc: {
-                        transform: {
-                            react: {
-                                runtime: 'automatic',
-                            },
+                        ...swcConfig?.jsc,
+                        parser: {
+                            ...swcConfig?.jsc?.parser,
+                            syntax: 'typescript',
                         },
+                        transform: {
+                            ...swcConfig?.jsc?.transform,
+                            useDefineForClassFields: true,
+                        },
+                        keepClassNames: true,
+                        externalHelpers: false,
                     },
                 },
             ],
