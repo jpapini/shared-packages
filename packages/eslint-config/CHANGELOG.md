@@ -1,5 +1,11 @@
 # @jpapini/eslint-config
 
+## 1.19.0
+
+### Minor Changes
+
+- [`3d32b2a`](https://github.com/jpapini/shared-packages/commit/3d32b2a42e0c596d271847293f022554abba0439) Thanks [@jpapini](https://github.com/jpapini)! - Ignore `describe` for jest/prefer-lowercase-title rule.
+
 ## 1.18.1
 
 ### Patch Changes
