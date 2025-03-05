@@ -1,5 +1,11 @@
 # @jpapini/eslint-config
 
+## 1.20.0
+
+### Minor Changes
+
+- [`3c51c97`](https://github.com/jpapini/shared-packages/commit/3c51c974d188b27c116920ad42b1447b04854a7d) Thanks [@jpapini](https://github.com/jpapini)! - Improving @typescript-eslint/member-ordering rule.
+
 ## 1.19.0
 
 ### Minor Changes
