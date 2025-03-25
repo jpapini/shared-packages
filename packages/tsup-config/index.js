@@ -2,8 +2,15 @@ const path = require('node:path');
 
 const { defineConfig } = require('tsup');
 
-function createLibraryConfiguration(rootDir) {
+/**
+ * @param {string} rootDir
+ * @param {import('tsup').Options} [options]
+ * @returns {import('tsup').Options}
+ */
+function createLibraryConfiguration(rootDir, options = {}) {
     return defineConfig({
+        ...options,
+
         target: 'node22',
         platform: 'node',
 
