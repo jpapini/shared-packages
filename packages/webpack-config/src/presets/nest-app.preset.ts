@@ -45,23 +45,28 @@ export const createNestAppPreset: PresetFunc = (context) => {
                 {
                     test: TS_RULE_TEST,
                     use: [
-                        {
-                            loader: require.resolve('swc-loader'),
-                            options: {
-                                jsc: {
-                                    target: 'es2022',
-                                    parser: {
-                                        syntax: 'typescript',
-                                        decorators: true,
-                                        dynamicImport: true,
-                                    },
-                                    transform: {
-                                        legacyDecorator: true,
-                                        decoratorMetadata: true,
-                                    },
-                                },
-                            } satisfies SwcConfig,
-                        },
+                        context.useSWC
+                            ? {
+                                  loader: require.resolve('swc-loader'),
+                                  options: {
+                                      jsc: {
+                                          target: 'es2022',
+                                          parser: {
+                                              syntax: 'typescript',
+                                              decorators: true,
+                                              dynamicImport: true,
+                                          },
+                                          transform: {
+                                              legacyDecorator: true,
+                                              decoratorMetadata: true,
+                                          },
+                                      },
+                                  } satisfies SwcConfig,
+                              }
+                            : {
+                                  loader: require.resolve('ts-loader'),
+                                  options: {},
+                              },
                     ],
                 },
             ],

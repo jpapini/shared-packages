@@ -48,25 +48,37 @@ export const createBasePreset: PresetFunc = (context, config) => {
                     test: TS_RULE_TEST,
                     exclude: [/dist\//u, /node_modules\//u],
                     use: [
-                        {
-                            loader: require.resolve('swc-loader'),
-                            options: {
-                                minify: false,
-                                module: {
-                                    type: 'nodenext',
-                                },
-                                jsc: {
-                                    parser: {
-                                        syntax: 'typescript',
-                                    },
-                                    transform: {
-                                        useDefineForClassFields: true,
-                                    },
-                                    keepClassNames: true,
-                                    externalHelpers: false,
-                                },
-                            } satisfies SwcConfig,
-                        },
+                        context.useSWC
+                            ? {
+                                  loader: require.resolve('swc-loader'),
+                                  options: {
+                                      ...context.swcLoaderConfig,
+                                      minify: false,
+                                      module: {
+                                          ...context.swcLoaderConfig.module,
+                                          type: 'nodenext',
+                                      },
+                                      jsc: {
+                                          ...context.swcLoaderConfig.jsc,
+                                          parser: {
+                                              ...context.swcLoaderConfig.jsc?.parser,
+                                              syntax: 'typescript',
+                                          },
+                                          transform: {
+                                              ...context.swcLoaderConfig.jsc?.transform,
+                                              useDefineForClassFields: true,
+                                          },
+                                          keepClassNames: true,
+                                          externalHelpers: false,
+                                      },
+                                  } satisfies SwcConfig,
+                              }
+                            : {
+                                  loader: require.resolve('ts-loader'),
+                                  options: {
+                                      ...context.tsLoaderConfig,
+                                  },
+                              },
                     ],
                 },
             ],

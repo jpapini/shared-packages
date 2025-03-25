@@ -58,25 +58,30 @@ export const createReactAppPreset: PresetFunc = (context) => {
                 {
                     test: TS_RULE_TEST,
                     use: [
-                        {
-                            loader: require.resolve('swc-loader'),
-                            options: {
-                                minify: context.isProduction,
-                                jsc: {
-                                    target: 'es5',
-                                    parser: {
-                                        syntax: 'typescript',
-                                        tsx: true,
-                                    },
-                                    transform: {
-                                        react: {
-                                            runtime: 'automatic',
-                                            refresh: context.isDevServer,
-                                        },
-                                    },
-                                },
-                            } satisfies SwcConfig,
-                        },
+                        context.useSWC
+                            ? {
+                                  loader: require.resolve('swc-loader'),
+                                  options: {
+                                      minify: context.isProduction,
+                                      jsc: {
+                                          target: 'es5',
+                                          parser: {
+                                              syntax: 'typescript',
+                                              tsx: true,
+                                          },
+                                          transform: {
+                                              react: {
+                                                  runtime: 'automatic',
+                                                  refresh: context.isDevServer,
+                                              },
+                                          },
+                                      },
+                                  } satisfies SwcConfig,
+                              }
+                            : {
+                                  loader: require.resolve('ts-loader'),
+                                  options: {},
+                              },
                     ],
                 },
                 {

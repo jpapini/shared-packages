@@ -1,6 +1,8 @@
 import path from 'node:path';
 
 import { colors, logger } from '@jpapini/logger';
+import type { Config as SwcConfig } from '@swc/types';
+import type { Options as TsLoaderConfig } from 'ts-loader';
 
 import type { BuildType, NodeEnv } from '~/enums';
 import { findFilePathOrThrow } from '~/utils/find-file-path.util';
@@ -25,6 +27,10 @@ export type BaseContextOptions<TBuildType extends BuildType = BuildType> = {
     isDevServer: boolean;
 
     publicUrl: URL;
+
+    useSWC?: boolean | undefined;
+    swcLoaderConfig?: Partial<SwcConfig> | undefined;
+    tsLoaderConfig?: Partial<TsLoaderConfig> | undefined;
 };
 
 export abstract class BaseContext<TBuildType extends BuildType = BuildType> {
@@ -48,6 +54,10 @@ export abstract class BaseContext<TBuildType extends BuildType = BuildType> {
     protected _isDevServer: boolean;
 
     protected _publicUrl: URL;
+
+    protected _useSWC: boolean;
+    protected _swcLoaderConfig: Partial<SwcConfig>;
+    protected _tsLoaderConfig: Partial<TsLoaderConfig>;
 
     constructor(options: BaseContextOptions<TBuildType>) {
         this._buildType = options.buildType;
@@ -74,6 +84,10 @@ export abstract class BaseContext<TBuildType extends BuildType = BuildType> {
 
         this._publicUrl = options.publicUrl;
         this._publicUrl.pathname += this._publicUrl.pathname.endsWith('/') ? '' : '/';
+
+        this._useSWC = options.useSWC ?? false;
+        this._swcLoaderConfig = options.swcLoaderConfig ?? {};
+        this._tsLoaderConfig = options.tsLoaderConfig ?? {};
     }
 
     public get buildType(): TBuildType {
@@ -127,6 +141,18 @@ export abstract class BaseContext<TBuildType extends BuildType = BuildType> {
         return this._publicUrl;
     }
 
+    public get useSWC(): boolean {
+        return this._useSWC;
+    }
+
+    public get swcLoaderConfig(): Partial<SwcConfig> {
+        return this._swcLoaderConfig;
+    }
+
+    public get tsLoaderConfig(): Partial<TsLoaderConfig> {
+        return this._tsLoaderConfig;
+    }
+
     public print(): void {
         logger.info('ID:', colors.blue(this.id));
 
@@ -154,5 +180,7 @@ export abstract class BaseContext<TBuildType extends BuildType = BuildType> {
         logger.info('Manifest file:', colors.blue(shorternPath(this.pkgJsonFile, this.rootDir)));
         logger.info('TSConfig file:', colors.blue(shorternPath(this.tsconfigFile, this.rootDir)));
         logger.info('Entry file:', colors.blue(shorternPath(this.entryFile, this.rootDir)));
+
+        logger.info('Use SWC:', this.useSWC ? colors.green('YES') : colors.yellow('NO'));
     }
 }
