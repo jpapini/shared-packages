@@ -47,8 +47,8 @@
     "dependencies": {
         "@jpapini/logger": "workspace:*",
         "@pmmmwh/react-refresh-webpack-plugin": "0.5.15",
-        "@tailwindcss/postcss": "4.0.9",
-        "autoprefixer": "10.4.20",
+        "@tailwindcss/postcss": "4.0.15",
+        "autoprefixer": "10.4.21",
         "css-loader": "7.1.2",
         "dotenv": "16.4.7",
         "html-webpack-plugin": "5.6.3",
@@ -58,7 +58,7 @@
         "postcss-loader": "8.1.1",
         "run-script-webpack-plugin": "0.2.2",
         "swc-loader": "0.2.6",
-        "tailwindcss": "4.0.9",
+        "tailwindcss": "4.0.15",
         "tsconfig-paths-webpack-plugin": "4.2.0",
         "url-loader": "4.1.1",
         "webpack-bundle-analyzer": "4.10.2",
@@ -66,8 +66,8 @@
         "webpack-node-externals": "3.0.0"
     },
     "devDependencies": {
-        "@swc/core": "1.11.7",
-        "@swc/types": "0.1.19",
+        "@swc/core": "1.11.13",
+        "@swc/types": "0.1.20",
         "@types/webpack": "5.28.5",
         "@types/webpack-bundle-analyzer": "4.7.0",
         "@types/webpack-node-externals": "3.0.4",
@@ -82,14 +82,14 @@
         "webpack-cli": "6",
         "webpack-dev-server": "5"
     },
-    "packageManager": "pnpm@10.5.2",
+    "packageManager": "pnpm@10.6.5",
     "engines": {
         "node": "22",
         "pnpm": "10"
     },
     "volta": {
         "node": "22.14.0",
-        "pnpm": "10.5.2"
+        "pnpm": "10.6.5"
     },
     "publishConfig": {
         "access": "public"

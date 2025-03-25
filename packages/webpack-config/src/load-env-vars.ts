@@ -17,8 +17,7 @@ export function loadEnvVars(rootDir: string, env?: WebpackEnv) {
         });
     }
 
-    if (!process.env.NODE_ENV)
-        process.env.NODE_ENV = env?.WEBPACK_SERVE ? NodeEnv.DEVELOPMENT : NodeEnv.PRODUCTION;
+    process.env.NODE_ENV ??= env?.WEBPACK_SERVE ? NodeEnv.DEVELOPMENT : NodeEnv.PRODUCTION;
 
     if (!(Object.values(NodeEnv) as string[]).includes(process.env.NODE_ENV)) {
         throw new Error(

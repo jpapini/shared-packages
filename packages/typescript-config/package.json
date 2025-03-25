@@ -40,14 +40,14 @@
     "peerDependencies": {
         "typescript": "5"
     },
-    "packageManager": "pnpm@10.5.2",
+    "packageManager": "pnpm@10.6.5",
     "engines": {
         "node": "22",
         "pnpm": "10"
     },
     "volta": {
         "node": "22.14.0",
-        "pnpm": "10.5.2"
+        "pnpm": "10.6.5"
     },
     "publishConfig": {
         "access": "public"

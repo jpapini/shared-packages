@@ -32,20 +32,20 @@
         "reset": "pnpm run clean; rimraf node_modules"
     },
     "devDependencies": {
-        "lint-staged": "15.4.3",
+        "lint-staged": "15.5.0",
         "npm-run-all2": "7.0.2"
     },
     "peerDependencies": {
         "lint-staged": "15"
     },
-    "packageManager": "pnpm@10.5.2",
+    "packageManager": "pnpm@10.6.5",
     "engines": {
         "node": "22",
         "pnpm": "10"
     },
     "volta": {
         "node": "22.14.0",
-        "pnpm": "10.5.2"
+        "pnpm": "10.6.5"
     },
     "publishConfig": {
         "access": "public"

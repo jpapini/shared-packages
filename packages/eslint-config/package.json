@@ -36,38 +36,38 @@
     },
     "dependencies": {
         "@eslint/compat": "1.2.7",
-        "@eslint/js": "9.21.0",
+        "@eslint/js": "9.23.0",
         "@stylistic/eslint-plugin": "4.2.0",
-        "eslint-config-prettier": "10.0.2",
-        "eslint-import-resolver-typescript": "3.8.3",
-        "eslint-plugin-import-x": "4.6.1",
+        "eslint-config-prettier": "10.1.1",
+        "eslint-import-resolver-typescript": "4.2.3",
+        "eslint-plugin-import-x": "4.9.2",
         "eslint-plugin-jest": "28.11.0",
         "eslint-plugin-jsx-a11y": "6.10.2",
-        "eslint-plugin-perfectionist": "4.9.0",
-        "eslint-plugin-prettier": "5.2.3",
+        "eslint-plugin-perfectionist": "4.10.1",
+        "eslint-plugin-prettier": "5.2.5",
         "eslint-plugin-react": "7.37.4",
         "eslint-plugin-react-hooks": "5.2.0",
-        "eslint-plugin-unicorn": "57.0.0",
+        "eslint-plugin-unicorn": "58.0.0",
         "globals": "16.0.0",
         "memoize-one": "6.0.0",
-        "typescript-eslint": "8.26.0"
+        "typescript-eslint": "8.28.0"
     },
     "devDependencies": {
         "@types/eslint-plugin-jsx-a11y": "6.10.0",
-        "eslint": "9.21.0",
+        "eslint": "9.23.0",
         "npm-run-all2": "7.0.2"
     },
     "peerDependencies": {
         "eslint": "9"
     },
-    "packageManager": "pnpm@10.5.2",
+    "packageManager": "pnpm@10.6.5",
     "engines": {
         "node": "22",
         "pnpm": "10"
     },
     "volta": {
         "node": "22.14.0",
-        "pnpm": "10.5.2"
+        "pnpm": "10.6.5"
     },
     "publishConfig": {
         "access": "public"

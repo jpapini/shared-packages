@@ -31,24 +31,24 @@
         "reset": "pnpm run clean; rimraf hooks/_ node_modules"
     },
     "dependencies": {
-        "@commitlint/cli": "19.7.1",
+        "@commitlint/cli": "19.8.0",
         "@jpapini/commitlint-config": "workspace:*",
         "@jpapini/lint-staged-config": "workspace:*",
         "husky": "9.1.7",
-        "lint-staged": "15.4.3",
+        "lint-staged": "15.5.0",
         "resolve-bin": "1.0.1"
     },
     "devDependencies": {
         "npm-run-all2": "7.0.2"
     },
-    "packageManager": "pnpm@10.5.2",
+    "packageManager": "pnpm@10.6.5",
     "engines": {
         "node": "22",
         "pnpm": "10"
     },
     "volta": {
         "node": "22.14.0",
-        "pnpm": "10.5.2"
+        "pnpm": "10.6.5"
     },
     "publishConfig": {
         "access": "public"
