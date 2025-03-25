@@ -1,5 +1,18 @@
 # @jpapini/webpack-config
 
+## 2.6.0
+
+### Minor Changes
+
+- [`b7e31be`](https://github.com/jpapini/shared-packages/commit/b7e31bec535d9d5cb089918117e3f332e06e7f14) Thanks [@jpapini](https://github.com/jpapini)! - Add useSWC options.
+
+### Patch Changes
+
+- [`17b8cbf`](https://github.com/jpapini/shared-packages/commit/17b8cbfa957d3340cc2be1da47aa1622b95e8612) Thanks [@jpapini](https://github.com/jpapini)! - Update dependencies.
+
+- Updated dependencies [[`17b8cbf`](https://github.com/jpapini/shared-packages/commit/17b8cbfa957d3340cc2be1da47aa1622b95e8612)]:
+    - @jpapini/logger@1.5.2
+
 ## 2.5.4
 
 ### Patch Changes
