@@ -1,11 +1,12 @@
 import type { Config as SwcConfig } from '@swc/types';
 import type { Config } from 'jest';
+import type { TsJestTransformerOptions } from 'ts-jest';
 
 export type CreateJestConfigOptions = Exclude<Partial<Config>, 'rootDir'> & {
     rootDir: string;
 };
 
-export function createJestConfig(options: CreateJestConfigOptions, swcConfig?: SwcConfig): Config {
+function createBaseJestConfig(options: CreateJestConfigOptions): Config {
     return {
         ...options,
         rootDir: options.rootDir,
@@ -24,27 +25,54 @@ export function createJestConfig(options: CreateJestConfigOptions, swcConfig?: S
             '<rootDir>/src/**/*.spec.{ts,tsx}',
             ...(options.testMatch ?? []),
         ],
+    };
+}
+
+export function createSwcJestConfig(
+    options: CreateJestConfigOptions,
+    swcConfig: SwcConfig = {},
+): Config {
+    return createBaseJestConfig({
+        ...options,
         transform: {
             '^.+\\.(t|j|mj|cj)sx?$': [
                 '@swc/jest',
                 {
                     ...swcConfig,
                     jsc: {
-                        ...swcConfig?.jsc,
+                        ...swcConfig.jsc,
                         parser: {
-                            ...swcConfig?.jsc?.parser,
+                            ...swcConfig.jsc?.parser,
                             syntax: 'typescript',
                         },
                         transform: {
-                            ...swcConfig?.jsc?.transform,
+                            ...swcConfig.jsc?.transform,
                             useDefineForClassFields: true,
                         },
                         keepClassNames: true,
                         externalHelpers: false,
                     },
-                },
+                } satisfies SwcConfig,
             ],
             ...(options.transform ?? {}),
         },
-    };
+    });
+}
+
+export function createTsJestConfig(
+    options: CreateJestConfigOptions,
+    tsJestConfig: TsJestTransformerOptions = {},
+): Config {
+    return createBaseJestConfig({
+        ...options,
+        transform: {
+            '^.+\\.(t|j|mj|cj)sx?$': [
+                'ts-jest',
+                {
+                    ...tsJestConfig,
+                } satisfies TsJestTransformerOptions,
+            ],
+            ...(options.transform ?? {}),
+        },
+    });
 }
