@@ -1,5 +1,11 @@
 # @jpapini/typescript-config
 
+## 1.5.2
+
+### Patch Changes
+
+- [`17b8cbf`](https://github.com/jpapini/shared-packages/commit/17b8cbfa957d3340cc2be1da47aa1622b95e8612) Thanks [@jpapini](https://github.com/jpapini)! - Update dependencies.
+
 ## 1.5.1
 
 ### Patch Changes

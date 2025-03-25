@@ -1,5 +1,15 @@
 # @jpapini/tsup-config
 
+## 1.5.0
+
+### Minor Changes
+
+- [`7e024da`](https://github.com/jpapini/shared-packages/commit/7e024da99d7549ea95159eeb3190544b0c9f0c07) Thanks [@jpapini](https://github.com/jpapini)! - Allow options override.
+
+### Patch Changes
+
+- [`17b8cbf`](https://github.com/jpapini/shared-packages/commit/17b8cbfa957d3340cc2be1da47aa1622b95e8612) Thanks [@jpapini](https://github.com/jpapini)! - Update dependencies.
+
 ## 1.4.1
 
 ### Patch Changes
