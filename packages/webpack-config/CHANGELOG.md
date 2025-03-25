@@ -1,5 +1,12 @@
 # @jpapini/webpack-config
 
+## 2.6.1
+
+### Patch Changes
+
+- [#103](https://github.com/jpapini/shared-packages/pull/103) [`1afac37`](https://github.com/jpapini/shared-packages/commit/1afac379f462b919d97044a547be59c17cc74f9c) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@tailwindcss/postcss` to `4.0.16`.
+  Updated dependency `tailwindcss` to `4.0.16`.
+
 ## 2.6.0
 
 ### Minor Changes
