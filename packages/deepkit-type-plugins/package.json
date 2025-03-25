@@ -1,6 +1,6 @@
 {
     "name": "@jpapini/deepkit-type-plugins",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Plugins for using Deepkit type with Vite.js and Esbuild.",
     "keywords": [
         "jpapini",
