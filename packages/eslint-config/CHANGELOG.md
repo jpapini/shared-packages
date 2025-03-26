@@ -1,5 +1,13 @@
 # @jpapini/eslint-config
 
+## 1.21.0
+
+### Minor Changes
+
+- [`c160ff4`](https://github.com/jpapini/shared-packages/commit/c160ff4e4e0243c76b5899fbb0d861290b8d44da) Thanks [@jpapini](https://github.com/jpapini)! - Add options to disable or enable jest config.
+
+- [`3afbffc`](https://github.com/jpapini/shared-packages/commit/3afbffcb3fa9d221ef4929c06c0871fee3b918b7) Thanks [@jpapini](https://github.com/jpapini)! - Add Vitest config.
+
 ## 1.20.2
 
 ### Patch Changes
