@@ -152,7 +152,7 @@
         "@nuxt/schema": "3",
         "astro": "5",
         "esbuild": "*",
-        "rollup": "3",
+        "rollup": "3 || 4",
         "typescript": "5",
         "vite": ">=3",
         "webpack": "4 || 5"
