@@ -17,10 +17,12 @@ import unicornConfig from './configs/unicorn-config.js';
 /**
  * Base configuration for ESLint
  * @param {string} rootDir The root directory of the project
+ * @param {object} [options] Configuration options
+ * @param {boolean} [options.jest] Enable Jest configuration
  * @param {import('typescript-eslint').InfiniteDepthConfigWithExtends} [overrides] Additional configuration
  */
-function createBaseEslintConfig(rootDir, overrides = {}) {
-    return tseslint.config(
+function createBaseEslintConfig(rootDir, options = {}, overrides = {}) {
+    return tseslint.config([
         ignoreConfig(rootDir),
         eslintConfig,
         stylisticConfig,
@@ -28,7 +30,7 @@ function createBaseEslintConfig(rootDir, overrides = {}) {
         perfectionistConfig,
         unicornConfig,
         typescriptConfig,
-        jestConfig,
+        ...[options?.jest ? [jestConfig] : []],
         overrides,
         prettierConfig,
         {
@@ -40,17 +42,19 @@ function createBaseEslintConfig(rootDir, overrides = {}) {
                 },
             },
         },
-    );
+    ]);
 }
 
 /**
  * React.js configuration for ESLint
  * @param {string} rootDir The root directory of the project
+ * @param {object} [options] Configuration options
+ * @param {boolean} [options.jest] Enable Jest configuration
  * @param {import('typescript-eslint').InfiniteDepthConfigWithExtends} [overrides] Additional configuration
  */
-function createReactEslintConfig(rootDir, overrides = {}) {
-    return tseslint.config(
-        createBaseEslintConfig(rootDir),
+function createReactEslintConfig(rootDir, options = {}, overrides = {}) {
+    return tseslint.config([
+        createBaseEslintConfig(rootDir, options),
         {
             name: 'typescript-config',
             files: ['**/*.{ts,tsx}'],
@@ -72,7 +76,7 @@ function createReactEslintConfig(rootDir, overrides = {}) {
                 },
             },
         },
-    );
+    ]);
 }
 
 export { createBaseEslintConfig, createReactEslintConfig };
