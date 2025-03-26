@@ -13,12 +13,14 @@ import reactHooksConfig from './configs/react-hooks-config.js';
 import stylisticConfig from './configs/stylistic-config.js';
 import typescriptConfig from './configs/typescript-config.js';
 import unicornConfig from './configs/unicorn-config.js';
+import vitestConfig from './configs/vitest-config.js';
 
 /**
  * Base configuration for ESLint
  * @param {string} rootDir The root directory of the project
  * @param {object} [options] Configuration options
  * @param {boolean} [options.jest] Enable Jest configuration
+ * @param {boolean} [options.vitest] Enable Vitest configuration
  * @param {import('typescript-eslint').InfiniteDepthConfigWithExtends} [overrides] Additional configuration
  */
 function createBaseEslintConfig(rootDir, options = {}, overrides = {}) {
@@ -31,6 +33,7 @@ function createBaseEslintConfig(rootDir, options = {}, overrides = {}) {
         unicornConfig,
         typescriptConfig,
         ...[options?.jest ? [jestConfig] : []],
+        ...[options?.vitest ? [vitestConfig] : []],
         overrides,
         prettierConfig,
         {
@@ -50,6 +53,7 @@ function createBaseEslintConfig(rootDir, options = {}, overrides = {}) {
  * @param {string} rootDir The root directory of the project
  * @param {object} [options] Configuration options
  * @param {boolean} [options.jest] Enable Jest configuration
+ * @param {boolean} [options.vitest] Enable Vitest configuration
  * @param {import('typescript-eslint').InfiniteDepthConfigWithExtends} [overrides] Additional configuration
  */
 function createReactEslintConfig(rootDir, options = {}, overrides = {}) {
