@@ -39,19 +39,19 @@
     },
     "devDependencies": {
         "npm-run-all2": "7.0.2",
-        "stylelint": "16.16.0"
+        "stylelint": "16.17.0"
     },
     "peerDependencies": {
         "stylelint": "16"
     },
-    "packageManager": "pnpm@10.6.5",
+    "packageManager": "pnpm@10.7.0",
     "engines": {
         "node": "22",
         "pnpm": "10"
     },
     "volta": {
         "node": "22.14.0",
-        "pnpm": "10.6.5"
+        "pnpm": "10.7.0"
     },
     "publishConfig": {
         "access": "public"
