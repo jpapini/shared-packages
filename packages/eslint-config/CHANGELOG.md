@@ -1,5 +1,17 @@
 # @jpapini/eslint-config
 
+## 1.20.2
+
+### Patch Changes
+
+- [#108](https://github.com/jpapini/shared-packages/pull/108) [`93a9125`](https://github.com/jpapini/shared-packages/commit/93a9125bed3ad491fe35ff2102ee24448f2d83a1) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@10.7.0`.
+  Updated dependency `pnpm` to `10.7.0`.
+  Updated dependency `stylelint` to `16.17.0`.
+  Updated dependency `eslint-import-resolver-typescript` to `4.2.4`.
+  Updated dependency `eslint-plugin-import-x` to `4.9.3`.
+  Updated dependency `@tailwindcss/postcss` to `4.0.17`.
+  Updated dependency `tailwindcss` to `4.0.17`.
+
 ## 1.20.1
 
 ### Patch Changes
