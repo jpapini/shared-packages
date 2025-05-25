@@ -33,7 +33,7 @@
     },
     "devDependencies": {
         "lint-staged": "15.5.0",
-        "npm-run-all2": "7.0.2"
+        "npm-run-all2": "8.0.4"
     },
     "peerDependencies": {
         "lint-staged": "15"

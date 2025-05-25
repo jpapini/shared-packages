@@ -38,7 +38,7 @@
         "stylelint-config-tailwindcss": "1.0.0"
     },
     "devDependencies": {
-        "npm-run-all2": "7.0.2",
+        "npm-run-all2": "8.0.4",
         "stylelint": "16.17.0"
     },
     "peerDependencies": {
