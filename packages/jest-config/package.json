@@ -41,10 +41,10 @@
         "src"
     ],
     "scripts": {
-        "build": "tsup",
         "clean": "rimraf .turbo dist node_modules/.cache",
         "reset": "pnpm run clean; rimraf node_modules",
-        "typecheck": "tsc --noEmit --pretty"
+        "typecheck": "tsc --noEmit --pretty",
+        "build": "tsup"
     },
     "devDependencies": {
         "@jest/types": "29.6.3",

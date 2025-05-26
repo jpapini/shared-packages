@@ -37,13 +37,13 @@
         "src"
     ],
     "scripts": {
-        "build": "tsup",
         "clean": "rimraf .turbo dist node_modules/.cache",
         "reset": "pnpm run clean; rimraf node_modules",
+        "typecheck": "tsc --noEmit --pretty",
         "test": "jest --color --passWithNoTests",
         "test:cov": "pnpm run test --coverage",
         "test:watch": "pnpm run test --watch",
-        "typecheck": "tsc --noEmit --pretty"
+        "build": "tsup"
     },
     "devDependencies": {
         "npm-run-all2": "8.0.4"

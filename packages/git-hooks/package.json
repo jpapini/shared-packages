@@ -26,8 +26,8 @@
         "scripts"
     ],
     "scripts": {
-        "clean": "rimraf .turbo node_modules/.cache",
         "postinstall": "node scripts/install.js",
+        "clean": "rimraf .turbo node_modules/.cache",
         "reset": "pnpm run clean; rimraf hooks/_ node_modules"
     },
     "dependencies": {
