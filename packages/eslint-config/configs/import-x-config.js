@@ -136,6 +136,12 @@ export default tseslint.config(
              * @url https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-unresolved.md
              */
             'import-x/no-unresolved': 'off',
+
+            /**
+             * Allow no named exports as default members
+             * @url https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-named-as-default-member.md
+             */
+            'import-x/no-named-as-default-member': 'off',
         },
     },
     {
