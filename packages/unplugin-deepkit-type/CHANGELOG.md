@@ -1,5 +1,17 @@
 # @jpapini/unplugin-deepkit-type
 
+## 1.0.1
+
+### Patch Changes
+
+- [#118](https://github.com/jpapini/shared-packages/pull/118) [`e051f73`](https://github.com/jpapini/shared-packages/commit/e051f73508e2417ac2e1d1fc11dc3842b741423b) Thanks [@jpapini](https://github.com/jpapini)! - Update Node.js to v22.16.0
+
+- [#118](https://github.com/jpapini/shared-packages/pull/118) [`ec62e53`](https://github.com/jpapini/shared-packages/commit/ec62e53c0ef6cd3bb01665cf967027b2bef4ec04) Thanks [@jpapini](https://github.com/jpapini)! - Update major dependencies
+
+- [#118](https://github.com/jpapini/shared-packages/pull/118) [`e372026`](https://github.com/jpapini/shared-packages/commit/e372026db44e94dcf8d148ea214cca129676203f) Thanks [@jpapini](https://github.com/jpapini)! - Update PNPM to v10.11.0
+
+- [#118](https://github.com/jpapini/shared-packages/pull/118) [`ec62e53`](https://github.com/jpapini/shared-packages/commit/ec62e53c0ef6cd3bb01665cf967027b2bef4ec04) Thanks [@jpapini](https://github.com/jpapini)! - Update minor dependencies
+
 ## 1.0.0
 
 ### Major Changes

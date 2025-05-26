@@ -1,6 +1,6 @@
 {
     "name": "@jpapini/tsup-config",
-    "version": "1.5.1",
+    "version": "1.5.2",
     "description": "Custom tsup configuration for TypeScript libraries.",
     "keywords": [
         "jpapini",
