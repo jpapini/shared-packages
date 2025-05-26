@@ -32,8 +32,8 @@
         "reset": "pnpm run clean; rimraf node_modules"
     },
     "devDependencies": {
-        "lint-staged": "15.5.2",
-        "npm-run-all2": "7.0.2"
+        "lint-staged": "16.0.0",
+        "npm-run-all2": "8.0.4"
     },
     "peerDependencies": {
         "lint-staged": "15"

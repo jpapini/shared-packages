@@ -35,11 +35,11 @@
         "@jpapini/commitlint-config": "workspace:*",
         "@jpapini/lint-staged-config": "workspace:*",
         "husky": "9.1.7",
-        "lint-staged": "15.5.2",
+        "lint-staged": "16.0.0",
         "resolve-bin": "1.0.1"
     },
     "devDependencies": {
-        "npm-run-all2": "7.0.2"
+        "npm-run-all2": "8.0.4"
     },
     "packageManager": "pnpm@10.11.0",
     "engines": {
