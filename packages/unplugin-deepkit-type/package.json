@@ -129,21 +129,21 @@
         "typecheck": "tsc --noEmit --pretty"
     },
     "dependencies": {
-        "unplugin": "2.2.2",
+        "unplugin": "2.3.4",
         "unplugin-utils": "0.2.4"
     },
     "devDependencies": {
-        "@deepkit/type-compiler": "1.0.2",
-        "@farmfe/core": "1.7.1",
-        "@nuxt/kit": "3.16.1",
-        "@nuxt/schema": "3.16.1",
-        "astro": "5.5.5",
-        "esbuild": "0.25.1",
+        "@deepkit/type-compiler": "1.0.8",
+        "@farmfe/core": "1.7.5",
+        "@nuxt/kit": "3.17.4",
+        "@nuxt/schema": "3.17.4",
+        "astro": "5.8.0",
+        "esbuild": "0.25.4",
         "npm-run-all2": "7.0.2",
-        "rollup": "4.37.0",
-        "typescript": "5.8.2",
-        "vite": "6.2.3",
-        "webpack": "5.98.0"
+        "rollup": "4.41.1",
+        "typescript": "5.8.3",
+        "vite": "6.3.5",
+        "webpack": "5.99.9"
     },
     "peerDependencies": {
         "@deepkit/type-compiler": "1",

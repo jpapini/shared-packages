@@ -31,11 +31,11 @@
         "reset": "pnpm run clean; rimraf hooks/_ node_modules"
     },
     "dependencies": {
-        "@commitlint/cli": "19.8.0",
+        "@commitlint/cli": "19.8.1",
         "@jpapini/commitlint-config": "workspace:*",
         "@jpapini/lint-staged-config": "workspace:*",
         "husky": "9.1.7",
-        "lint-staged": "15.5.0",
+        "lint-staged": "15.5.2",
         "resolve-bin": "1.0.1"
     },
     "devDependencies": {
