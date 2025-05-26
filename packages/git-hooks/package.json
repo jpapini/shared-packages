@@ -26,8 +26,8 @@
         "scripts"
     ],
     "scripts": {
-        "postinstall": "node scripts/install.js",
         "clean": "rimraf .turbo node_modules/.cache",
+        "postinstall": "node scripts/install.js",
         "reset": "pnpm run clean; rimraf hooks/_ node_modules"
     },
     "dependencies": {
@@ -47,7 +47,7 @@
         "pnpm": "10"
     },
     "volta": {
-        "node": "22.14.0",
+        "node": "22.16.0",
         "pnpm": "10.7.0"
     },
     "publishConfig": {

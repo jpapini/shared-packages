@@ -37,13 +37,13 @@
         "src"
     ],
     "scripts": {
+        "build": "tsup",
         "clean": "rimraf .turbo dist node_modules/.cache",
         "reset": "pnpm run clean; rimraf node_modules",
-        "typecheck": "tsc --noEmit --pretty",
         "test": "jest --color --passWithNoTests",
-        "test:watch": "pnpm run test --watch",
         "test:cov": "pnpm run test --coverage",
-        "build": "tsup"
+        "test:watch": "pnpm run test --watch",
+        "typecheck": "tsc --noEmit --pretty"
     },
     "devDependencies": {
         "npm-run-all2": "7.0.2"
@@ -54,7 +54,7 @@
         "pnpm": "10"
     },
     "volta": {
-        "node": "22.14.0",
+        "node": "22.16.0",
         "pnpm": "10.7.0"
     },
     "publishConfig": {
