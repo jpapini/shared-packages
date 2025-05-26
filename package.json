@@ -49,14 +49,14 @@
         "turbo": "2.4.4",
         "typescript": "5.8.2"
     },
-    "packageManager": "pnpm@10.7.0",
+    "packageManager": "pnpm@10.11.0",
     "engines": {
         "node": "22",
         "pnpm": "10"
     },
     "volta": {
         "node": "22.16.0",
-        "pnpm": "10.7.0"
+        "pnpm": "10.11.0"
     },
     "pnpm": {
         "onlyBuiltDependencies": [
