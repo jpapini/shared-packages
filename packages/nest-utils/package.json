@@ -42,8 +42,8 @@
         "reset": "pnpm run clean; rimraf node_modules",
         "typecheck": "tsc --noEmit --pretty",
         "test": "jest --color --passWithNoTests",
-        "test:cov": "pnpm run test --coverage",
         "test:watch": "pnpm run test --watch",
+        "test:cov": "pnpm run test --coverage",
         "build": "tsup"
     },
     "dependencies": {
@@ -51,7 +51,6 @@
     },
     "devDependencies": {
         "@nestjs/common": "11.1.2",
-        "npm-run-all2": "8.0.4",
         "reflect-metadata": "0.2.2",
         "rxjs": "7.8.2"
     },

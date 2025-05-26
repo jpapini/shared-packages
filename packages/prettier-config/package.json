@@ -32,12 +32,11 @@
         "reset": "pnpm run clean; rimraf node_modules"
     },
     "dependencies": {
-        "prettier-plugin-packagejson": "2.5.14",
+        "@jpapini/prettier-plugin-packagejson": "workspace:*",
         "prettier-plugin-prisma": "5.0.0",
         "prettier-plugin-tailwindcss": "0.6.11"
     },
     "devDependencies": {
-        "npm-run-all2": "8.0.4",
         "prettier": "3.5.3"
     },
     "peerDependencies": {

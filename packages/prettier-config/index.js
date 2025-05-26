@@ -16,7 +16,7 @@ module.exports = {
 
     // Plugins
     plugins: [
-        require.resolve('prettier-plugin-packagejson'),
+        require.resolve('@jpapini/prettier-plugin-packagejson'),
         require.resolve('prettier-plugin-prisma'),
         require.resolve('prettier-plugin-tailwindcss'),
     ],

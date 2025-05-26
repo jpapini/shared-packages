@@ -41,12 +41,9 @@
         "reset": "pnpm run clean; rimraf node_modules",
         "typecheck": "tsc --noEmit --pretty",
         "test": "jest --color --passWithNoTests",
-        "test:cov": "pnpm run test --coverage",
         "test:watch": "pnpm run test --watch",
+        "test:cov": "pnpm run test --coverage",
         "build": "tsup"
-    },
-    "devDependencies": {
-        "npm-run-all2": "8.0.4"
     },
     "packageManager": "pnpm@10.11.0",
     "engines": {

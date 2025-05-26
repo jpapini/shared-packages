@@ -87,9 +87,6 @@ importers:
       '@commitlint/cli':
         specifier: 19.8.1
         version: 19.8.1(@types/node@22.15.21)(typescript@5.8.3)
-      npm-run-all2:
-        specifier: 8.0.4
-        version: 8.0.4
 
   packages/eslint-config:
     dependencies:
@@ -151,9 +148,6 @@ importers:
       eslint:
         specifier: 9.27.0
         version: 9.27.0(jiti@2.4.2)
-      npm-run-all2:
-        specifier: 8.0.4
-        version: 8.0.4
 
   packages/git-hooks:
     dependencies:
@@ -175,10 +169,6 @@ importers:
       resolve-bin:
         specifier: 1.0.1
         version: 1.0.1
-    devDependencies:
-      npm-run-all2:
-        specifier: 8.0.4
-        version: 8.0.4
 
   packages/http-server:
     dependencies:
@@ -191,10 +181,6 @@ importers:
       resolve-bin:
         specifier: 1.0.1
         version: 1.0.1
-    devDependencies:
-      npm-run-all2:
-        specifier: 8.0.4
-        version: 8.0.4
 
   packages/jest-config:
     devDependencies:
@@ -213,9 +199,6 @@ importers:
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.15.21)
-      npm-run-all2:
-        specifier: 8.0.4
-        version: 8.0.4
       ts-jest:
         specifier: 29.3.4
         version: 29.3.4(@babel/core@7.26.10)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.26.10))(jest@29.7.0(@types/node@22.15.21))(typescript@5.8.3)
@@ -228,19 +211,12 @@ importers:
       lint-staged:
         specifier: 16.0.0
         version: 16.0.0
-      npm-run-all2:
-        specifier: 8.0.4
-        version: 8.0.4
 
   packages/logger:
     dependencies:
       consola:
         specifier: 3.4.2
         version: 3.4.2
-    devDependencies:
-      npm-run-all2:
-        specifier: 8.0.4
-        version: 8.0.4
 
   packages/nest-utils:
     dependencies:
@@ -251,9 +227,6 @@ importers:
       '@nestjs/common':
         specifier: 11.1.2
         version: 11.1.2(reflect-metadata@0.2.2)(rxjs@7.8.2)
-      npm-run-all2:
-        specifier: 8.0.4
-        version: 8.0.4
       reflect-metadata:
         specifier: 0.2.2
         version: 0.2.2
@@ -263,9 +236,9 @@ importers:
 
   packages/prettier-config:
     dependencies:
-      prettier-plugin-packagejson:
-        specifier: 2.5.14
-        version: 2.5.14(prettier@3.5.3)
+      '@jpapini/prettier-plugin-packagejson':
+        specifier: workspace:*
+        version: link:../prettier-plugin-packagejson
       prettier-plugin-prisma:
         specifier: 5.0.0
         version: 5.0.0(prettier@3.5.3)
@@ -273,9 +246,31 @@ importers:
         specifier: 0.6.11
         version: 0.6.11(prettier@3.5.3)
     devDependencies:
-      npm-run-all2:
-        specifier: 8.0.4
-        version: 8.0.4
+      prettier:
+        specifier: 3.5.3
+        version: 3.5.3
+
+  packages/prettier-plugin-packagejson:
+    dependencies:
+      detect-indent:
+        specifier: 7.0.1
+        version: 7.0.1
+      detect-newline:
+        specifier: 4.0.1
+        version: 4.0.1
+      git-hooks-list:
+        specifier: 4.1.1
+        version: 4.1.1
+      is-plain-obj:
+        specifier: 4.1.0
+        version: 4.1.0
+      semver:
+        specifier: 7.7.2
+        version: 7.7.2
+      sort-object-keys:
+        specifier: 1.1.3
+        version: 1.1.3
+    devDependencies:
       prettier:
         specifier: 3.5.3
         version: 3.5.3
@@ -292,33 +287,20 @@ importers:
         specifier: 1.0.0
         version: 1.0.0(stylelint@16.19.1(typescript@5.8.3))(tailwindcss@4.1.7)
     devDependencies:
-      npm-run-all2:
-        specifier: 8.0.4
-        version: 8.0.4
       stylelint:
         specifier: 16.19.1
         version: 16.19.1(typescript@5.8.3)
 
   packages/tsup-config:
     devDependencies:
-      npm-run-all2:
-        specifier: 8.0.4
-        version: 8.0.4
       tsup:
         specifier: 8.5.0
         version: 8.5.0(@swc/core@1.11.29)(jiti@2.4.2)(postcss@8.5.3)(typescript@5.8.3)(yaml@2.8.0)
 
-  packages/type-check:
-    devDependencies:
-      npm-run-all2:
-        specifier: 8.0.4
-        version: 8.0.4
+  packages/type-check: {}
 
   packages/typescript-config:
     devDependencies:
-      npm-run-all2:
-        specifier: 8.0.4
-        version: 8.0.4
       typescript:
         specifier: 5.8.3
         version: 5.8.3
@@ -350,9 +332,6 @@ importers:
       esbuild:
         specifier: 0.25.4
         version: 0.25.4
-      npm-run-all2:
-        specifier: 8.0.4
-        version: 8.0.4
       rollup:
         specifier: 4.41.1
         version: 4.41.1
@@ -444,9 +423,6 @@ importers:
       '@types/webpack-node-externals':
         specifier: 3.0.4
         version: 3.0.4(@swc/core@1.11.29)(webpack-cli@6.0.1)
-      npm-run-all2:
-        specifier: 8.0.4
-        version: 8.0.4
       webpack:
         specifier: 5.99.9
         version: 5.99.9(@swc/core@1.11.29)(webpack-cli@6.0.1)
@@ -5880,14 +5856,6 @@ packages:
     resolution: {integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==}
     engines: {node: '>=6.0.0'}
 
-  prettier-plugin-packagejson@2.5.14:
-    resolution: {integrity: sha512-h+3tSpr2nVpp+YOK1MDIYtYhHVXr8/0V59UUbJpIJFaqi3w4fvUokJo6eV8W+vELrUXIZzJ+DKm5G7lYzrMcKQ==}
-    peerDependencies:
-      prettier: '>= 1.16.0'
-    peerDependenciesMeta:
-      prettier:
-        optional: true
-
   prettier-plugin-prisma@5.0.0:
     resolution: {integrity: sha512-jTJV04D9+yF7ziOOMs7CJe4ijgAH7DEGjt0SAWAToGNRy1H6BEhvcKA2UQH6gC6KVW5zeeOSAvsoiDDTt9oKXg==}
     engines: {node: '>=14', npm: '>=8'}
@@ -6302,11 +6270,6 @@ packages:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
 
-  semver@7.7.1:
-    resolution: {integrity: sha512-hlq8tAfn0m/61p4BVRcPzIGr6LKiMwo4VM6dGi6pt4qcRkmNzTcWq6eCEjEh+qXjkMDvPlOFFSGwQjoEa6gyMA==}
-    engines: {node: '>=10'}
-    hasBin: true
-
   semver@7.7.2:
     resolution: {integrity: sha512-RF0Fw+rO5AMf9MAyaRXI4AV0Ulj5lMHqVxxdSgiVbixSCXoEmmX/jk0CuJw4+3SqroYO9VoUh+HcuJivvtJemA==}
     engines: {node: '>=10'}
@@ -6436,10 +6399,6 @@ packages:
 
   sort-object-keys@1.1.3:
     resolution: {integrity: sha512-855pvK+VkU7PaKYPc+Jjnmt4EzejQHyhhF33q31qG8x7maDzkeFhAAThdCYay11CISO+qAMwjOBP+fPZe0IPyg==}
-
-  sort-package-json@3.2.1:
-    resolution: {integrity: sha512-rTfRdb20vuoAn7LDlEtCqOkYfl2X+Qze6cLbNOzcDpbmKEhJI30tTN44d5shbKJnXsvz24QQhlCm81Bag7EOKg==}
-    hasBin: true
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
@@ -7817,7 +7776,7 @@ snapshots:
       outdent: 0.5.0
       prettier: 2.8.8
       resolve-from: 5.0.0
-      semver: 7.7.1
+      semver: 7.7.2
 
   '@changesets/assemble-release-plan@6.0.8':
     dependencies:
@@ -7826,7 +7785,7 @@ snapshots:
       '@changesets/should-skip-package': 0.1.2
       '@changesets/types': 6.1.0
       '@manypkg/get-packages': 1.1.3
-      semver: 7.7.1
+      semver: 7.7.2
 
   '@changesets/changelog-git@0.2.1':
     dependencies:
@@ -7867,7 +7826,7 @@ snapshots:
       package-manager-detector: 0.2.11
       picocolors: 1.1.1
       resolve-from: 5.0.0
-      semver: 7.7.1
+      semver: 7.7.2
       spawndamnit: 3.0.1
       term-size: 2.2.1
 
@@ -7890,7 +7849,7 @@ snapshots:
       '@changesets/types': 6.1.0
       '@manypkg/get-packages': 1.1.3
       picocolors: 1.1.1
-      semver: 7.7.1
+      semver: 7.7.2
 
   '@changesets/get-github-info@0.6.0':
     dependencies:
@@ -8002,7 +7961,7 @@ snapshots:
   '@commitlint/is-ignored@19.8.1':
     dependencies:
       '@commitlint/types': 19.8.1
-      semver: 7.7.1
+      semver: 7.7.2
 
   '@commitlint/lint@19.8.1':
     dependencies:
@@ -9375,7 +9334,7 @@ snapshots:
       fast-glob: 3.3.3
       is-glob: 4.0.3
       minimatch: 9.0.5
-      semver: 7.7.1
+      semver: 7.7.2
       ts-api-utils: 2.1.0(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
@@ -9389,7 +9348,7 @@ snapshots:
       fast-glob: 3.3.3
       is-glob: 4.0.3
       minimatch: 9.0.5
-      semver: 7.7.1
+      semver: 7.7.2
       ts-api-utils: 2.1.0(typescript@5.8.3)
       typescript: 5.8.3
     transitivePeerDependencies:
@@ -9809,7 +9768,7 @@ snapshots:
       picomatch: 4.0.2
       prompts: 2.4.2
       rehype: 13.0.2
-      semver: 7.7.1
+      semver: 7.7.2
       shiki: 3.2.1
       tinyexec: 0.3.2
       tinyglobby: 0.2.12
@@ -10449,7 +10408,7 @@ snapshots:
       postcss-modules-scope: 3.2.1(postcss@8.5.3)
       postcss-modules-values: 4.0.0(postcss@8.5.3)
       postcss-value-parser: 4.2.0
-      semver: 7.7.1
+      semver: 7.7.2
     optionalDependencies:
       webpack: 5.99.9(@swc/core@1.11.29)(webpack-cli@6.0.1)
 
@@ -11216,7 +11175,7 @@ snapshots:
       caniuse-lite: 1.0.30001707
       isbot: 3.8.0
       object-path: 0.11.8
-      semver: 7.7.1
+      semver: 7.7.2
       ua-parser-js: 1.0.40
 
   farm-plugin-replace-dirname-darwin-arm64@0.2.1:
@@ -12055,7 +12014,7 @@ snapshots:
 
   is-bun-module@2.0.0:
     dependencies:
-      semver: 7.7.1
+      semver: 7.7.2
 
   is-callable@1.2.7: {}
 
@@ -12247,7 +12206,7 @@ snapshots:
       '@babel/parser': 7.27.0
       '@istanbuljs/schema': 0.1.3
       istanbul-lib-coverage: 3.2.2
-      semver: 7.7.1
+      semver: 7.7.2
     transitivePeerDependencies:
       - supports-color
 
@@ -12554,7 +12513,7 @@ snapshots:
       jest-util: 29.7.0
       natural-compare: 1.4.0
       pretty-format: 29.7.0
-      semver: 7.7.1
+      semver: 7.7.2
     transitivePeerDependencies:
       - supports-color
 
@@ -12969,7 +12928,7 @@ snapshots:
 
   make-dir@4.0.0:
     dependencies:
-      semver: 7.7.1
+      semver: 7.7.2
 
   make-error@1.3.6: {}
 
@@ -13875,7 +13834,7 @@ snapshots:
       cosmiconfig: 9.0.0(typescript@5.8.3)
       jiti: 1.21.7
       postcss: 8.5.3
-      semver: 7.7.1
+      semver: 7.7.2
     optionalDependencies:
       webpack: 5.99.9(@swc/core@1.11.29)(webpack-cli@6.0.1)
     transitivePeerDependencies:
@@ -13930,13 +13889,6 @@ snapshots:
   prettier-linter-helpers@1.0.0:
     dependencies:
       fast-diff: 1.3.0
-
-  prettier-plugin-packagejson@2.5.14(prettier@3.5.3):
-    dependencies:
-      sort-package-json: 3.2.1
-      synckit: 0.11.6
-    optionalDependencies:
-      prettier: 3.5.3
 
   prettier-plugin-prisma@5.0.0(prettier@3.5.3):
     dependencies:
@@ -14380,8 +14332,6 @@ snapshots:
 
   semver@6.3.1: {}
 
-  semver@7.7.1: {}
-
   semver@7.7.2: {}
 
   send@0.19.0:
@@ -14467,7 +14417,7 @@ snapshots:
     dependencies:
       color: 4.2.3
       detect-libc: 2.0.3
-      semver: 7.7.1
+      semver: 7.7.2
     optionalDependencies:
       '@img/sharp-darwin-arm64': 0.33.5
       '@img/sharp-darwin-x64': 0.33.5
@@ -14588,16 +14538,6 @@ snapshots:
       websocket-driver: 0.7.4
 
   sort-object-keys@1.1.3: {}
-
-  sort-package-json@3.2.1:
-    dependencies:
-      detect-indent: 7.0.1
-      detect-newline: 4.0.1
-      git-hooks-list: 4.1.1
-      is-plain-obj: 4.1.0
-      semver: 7.7.1
-      sort-object-keys: 1.1.3
-      tinyglobby: 0.2.12
 
   source-map-js@1.2.1: {}
 
@@ -15057,7 +14997,7 @@ snapshots:
       chalk: 4.1.2
       enhanced-resolve: 5.18.1
       micromatch: 4.0.8
-      semver: 7.7.1
+      semver: 7.7.2
       source-map: 0.7.4
       typescript: 5.8.3
       webpack: 5.99.9(@swc/core@1.11.29)(webpack-cli@6.0.1)

@@ -45,9 +45,6 @@
     "dependencies": {
         "consola": "3.4.2"
     },
-    "devDependencies": {
-        "npm-run-all2": "8.0.4"
-    },
     "packageManager": "pnpm@10.11.0",
     "engines": {
         "node": "22",

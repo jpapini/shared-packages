@@ -55,8 +55,7 @@
     },
     "devDependencies": {
         "@types/eslint-plugin-jsx-a11y": "6.10.0",
-        "eslint": "9.27.0",
-        "npm-run-all2": "8.0.4"
+        "eslint": "9.27.0"
     },
     "peerDependencies": {
         "eslint": "9"

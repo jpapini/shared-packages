@@ -38,9 +38,6 @@
         "http-server": "14.1.1",
         "resolve-bin": "1.0.1"
     },
-    "devDependencies": {
-        "npm-run-all2": "8.0.4"
-    },
     "packageManager": "pnpm@10.11.0",
     "engines": {
         "node": "22",
