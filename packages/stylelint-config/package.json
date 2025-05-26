@@ -1,6 +1,6 @@
 {
     "name": "@jpapini/stylelint-config",
-    "version": "1.5.3",
+    "version": "1.5.4",
     "description": "Custom Stylelint configuration for Tailwind CSS projects.",
     "keywords": [
         "jpapini",
