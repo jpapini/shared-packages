@@ -32,20 +32,19 @@
         "reset": "pnpm run clean; rimraf node_modules"
     },
     "devDependencies": {
-        "npm-run-all2": "7.0.2",
-        "tsup": "8.4.0"
+        "tsup": "8.5.0"
     },
     "peerDependencies": {
         "tsup": "8"
     },
-    "packageManager": "pnpm@10.7.0",
+    "packageManager": "pnpm@10.11.0",
     "engines": {
         "node": "22",
         "pnpm": "10"
     },
     "volta": {
-        "node": "22.14.0",
-        "pnpm": "10.7.0"
+        "node": "22.16.0",
+        "pnpm": "10.11.0"
     },
     "publishConfig": {
         "access": "public"

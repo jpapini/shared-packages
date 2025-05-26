@@ -1,26 +1,27 @@
 {
-    "name": "@jpapini/lint-staged-config",
-    "version": "1.5.4",
-    "description": "Lint-staged configuration for linting and formatting staged files.",
+    "name": "@jpapini/prettier-plugin-packagejson",
+    "version": "1.0.0",
+    "description": "Custom Prettier plugin for formatting package.json files.",
     "keywords": [
         "jpapini",
-        "lint-staged-config",
+        "prettier-plugin",
         "tools",
-        "lint-staged",
-        "config"
+        "lint",
+        "prettier",
+        "packagejson"
     ],
-    "homepage": "https://github.com/jpapini/shared-packages/tree/main/packages/lint-staged-config#readme",
+    "homepage": "https://github.com/jpapini/shared-packages/tree/main/packages/prettier-plugin-packagejson#readme",
     "bugs": {
         "url": "https://github.com/jpapini/shared-packages/issues"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/jpapini/shared-packages.git",
-        "directory": "packages/lint-staged-config"
+        "directory": "packages/prettier-plugin-packagejson"
     },
     "license": "MIT",
     "author": "Julien Papini <julien.papini@gmail.com> (https://github.com/jpapini)",
-    "type": "commonjs",
+    "type": "module",
     "exports": {
         ".": "./index.js"
     },
@@ -31,11 +32,19 @@
         "clean": "rimraf .turbo node_modules/.cache",
         "reset": "pnpm run clean; rimraf node_modules"
     },
+    "dependencies": {
+        "detect-indent": "7.0.1",
+        "detect-newline": "4.0.1",
+        "git-hooks-list": "4.1.1",
+        "is-plain-obj": "4.1.0",
+        "semver": "7.7.2",
+        "sort-object-keys": "1.1.3"
+    },
     "devDependencies": {
-        "lint-staged": "16.0.0"
+        "prettier": "3.5.3"
     },
     "peerDependencies": {
-        "lint-staged": "15"
+        "prettier": "3"
     },
     "packageManager": "pnpm@10.11.0",
     "engines": {
