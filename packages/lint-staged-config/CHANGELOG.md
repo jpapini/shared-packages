@@ -1,5 +1,11 @@
 # @jpapini/lint-staged-config
 
+## 1.5.6
+
+### Patch Changes
+
+- [#120](https://github.com/jpapini/shared-packages/pull/120) [`871bfbe`](https://github.com/jpapini/shared-packages/commit/871bfbe82197ce532bf2eedc537528b9d9148b6d) Thanks [@jpapini](https://github.com/jpapini)! - Update peerDependencies.
+
 ## 1.5.5
 
 ### Patch Changes
