@@ -129,7 +129,7 @@
         "build": "tsup"
     },
     "dependencies": {
-        "unplugin": "2.3.4",
+        "unplugin": "2.3.5",
         "unplugin-utils": "0.2.4"
     },
     "devDependencies": {
@@ -137,8 +137,8 @@
         "@farmfe/core": "1.7.5",
         "@nuxt/kit": "3.17.4",
         "@nuxt/schema": "3.17.4",
-        "astro": "5.8.0",
-        "esbuild": "0.25.4",
+        "astro": "5.8.1",
+        "esbuild": "0.25.5",
         "rollup": "4.41.1",
         "typescript": "5.8.3",
         "vite": "6.3.5",
