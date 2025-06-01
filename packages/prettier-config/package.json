@@ -34,7 +34,7 @@
     "dependencies": {
         "@jpapini/prettier-plugin-packagejson": "workspace:*",
         "prettier-plugin-prisma": "5.0.0",
-        "prettier-plugin-tailwindcss": "0.6.11"
+        "prettier-plugin-tailwindcss": "0.6.12"
     },
     "devDependencies": {
         "prettier": "3.5.3"
