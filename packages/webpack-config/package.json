@@ -67,14 +67,14 @@
         "webpack-node-externals": "3.0.0"
     },
     "devDependencies": {
-        "@swc/core": "1.11.29",
-        "@swc/types": "0.1.21",
+        "@swc/core": "1.11.31",
+        "@swc/types": "0.1.22",
         "@types/webpack": "5.28.5",
         "@types/webpack-bundle-analyzer": "4.7.0",
         "@types/webpack-node-externals": "3.0.4",
         "webpack": "5.99.9",
         "webpack-cli": "6.0.1",
-        "webpack-dev-server": "5.2.1"
+        "webpack-dev-server": "5.2.2"
     },
     "peerDependencies": {
         "@swc/core": "1",
@@ -87,14 +87,14 @@
             "optional": true
         }
     },
-    "packageManager": "pnpm@10.11.0",
+    "packageManager": "pnpm@10.11.1",
     "engines": {
         "node": "22",
         "pnpm": "10"
     },
     "volta": {
         "node": "22.16.0",
-        "pnpm": "10.11.0"
+        "pnpm": "10.11.1"
     },
     "publishConfig": {
         "access": "public"
