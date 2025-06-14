@@ -135,11 +135,11 @@
     "devDependencies": {
         "@deepkit/type-compiler": "1.0.8",
         "@farmfe/core": "1.7.5",
-        "@nuxt/kit": "3.17.4",
-        "@nuxt/schema": "3.17.4",
-        "astro": "5.8.1",
+        "@nuxt/kit": "3.17.5",
+        "@nuxt/schema": "3.17.5",
+        "astro": "5.9.3",
         "esbuild": "0.25.5",
-        "rollup": "4.41.1",
+        "rollup": "4.43.0",
         "typescript": "5.8.3",
         "vite": "6.3.5",
         "webpack": "5.99.9"
@@ -182,14 +182,14 @@
             "optional": true
         }
     },
-    "packageManager": "pnpm@10.11.0",
+    "packageManager": "pnpm@10.12.1",
     "engines": {
         "node": "22",
         "pnpm": "10"
     },
     "volta": {
         "node": "22.16.0",
-        "pnpm": "10.11.0"
+        "pnpm": "10.12.1"
     },
     "publishConfig": {
         "access": "public"
