@@ -133,16 +133,16 @@
         "unplugin-utils": "0.2.4"
     },
     "devDependencies": {
-        "@deepkit/type-compiler": "1.0.8",
-        "@farmfe/core": "1.7.5",
-        "@nuxt/kit": "3.17.4",
-        "@nuxt/schema": "3.17.4",
-        "astro": "5.8.1",
-        "esbuild": "0.25.5",
-        "rollup": "4.41.1",
+        "@deepkit/type-compiler": "1.0.15",
+        "@farmfe/core": "1.7.10",
+        "@nuxt/kit": "3.17.7",
+        "@nuxt/schema": "3.17.7",
+        "astro": "5.12.0",
+        "esbuild": "0.25.7",
+        "rollup": "4.45.1",
         "typescript": "5.8.3",
         "vite": "6.3.5",
-        "webpack": "5.99.9"
+        "webpack": "5.100.2"
     },
     "peerDependencies": {
         "@deepkit/type-compiler": "1",
@@ -182,14 +182,14 @@
             "optional": true
         }
     },
-    "packageManager": "pnpm@10.11.0",
+    "packageManager": "pnpm@10.13.1",
     "engines": {
         "node": "22",
         "pnpm": "10"
     },
     "volta": {
-        "node": "22.16.0",
-        "pnpm": "10.11.0"
+        "node": "22.17.1",
+        "pnpm": "10.13.1"
     },
     "publishConfig": {
         "access": "public"
