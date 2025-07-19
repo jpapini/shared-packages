@@ -91,7 +91,7 @@ export const createBasePreset: PresetFunc = (context, config) => {
             new EnvironmentPlugin({
                 ...context.envVars,
                 NODE_ENV: context.nodeEnv,
-                PUBLIC_URL: context.publicUrl.toString(),
+                ...(context.publicUrl ? { PUBLIC_URL: context.publicUrl.toString() } : {}),
             }),
             ...(context.isProduction
                 ? [

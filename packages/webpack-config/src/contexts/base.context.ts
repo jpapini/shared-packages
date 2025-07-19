@@ -26,7 +26,7 @@ export type BaseContextOptions<TBuildType extends BuildType = BuildType> = {
     isWatchMode: boolean;
     isDevServer: boolean;
 
-    publicUrl: URL;
+    publicUrl?: URL | undefined;
 
     useSWC?: boolean | undefined;
     swcLoaderConfig?: Partial<SwcConfig> | undefined;
@@ -54,7 +54,7 @@ export abstract class BaseContext<TBuildType extends BuildType = BuildType> {
     protected _isWatchMode: boolean;
     protected _isDevServer: boolean;
 
-    protected _publicUrl: URL;
+    protected _publicUrl: URL | undefined;
 
     protected _useSWC: boolean;
     protected _swcLoaderConfig: Partial<SwcConfig>;
@@ -85,7 +85,9 @@ export abstract class BaseContext<TBuildType extends BuildType = BuildType> {
         this._isDevServer = options.isDevServer;
 
         this._publicUrl = options.publicUrl;
-        this._publicUrl.pathname += this._publicUrl.pathname.endsWith('/') ? '' : '/';
+        if (this._publicUrl) {
+            this._publicUrl.pathname += this._publicUrl.pathname.endsWith('/') ? '' : '/';
+        }
 
         this._useSWC = options.useSWC ?? false;
         this._swcLoaderConfig = options.swcLoaderConfig ?? {};
@@ -140,7 +142,7 @@ export abstract class BaseContext<TBuildType extends BuildType = BuildType> {
         return this._isDevServer;
     }
 
-    public get publicUrl(): URL {
+    public get publicUrl(): URL | undefined {
         return this._publicUrl;
     }
 
@@ -161,7 +163,10 @@ export abstract class BaseContext<TBuildType extends BuildType = BuildType> {
         logger.info('ID:', colors.blue(this.id));
 
         logger.info('Node environment:', colors.blue(this.nodeEnv));
-        logger.info('Public URL:', colors.blue(this.publicUrl.toString()));
+        logger.info(
+            'Public URL:',
+            this.publicUrl ? colors.blue(this.publicUrl.toString()) : colors.red('Not set'),
+        );
 
         logger.info(
             'Production build:',

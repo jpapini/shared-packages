@@ -25,11 +25,9 @@ export function loadEnvVars(rootDir: string, env?: WebpackEnv) {
         );
     }
 
-    if (!process.env.PUBLIC_URL) throw new Error('PUBLIC_URL environment variable is required');
-
-    let publicUrl: URL;
+    let publicUrl: URL | undefined;
     try {
-        publicUrl = new URL(process.env.PUBLIC_URL);
+        publicUrl = process.env.PUBLIC_URL ? new URL(process.env.PUBLIC_URL) : undefined;
     } catch {
         throw new Error(`Invalid PUBLIC_URL: ${process.env.PUBLIC_URL}. Must be a valid URL`);
     }

@@ -20,6 +20,8 @@ const require = createRequire(import.meta.url);
 export const createReactAppPreset: PresetFunc = (context) => {
     if (!(context instanceof ReactAppContext)) throw new Error('Invalid context');
 
+    if (!context.publicUrl) throw new Error('PUBLIC_URL environment variable is required');
+
     return {
         presetName: 'react-app',
 
