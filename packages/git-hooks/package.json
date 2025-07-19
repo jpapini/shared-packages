@@ -35,17 +35,17 @@
         "@jpapini/commitlint-config": "workspace:*",
         "@jpapini/lint-staged-config": "workspace:*",
         "husky": "9.1.7",
-        "lint-staged": "16.1.0",
+        "lint-staged": "16.1.2",
         "resolve-bin": "1.0.1"
     },
-    "packageManager": "pnpm@10.11.0",
+    "packageManager": "pnpm@10.13.1",
     "engines": {
         "node": "22",
         "pnpm": "10"
     },
     "volta": {
-        "node": "22.16.0",
-        "pnpm": "10.11.0"
+        "node": "22.17.1",
+        "pnpm": "10.13.1"
     },
     "publishConfig": {
         "access": "public"
