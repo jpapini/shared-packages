@@ -6,7 +6,7 @@ module.exports = {
         if (!files || !files.length) return [];
         return [
             `prettier --cache --cache-location node_modules/.cache/prettier/.prettiercache -u -w ${files}`,
-            `eslint --flag unstable_config_lookup_from_file --cache --cache-location node_modules/.cache/eslint/.eslintcache --fix ${files}`,
+            `eslint --flag v10_config_lookup_from_file --cache --cache-location node_modules/.cache/eslint/.eslintcache --fix ${files}`,
         ];
     },
     '**/*.css': (filenames) => {

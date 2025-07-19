@@ -2,10 +2,10 @@ import { colors, logger } from '@jpapini/logger';
 
 import { contextFactory } from './context.factory';
 import type { ContextOptions } from './context.factory';
-import { NestAppContext, ReactAppContext } from './contexts';
+import { NodeAppContext, ReactAppContext } from './contexts';
 import { NodeEnv } from './enums';
 import { loadEnvVars } from './load-env-vars';
-import { createBasePreset, createNestAppPreset, createReactAppPreset } from './presets';
+import { createBasePreset, createNodeAppPreset, createReactAppPreset } from './presets';
 import type { WebpackConfiguration, WebpackEnv } from './types';
 import { mergePresets } from './utils/merge-presets.util';
 
@@ -41,7 +41,7 @@ export function createBuildConfiguration(
 
         const { loadedPresets, config } = mergePresets(context, [
             createBasePreset,
-            ...(context instanceof NestAppContext ? [createNestAppPreset] : []),
+            ...(context instanceof NodeAppContext ? [createNodeAppPreset] : []),
             ...(context instanceof ReactAppContext ? [createReactAppPreset] : []),
         ]);
 

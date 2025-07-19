@@ -8,10 +8,10 @@
         "plop": "plop --plopfile plop/plopfile.js",
         "lint": "run-s -c lint:*",
         "lint:prettier": "prettier --cache --cache-location node_modules/.cache/prettier/.prettiercache -u -c '**/*' '!**/pnpm-lock.yaml' '!**/*.hbs'",
-        "lint:eslint": "eslint --flag unstable_config_lookup_from_file --cache --cache-location node_modules/.cache/eslint/.eslintcache .",
+        "lint:eslint": "eslint --flag v10_config_lookup_from_file --cache --cache-location node_modules/.cache/eslint/.eslintcache .",
         "format": "run-s -c format:*",
         "format:prettier": "prettier --cache --cache-location node_modules/.cache/prettier/.prettiercache -u -w '**/*' '!**/pnpm-lock.yaml' '!**/*.hbs'",
-        "format:eslint": "eslint --flag unstable_config_lookup_from_file --cache --cache-location node_modules/.cache/eslint/.eslintcache --fix .",
+        "format:eslint": "eslint --flag v10_config_lookup_from_file --cache --cache-location node_modules/.cache/eslint/.eslintcache --fix .",
         "typecheck": "turbo run typecheck",
         "test": "turbo run test",
         "test:cov": "turbo run test:cov",
@@ -61,8 +61,10 @@
     "pnpm": {
         "onlyBuiltDependencies": [
             "@swc/core",
+            "@tailwindcss/oxide",
             "core-js-pure",
-            "esbuild"
+            "esbuild",
+            "unrs-resolver"
         ]
     }
 }
