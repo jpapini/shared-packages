@@ -135,8 +135,8 @@
     "devDependencies": {
         "@deepkit/type-compiler": "1.0.15",
         "@farmfe/core": "1.7.10",
-        "@nuxt/kit": "3.17.7",
-        "@nuxt/schema": "3.17.7",
+        "@nuxt/kit": "4.0.0",
+        "@nuxt/schema": "4.0.0",
         "astro": "5.12.0",
         "esbuild": "0.25.7",
         "rollup": "4.45.1",
@@ -147,8 +147,8 @@
     "peerDependencies": {
         "@deepkit/type-compiler": "1",
         "@farmfe/core": ">=1",
-        "@nuxt/kit": "3",
-        "@nuxt/schema": "3",
+        "@nuxt/kit": "3 || 4",
+        "@nuxt/schema": "3 || 4",
         "astro": "5",
         "esbuild": "*",
         "rollup": "3 || 4",
