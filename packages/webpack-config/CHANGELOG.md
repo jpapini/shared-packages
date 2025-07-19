@@ -1,5 +1,15 @@
 # @jpapini/webpack-config
 
+## 2.8.0
+
+### Minor Changes
+
+- [`c756939`](https://github.com/jpapini/shared-packages/commit/c75693918306aa5834a62faabae9e91a76356c9f) Thanks [@jpapini](https://github.com/jpapini)! - PUBLIC_URL is required only for react app.
+
+### Patch Changes
+
+- [#131](https://github.com/jpapini/shared-packages/pull/131) [`0a01f04`](https://github.com/jpapini/shared-packages/commit/0a01f04e15f8dc7634aa2fef3c2020df7e2db900) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@swc/core` to `1.13.1`.
+
 ## 2.7.0
 
 ### Minor Changes
