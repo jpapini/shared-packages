@@ -35,7 +35,7 @@
         "@jpapini/prettier-config": "workspace:*",
         "@jpapini/tsup-config": "workspace:*",
         "@jpapini/typescript-config": "workspace:*",
-        "@swc/core": "1.13.0",
+        "@swc/core": "1.13.1",
         "@swc/jest": "0.2.39",
         "@types/jest": "30.0.0",
         "@types/node": "22.16.5",
