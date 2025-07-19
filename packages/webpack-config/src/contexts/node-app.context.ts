@@ -6,14 +6,14 @@ import { shorternPath } from '~/utils/shortern-path.util';
 import { BaseContext } from './base.context';
 import type { BaseContextOptions } from './base.context';
 
-export type NestAppContextOptions = BaseContextOptions<typeof BuildType.NEST_APP> & {
+export type NodeAppContextOptions = BaseContextOptions<typeof BuildType.NODE_APP> & {
     outFilename?: string | undefined;
 };
 
-export class NestAppContext extends BaseContext<typeof BuildType.NEST_APP> {
+export class NodeAppContext extends BaseContext<typeof BuildType.NODE_APP> {
     protected _outFilename: string;
 
-    constructor({ outFilename, ...options }: NestAppContextOptions) {
+    constructor({ outFilename, ...options }: NodeAppContextOptions) {
         super(options);
 
         this._outFilename = outFilename ?? 'main.js';

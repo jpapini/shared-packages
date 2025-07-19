@@ -31,6 +31,7 @@ export type BaseContextOptions<TBuildType extends BuildType = BuildType> = {
     useSWC?: boolean | undefined;
     swcLoaderConfig?: Partial<SwcConfig> | undefined;
     tsLoaderConfig?: Partial<TsLoaderConfig> | undefined;
+    decorators?: boolean | undefined;
 };
 
 export abstract class BaseContext<TBuildType extends BuildType = BuildType> {
@@ -58,6 +59,7 @@ export abstract class BaseContext<TBuildType extends BuildType = BuildType> {
     protected _useSWC: boolean;
     protected _swcLoaderConfig: Partial<SwcConfig>;
     protected _tsLoaderConfig: Partial<TsLoaderConfig>;
+    protected _decorators: boolean;
 
     constructor(options: BaseContextOptions<TBuildType>) {
         this._buildType = options.buildType;
@@ -88,6 +90,7 @@ export abstract class BaseContext<TBuildType extends BuildType = BuildType> {
         this._useSWC = options.useSWC ?? false;
         this._swcLoaderConfig = options.swcLoaderConfig ?? {};
         this._tsLoaderConfig = options.tsLoaderConfig ?? {};
+        this._decorators = options.decorators ?? false;
     }
 
     public get buildType(): TBuildType {
@@ -144,13 +147,14 @@ export abstract class BaseContext<TBuildType extends BuildType = BuildType> {
     public get useSWC(): boolean {
         return this._useSWC;
     }
-
     public get swcLoaderConfig(): Partial<SwcConfig> {
         return this._swcLoaderConfig;
     }
-
     public get tsLoaderConfig(): Partial<TsLoaderConfig> {
         return this._tsLoaderConfig;
+    }
+    public get decorators(): boolean {
+        return this._decorators;
     }
 
     public print(): void {
@@ -182,5 +186,6 @@ export abstract class BaseContext<TBuildType extends BuildType = BuildType> {
         logger.info('Entry file:', colors.blue(shorternPath(this.entryFile, this.rootDir)));
 
         logger.info('Use SWC:', this.useSWC ? colors.green('YES') : colors.yellow('NO'));
+        logger.info('Decorators:', this.decorators ? colors.green('YES') : colors.yellow('NO'));
     }
 }

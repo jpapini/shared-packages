@@ -6,18 +6,18 @@ import webpack from 'webpack';
 import nodeExternals from 'webpack-node-externals';
 
 import { TS_RULE_TEST } from '~/constants';
-import { NestAppContext } from '~/contexts';
+import { NodeAppContext } from '~/contexts';
 import type { PresetFunc } from '~/types';
 
 const { HotModuleReplacementPlugin } = webpack;
 
 const require = createRequire(import.meta.url);
 
-export const createNestAppPreset: PresetFunc = (context) => {
-    if (!(context instanceof NestAppContext)) throw new Error('Invalid context');
+export const createNodeAppPreset: PresetFunc = (context) => {
+    if (!(context instanceof NodeAppContext)) throw new Error('Invalid context');
 
     return {
-        presetName: 'nest-app',
+        presetName: 'node-app',
 
         devtool: context.isProduction ? false : 'inline-source-map',
 
@@ -53,12 +53,7 @@ export const createNestAppPreset: PresetFunc = (context) => {
                                           target: 'es2022',
                                           parser: {
                                               syntax: 'typescript',
-                                              decorators: true,
                                               dynamicImport: true,
-                                          },
-                                          transform: {
-                                              legacyDecorator: true,
-                                              decoratorMetadata: true,
                                           },
                                       },
                                   } satisfies SwcConfig,

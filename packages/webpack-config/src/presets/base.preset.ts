@@ -63,10 +63,13 @@ export const createBasePreset: PresetFunc = (context, config) => {
                                           parser: {
                                               ...context.swcLoaderConfig.jsc?.parser,
                                               syntax: 'typescript',
+                                              decorators: context.decorators,
                                           },
                                           transform: {
                                               ...context.swcLoaderConfig.jsc?.transform,
                                               useDefineForClassFields: true,
+                                              legacyDecorator: context.decorators,
+                                              decoratorMetadata: context.decorators,
                                           },
                                           keepClassNames: true,
                                           externalHelpers: false,
