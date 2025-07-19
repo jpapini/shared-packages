@@ -1,6 +1,6 @@
 {
     "name": "@jpapini/prettier-plugin-packagejson",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Custom Prettier plugin for formatting package.json files.",
     "keywords": [
         "jpapini",
