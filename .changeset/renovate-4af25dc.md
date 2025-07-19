@@ -13,7 +13,6 @@
 '@jpapini/tsup-config': patch
 '@jpapini/type-check': patch
 '@jpapini/typescript-config': patch
-'@jpapini/unplugin-deepkit-type': patch
 '@jpapini/webpack-config': patch
 ---
 
