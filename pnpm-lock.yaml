@@ -281,8 +281,8 @@ importers:
         specifier: 7.0.0
         version: 7.0.0(stylelint@16.22.0(typescript@5.8.3))
       stylelint-config-standard:
-        specifier: 38.0.0
-        version: 38.0.0(stylelint@16.22.0(typescript@5.8.3))
+        specifier: 39.0.0
+        version: 39.0.0(stylelint@16.22.0(typescript@5.8.3))
       stylelint-config-tailwindcss:
         specifier: 1.0.0
         version: 1.0.0(stylelint@16.22.0(typescript@5.8.3))(tailwindcss@4.1.11)
@@ -5275,6 +5275,7 @@ packages:
   source-map@0.8.0-beta.0:
     resolution: {integrity: sha512-2ymg6oRBpebeZi9UUNsgQ89bhx01TcTkmNTGnNO88imTmbSgy4nfujrgVEFKWpMTEGA11EDkTt7mqObTPdigIA==}
     engines: {node: '>= 8'}
+    deprecated: The work that was done in this beta branch won't be included in future versions
 
   spawndamnit@3.0.1:
     resolution: {integrity: sha512-MmnduQUuHCoFckZoWnXsTg7JaiLBJrKFj9UI2MbRPGaJeVpsLcVBu6P/IGZovziM/YBsellCmsprgNA+w0CzVg==}
@@ -5406,17 +5407,17 @@ packages:
     peerDependencies:
       stylelint: '>=14'
 
-  stylelint-config-recommended@16.0.0:
-    resolution: {integrity: sha512-4RSmPjQegF34wNcK1e1O3Uz91HN8P1aFdFzio90wNK9mjgAI19u5vsU868cVZboKzCaa5XbpvtTzAAGQAxpcXA==}
+  stylelint-config-recommended@17.0.0:
+    resolution: {integrity: sha512-WaMSdEiPfZTSFVoYmJbxorJfA610O0tlYuU2aEwY33UQhSPgFbClrVJYWvy3jGJx+XW37O+LyNLiZOEXhKhJmA==}
     engines: {node: '>=18.12.0'}
     peerDependencies:
-      stylelint: ^16.16.0
+      stylelint: ^16.23.0
 
-  stylelint-config-standard@38.0.0:
-    resolution: {integrity: sha512-uj3JIX+dpFseqd/DJx8Gy3PcRAJhlEZ2IrlFOc4LUxBX/PNMEQ198x7LCOE2Q5oT9Vw8nyc4CIL78xSqPr6iag==}
+  stylelint-config-standard@39.0.0:
+    resolution: {integrity: sha512-JabShWORb8Bmc1A47ZyJstran60P3yUdI1zWMpGYPeFiC6xzHXJMkpKAd8EjIhq3HPUplIWWMDJ/xu0AiPd+kA==}
     engines: {node: '>=18.12.0'}
     peerDependencies:
-      stylelint: ^16.18.0
+      stylelint: ^16.23.0
 
   stylelint-config-tailwindcss@1.0.0:
     resolution: {integrity: sha512-e6WUBJeLdOZ0sy8FZ1jk5Zy9iNGqqJbrMwnnV0Hpaw/yin6QO3gVv/zvyqSty8Yg6nEB5gqcyJbN387TPhEa7Q==}
@@ -11609,14 +11610,14 @@ snapshots:
       stylelint: 16.22.0(typescript@5.8.3)
       stylelint-order: 6.0.4(stylelint@16.22.0(typescript@5.8.3))
 
-  stylelint-config-recommended@16.0.0(stylelint@16.22.0(typescript@5.8.3)):
+  stylelint-config-recommended@17.0.0(stylelint@16.22.0(typescript@5.8.3)):
     dependencies:
       stylelint: 16.22.0(typescript@5.8.3)
 
-  stylelint-config-standard@38.0.0(stylelint@16.22.0(typescript@5.8.3)):
+  stylelint-config-standard@39.0.0(stylelint@16.22.0(typescript@5.8.3)):
     dependencies:
       stylelint: 16.22.0(typescript@5.8.3)
-      stylelint-config-recommended: 16.0.0(stylelint@16.22.0(typescript@5.8.3))
+      stylelint-config-recommended: 17.0.0(stylelint@16.22.0(typescript@5.8.3))
 
   stylelint-config-tailwindcss@1.0.0(stylelint@16.22.0(typescript@5.8.3))(tailwindcss@4.1.11):
     dependencies:
