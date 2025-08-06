@@ -1,5 +1,14 @@
 # @jpapini/prettier-config
 
+## 1.5.7
+
+### Patch Changes
+
+- [`a9c3835`](https://github.com/jpapini/shared-packages/commit/a9c3835d83be70357c9ea5c114313b51c377a083) Thanks [@jpapini](https://github.com/jpapini)! - Update Node.js and PNPM versions.
+
+- Updated dependencies [[`a9c3835`](https://github.com/jpapini/shared-packages/commit/a9c3835d83be70357c9ea5c114313b51c377a083)]:
+    - @jpapini/prettier-plugin-packagejson@1.0.2
+
 ## 1.5.6
 
 ### Patch Changes

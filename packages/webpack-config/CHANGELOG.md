@@ -1,5 +1,16 @@
 # @jpapini/webpack-config
 
+## 2.8.1
+
+### Patch Changes
+
+- [`a9c3835`](https://github.com/jpapini/shared-packages/commit/a9c3835d83be70357c9ea5c114313b51c377a083) Thanks [@jpapini](https://github.com/jpapini)! - Update Node.js and PNPM versions.
+
+- [`89cadc5`](https://github.com/jpapini/shared-packages/commit/89cadc58e1422ea839bfe111799ce70dbc70a505) Thanks [@jpapini](https://github.com/jpapini)! - Update minor dependencies.
+
+- Updated dependencies [[`a9c3835`](https://github.com/jpapini/shared-packages/commit/a9c3835d83be70357c9ea5c114313b51c377a083)]:
+    - @jpapini/logger@1.5.6
+
 ## 2.8.0
 
 ### Minor Changes
