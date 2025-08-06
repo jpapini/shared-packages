@@ -34,7 +34,7 @@
         "reset": "pnpm run clean; rimraf node_modules"
     },
     "dependencies": {
-        "dotenv": "17.2.0",
+        "dotenv": "17.2.1",
         "http-server": "14.1.1",
         "resolve-bin": "1.0.1"
     },

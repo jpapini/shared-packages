@@ -23,7 +23,11 @@ function createBaseJestConfig(options: CreateJestConfigOptions): Config {
         testMatch: [
             '<rootDir>/src/**/*.test.{ts,tsx}',
             '<rootDir>/src/**/*.spec.{ts,tsx}',
-            ...(options.testMatch ?? []),
+            ...(Array.isArray(options.testMatch)
+                ? options.testMatch
+                : typeof options.testMatch === 'string'
+                  ? [options.testMatch]
+                  : []),
         ],
     };
 }

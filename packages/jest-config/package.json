@@ -47,13 +47,13 @@
         "build": "tsup"
     },
     "devDependencies": {
-        "@jest/types": "30.0.1",
-        "@swc/core": "1.13.1",
+        "@jest/types": "30.0.5",
+        "@swc/core": "1.13.3",
         "@swc/jest": "0.2.39",
         "@swc/types": "0.1.23",
-        "jest": "30.0.4",
-        "ts-jest": "29.4.0",
-        "typescript": "5.8.3"
+        "jest": "30.0.5",
+        "ts-jest": "29.4.1",
+        "typescript": "5.9.2"
     },
     "peerDependencies": {
         "@swc/core": "1",
