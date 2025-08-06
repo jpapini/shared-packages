@@ -1,5 +1,13 @@
 # @jpapini/lint-staged-config
 
+## 1.5.9
+
+### Patch Changes
+
+- [`a9c3835`](https://github.com/jpapini/shared-packages/commit/a9c3835d83be70357c9ea5c114313b51c377a083) Thanks [@jpapini](https://github.com/jpapini)! - Update Node.js and PNPM versions.
+
+- [`89cadc5`](https://github.com/jpapini/shared-packages/commit/89cadc58e1422ea839bfe111799ce70dbc70a505) Thanks [@jpapini](https://github.com/jpapini)! - Update minor dependencies.
+
 ## 1.5.8
 
 ### Patch Changes

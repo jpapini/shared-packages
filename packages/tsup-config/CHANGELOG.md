@@ -1,5 +1,11 @@
 # @jpapini/tsup-config
 
+## 1.5.4
+
+### Patch Changes
+
+- [`a9c3835`](https://github.com/jpapini/shared-packages/commit/a9c3835d83be70357c9ea5c114313b51c377a083) Thanks [@jpapini](https://github.com/jpapini)! - Update Node.js and PNPM versions.
+
 ## 1.5.3
 
 ### Patch Changes
