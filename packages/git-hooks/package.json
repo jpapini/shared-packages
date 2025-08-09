@@ -35,7 +35,7 @@
         "@jpapini/commitlint-config": "workspace:*",
         "@jpapini/lint-staged-config": "workspace:*",
         "husky": "9.1.7",
-        "lint-staged": "16.1.4",
+        "lint-staged": "16.1.5",
         "resolve-bin": "1.0.1"
     },
     "packageManager": "pnpm@10.14.0",
