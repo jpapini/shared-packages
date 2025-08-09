@@ -68,7 +68,7 @@
     },
     "devDependencies": {
         "@swc/core": "1.13.3",
-        "@swc/types": "0.1.23",
+        "@swc/types": "0.1.24",
         "@types/webpack": "5.28.5",
         "@types/webpack-bundle-analyzer": "4.7.0",
         "@types/webpack-node-externals": "3.0.4",
