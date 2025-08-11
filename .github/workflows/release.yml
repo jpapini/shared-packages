@@ -44,7 +44,7 @@ jobs:
                   git config --global tag.gpgSign true
 
             - name: Checkout repository
-              uses: actions/checkout@v4
+              uses: actions/checkout@v5
               with:
                   ssh-key: ${{ env.SSH_PRIVATE_KEY }}
 
