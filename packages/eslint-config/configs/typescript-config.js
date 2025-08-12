@@ -367,6 +367,12 @@ export default tseslint.config(
              * @url https://typescript-eslint.io/rules/restrict-template-expressions/
              */
             '@typescript-eslint/restrict-template-expressions': 'off',
+
+            /**
+             * Enforce unbound methods are called with their expected scope.
+             * @url https://typescript-eslint.io/rules/unbound-method/
+             */
+            '@typescript-eslint/unbound-method': ['error', { ignoreStatic: true }],
         },
     },
     {
