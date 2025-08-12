@@ -1,5 +1,11 @@
 # @jpapini/nest-utils
 
+## 1.6.5
+
+### Patch Changes
+
+- [`53d5430`](https://github.com/jpapini/shared-packages/commit/53d5430e361089be351fc23cbd1d0655ac3f6739) Thanks [@jpapini](https://github.com/jpapini)! - Update dependencies.
+
 ## 1.6.4
 
 ### Patch Changes
