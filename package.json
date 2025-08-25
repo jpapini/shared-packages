@@ -26,7 +26,7 @@
     "prettier": "@jpapini/prettier-config",
     "devDependencies": {
         "@changesets/changelog-github": "0.5.1",
-        "@changesets/cli": "2.29.5",
+        "@changesets/cli": "2.29.6",
         "@commitlint/cli": "19.8.1",
         "@jpapini/commitlint-config": "workspace:*",
         "@jpapini/eslint-config": "workspace:*",
@@ -35,28 +35,28 @@
         "@jpapini/prettier-config": "workspace:*",
         "@jpapini/tsup-config": "workspace:*",
         "@jpapini/typescript-config": "workspace:*",
-        "@swc/core": "1.13.3",
+        "@swc/core": "1.13.5",
         "@swc/jest": "0.2.39",
         "@types/jest": "30.0.0",
-        "@types/node": "22.17.1",
-        "eslint": "9.33.0",
+        "@types/node": "22.18.0",
+        "eslint": "9.34.0",
         "jest": "30.0.5",
         "npm-run-all2": "8.0.4",
         "plop": "4.0.1",
         "prettier": "3.6.2",
         "rimraf": "6.0.1",
         "tsup": "8.5.0",
-        "turbo": "2.5.5",
+        "turbo": "2.5.6",
         "typescript": "5.9.2"
     },
-    "packageManager": "pnpm@10.14.0",
+    "packageManager": "pnpm@10.15.0",
     "engines": {
         "node": "22",
         "pnpm": "10"
     },
     "volta": {
         "node": "22.18.0",
-        "pnpm": "10.14.0"
+        "pnpm": "10.15.0"
     },
     "pnpm": {
         "onlyBuiltDependencies": [

@@ -45,14 +45,14 @@
         "test:cov": "pnpm run test --coverage",
         "build": "tsup"
     },
-    "packageManager": "pnpm@10.14.0",
+    "packageManager": "pnpm@10.15.0",
     "engines": {
         "node": "22",
         "pnpm": "10"
     },
     "volta": {
         "node": "22.18.0",
-        "pnpm": "10.14.0"
+        "pnpm": "10.15.0"
     },
     "publishConfig": {
         "access": "public"
