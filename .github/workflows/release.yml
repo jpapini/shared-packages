@@ -44,15 +44,15 @@ jobs:
                   git config --global tag.gpgSign true
 
             - name: Checkout repository
-              uses: actions/checkout@v4
+              uses: actions/checkout@v4.4.0
               with:
                   ssh-key: ${{ env.SSH_PRIVATE_KEY }}
 
             - name: Setup PNPM
-              uses: pnpm/action-setup@v4
+              uses: pnpm/action-setup@v4.4.0
 
             - name: Setup Node.js
-              uses: actions/setup-node@v4
+              uses: actions/setup-node@v4.4.0
               with:
                   registry-url: 'https://registry.npmjs.org/'
                   node-version-file: package.json
@@ -63,7 +63,7 @@ jobs:
 
             - name: Create release Pull Request
               id: changesets
-              uses: changesets/action@v1
+              uses: changesets/action@v1.9.0
               with:
                   setupGitUser: false
                   title: 'Release package(s)'
