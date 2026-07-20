@@ -47,14 +47,14 @@ jobs:
                   git config --global tag.gpgSign true
 
             - name: Checkout repository
-              uses: actions/checkout@v4
+              uses: actions/checkout@v4.4.0
               with:
                   ssh-key: ${{ env.SSH_PRIVATE_KEY }}
                   fetch-depth: 2
                   ref: ${{ github.head_ref }}
 
             - name: Setup PNPM
-              uses: pnpm/action-setup@v4
+              uses: pnpm/action-setup@v4.4.0
 
             - name: Run changesets-renovate
               run: pnpm dlx @scaleway/changesets-renovate
