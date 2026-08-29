@@ -38,7 +38,7 @@
         "@swc/core": "1.13.3",
         "@swc/jest": "0.2.39",
         "@types/jest": "30.0.0",
-        "@types/node": "22.17.1",
+        "@types/node": "24.13.3",
         "eslint": "9.33.0",
         "jest": "30.0.5",
         "npm-run-all2": "8.0.4",
