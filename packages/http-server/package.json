@@ -38,14 +38,14 @@
         "http-server": "14.1.1",
         "resolve-bin": "1.0.1"
     },
-    "packageManager": "pnpm@10.14.0",
+    "packageManager": "pnpm@11.25.0",
     "engines": {
         "node": "22",
-        "pnpm": "10"
+        "pnpm": "11"
     },
     "volta": {
         "node": "22.18.0",
-        "pnpm": "10.14.0"
+        "pnpm": "11.25.0"
     },
     "publishConfig": {
         "access": "public"
