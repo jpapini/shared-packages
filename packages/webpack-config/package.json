@@ -74,13 +74,13 @@
         "@types/webpack-node-externals": "3.0.4",
         "webpack": "5.101.1",
         "webpack-cli": "6.0.1",
-        "webpack-dev-server": "5.2.2"
+        "webpack-dev-server": "6.0.0"
     },
     "peerDependencies": {
         "@swc/core": "1",
         "webpack": "5",
         "webpack-cli": "6",
-        "webpack-dev-server": "5"
+        "webpack-dev-server": "5 || 6"
     },
     "peerDependenciesMeta": {
         "@swc/core": {
