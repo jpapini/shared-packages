@@ -34,10 +34,10 @@
         "reset": "pnpm run clean; rimraf node_modules"
     },
     "devDependencies": {
-        "typescript": "5.9.2"
+        "typescript": "7.0.2"
     },
     "peerDependencies": {
-        "typescript": "5"
+        "typescript": "5 || 7"
     },
     "packageManager": "pnpm@10.14.0",
     "engines": {
