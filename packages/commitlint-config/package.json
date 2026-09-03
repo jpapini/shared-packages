@@ -33,13 +33,13 @@
         "reset": "pnpm run clean; rimraf node_modules"
     },
     "dependencies": {
-        "@commitlint/config-conventional": "19.8.1"
+        "@commitlint/config-conventional": "21.2.2"
     },
     "devDependencies": {
-        "@commitlint/cli": "19.8.1"
+        "@commitlint/cli": "21.2.2"
     },
     "peerDependencies": {
-        "@commitlint/cli": "19"
+        "@commitlint/cli": "19 || 21"
     },
     "packageManager": "pnpm@10.14.0",
     "engines": {
