@@ -26,7 +26,7 @@
     "prettier": "@jpapini/prettier-config",
     "devDependencies": {
         "@changesets/changelog-github": "0.5.1",
-        "@changesets/cli": "2.29.5",
+        "@changesets/cli": "3.0.2",
         "@commitlint/cli": "19.8.1",
         "@jpapini/commitlint-config": "workspace:*",
         "@jpapini/eslint-config": "workspace:*",
