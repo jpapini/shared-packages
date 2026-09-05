@@ -32,10 +32,10 @@
         "reset": "pnpm run clean; rimraf node_modules"
     },
     "devDependencies": {
-        "lint-staged": "16.1.5"
+        "lint-staged": "17.5.0"
     },
     "peerDependencies": {
-        "lint-staged": "16"
+        "lint-staged": "16 || 17"
     },
     "packageManager": "pnpm@10.14.0",
     "engines": {
