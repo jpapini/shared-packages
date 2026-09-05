@@ -38,14 +38,14 @@
         "lint-staged": "16.1.5",
         "resolve-bin": "1.0.1"
     },
-    "packageManager": "pnpm@10.14.0",
+    "packageManager": "pnpm@12.3.4",
     "engines": {
         "node": "22",
-        "pnpm": "10"
+        "pnpm": "12"
     },
     "volta": {
         "node": "22.18.0",
-        "pnpm": "10.14.0"
+        "pnpm": "12.3.4"
     },
     "publishConfig": {
         "access": "public"
