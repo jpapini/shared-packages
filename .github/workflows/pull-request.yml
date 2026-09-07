@@ -42,16 +42,16 @@ jobs:
                   git config --global tag.gpgSign true
 
             - name: Checkout repository
-              uses: actions/checkout@v4
+              uses: actions/checkout@v7
               with:
                   ssh-key: ${{ env.SSH_PRIVATE_KEY }}
                   fetch-depth: 0
 
             - name: Setup PNPM
-              uses: pnpm/action-setup@v4
+              uses: pnpm/action-setup@v6
 
             - name: Setup Node.js
-              uses: actions/setup-node@v4
+              uses: actions/setup-node@v7
               with:
                   node-version-file: package.json
                   cache: pnpm
@@ -91,15 +91,15 @@ jobs:
                   git config --global tag.gpgSign true
 
             - name: Checkout repository
-              uses: actions/checkout@v4
+              uses: actions/checkout@v7
               with:
                   ssh-key: ${{ env.SSH_PRIVATE_KEY }}
 
             - name: Setup PNPM
-              uses: pnpm/action-setup@v4
+              uses: pnpm/action-setup@v6
 
             - name: Setup Node.js
-              uses: actions/setup-node@v4
+              uses: actions/setup-node@v7
               with:
                   node-version-file: package.json
                   cache: pnpm
@@ -142,15 +142,15 @@ jobs:
                   git config --global tag.gpgSign true
 
             - name: Checkout repository
-              uses: actions/checkout@v4
+              uses: actions/checkout@v7
               with:
                   ssh-key: ${{ env.SSH_PRIVATE_KEY }}
 
             - name: Setup PNPM
-              uses: pnpm/action-setup@v4
+              uses: pnpm/action-setup@v6
 
             - name: Setup Node.js
-              uses: actions/setup-node@v4
+              uses: actions/setup-node@v7
               with:
                   node-version-file: package.json
                   cache: pnpm
