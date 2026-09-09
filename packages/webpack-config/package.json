@@ -73,13 +73,13 @@
         "@types/webpack-bundle-analyzer": "4.7.0",
         "@types/webpack-node-externals": "3.0.4",
         "webpack": "5.101.1",
-        "webpack-cli": "6.0.1",
+        "webpack-cli": "7.2.3",
         "webpack-dev-server": "5.2.2"
     },
     "peerDependencies": {
         "@swc/core": "1",
         "webpack": "5",
-        "webpack-cli": "6",
+        "webpack-cli": "6 || 7",
         "webpack-dev-server": "5"
     },
     "peerDependenciesMeta": {
